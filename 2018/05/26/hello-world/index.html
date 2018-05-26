@@ -372,7 +372,7 @@
                 
               
 
-              <time title="创建时间：2018-05-26 16:02:17 / 修改时间：15:50:32" itemprop="dateCreated datePublished" datetime="2018-05-26T16:02:17+08:00">2018-05-26</time>
+              <time title="Post created：2018-05-26 16:02:17 / Updated at：15:50:32" itemprop="dateCreated datePublished" datetime="2018-05-26T16:02:17+08:00">2018-05-26</time>
             
 
             
@@ -392,7 +392,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/05/26/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/26/hello-world/" itemprop="commentsCount"></span>
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/26/hello-world/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -406,7 +406,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数：</span>
+                 <span class="post-meta-item-text">Views：</span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -421,7 +421,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-eye"></i>
                 </span>
-                <span class="post-meta-item-text">post.visitors </span>
+                <span class="post-meta-item-text">阅读量 </span>
                 <span class="leancloud-visitors-count"></span>
             
 
@@ -1021,24 +1021,44 @@
       query.find()
         .done(function (results) {
           var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+          var UPDATED_AT = '.leancloud-updated-at'; // 新增代码 定义最近变更时间的class
           if (results.length === 0) {
             $visitors.find(COUNT_CONTAINER_REF).text(0);
             return;
           }
-          for (var i = 0; i < results.length; i++) {
+          // console.log(results);
+          for(var i = 0; i < results.length; i++) {
             var item = results[i];
             var url = item.get('url');
-            var time = item.get('time');
+            var time = item.get('time');   // 获取阅读量
+            var updatedT = item.updatedAt; // 新增代码 获取最近浏览时间 需要注意的是updateT是对象并不是字符串
             var element = document.getElementById(url);
             $(element).find(COUNT_CONTAINER_REF).text(time);
+            // 新增代码 转换日期格式
+            if(updatedT != null && updatedT != '') {
+              var a = [updatedT.getFullYear(), updatedT.getMonth() + 1, updatedT.getDate(), updatedT.getHours(), updatedT.getMinutes(), updatedT.getSeconds()];
+              for(var j = 0,len = a.length; j < len; j++) {
+                  if(a[j] < 10) {
+                      a[j] = '0' + a[j];
+                  }
+              }
+              var updateTime = a[0] + '-' + a[1] + '-' + a[2] + ' ' + a[3] + ':' + a[4] + ':' + a[5];
+              $(element).find(UPDATED_AT).text(updateTime);
+            }
           }
           for(var i = 0; i < entries.length; i++) {
             var url = entries[i];
             var element = document.getElementById(url);
             var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            var updatedAtContent = $(element).find(UPDATED_AT);
             if( countSpan.text() == '') {
               countSpan.text(0);
             }
+            // 新增代码 如果首页的文章没有更新侧默认为无人浏览
+            if(updatedAtContent.text() == '') {
+              updatedAtContent.text('无人浏览');
+            }
+            // 结束
           }
         })
         .fail(function (object, error) {
