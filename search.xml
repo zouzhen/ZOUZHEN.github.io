@@ -15,6 +15,9 @@
     <title><![CDATA[第一个博客！]]></title>
     <url>%2F2018%2F05%2F26%2F%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%EF%BC%81%2F</url>
     <content type="text"><![CDATA[第一个博客从这个博客开始，新的学习阶段开启了！]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
       <tags>
         <tag>NoteBook</tag>
       </tags>
