@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-29T01:55:12.665Z</updated>
+  <updated>2018-05-30T12:23:02.652Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Django的网站逻辑</title>
+    <link href="http://yoursite.com/2018/05/29/Django%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2018/05/29/Django实战/</id>
+    <published>2018-05-29T07:38:48.000Z</published>
+    <updated>2018-05-30T12:23:02.652Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Django实战——后台逻辑"><a href="#Django实战——后台逻辑" class="headerlink" title="Django实战——后台逻辑"></a>Django实战——后台逻辑</h1><h2 id="Django用户-（登录-注册-找回密码）"><a href="#Django用户-（登录-注册-找回密码）" class="headerlink" title="Django用户 （登录 注册 找回密码）"></a>Django用户 （登录 注册 找回密码）</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><hr><p>后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，<br>并添加到<br>函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。  </p><h4 id="对登录账户进行验证（采用类来做）"><a href="#对登录账户进行验证（采用类来做）" class="headerlink" title="对登录账户进行验证（采用类来做）"></a>对登录账户进行验证（采用类来做）</h4><ol><li>得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，<br>然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。  </li><li>对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用<br>request.user.user.is_authenticated来进行判断。决定显示哪一行代码。</li><li>自定义认证方法，实现邮箱的登录方式（重定义方式）</li></ol><h4 id="Seesion和Cookie机制"><a href="#Seesion和Cookie机制" class="headerlink" title="Seesion和Cookie机制"></a>Seesion和Cookie机制</h4><ol><li>无状态请求</li><li>有状态请求 </li></ol><hr><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><hr><h4 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h4><ol><li>添加插件（captcha）</li></ol><h4 id="提交注册信息（包括注册码）"><a href="#提交注册信息（包括注册码）" class="headerlink" title="提交注册信息（包括注册码）"></a>提交注册信息（包括注册码）</h4><h4 id="发送邮件验证注册信息"><a href="#发送邮件验证注册信息" class="headerlink" title="发送邮件验证注册信息"></a>发送邮件验证注册信息</h4><h4 id="激活账户"><a href="#激活账户" class="headerlink" title="激活账户"></a>激活账户</h4><hr><h3 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h3><hr><p>采用类似于激活账户的方式来实现</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Django实战——后台逻辑&quot;&gt;&lt;a href=&quot;#Django实战——后台逻辑&quot; class=&quot;headerlink&quot; title=&quot;Django实战——后台逻辑&quot;&gt;&lt;/a&gt;Django实战——后台逻辑&lt;/h1&gt;&lt;h2 id=&quot;Django用户-（登录-注册-找
+      
+    
+    </summary>
+    
+      <category term="Web开发" scheme="http://yoursite.com/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Adm-zip工具</title>
     <link href="http://yoursite.com/2018/05/29/Adm-zip%E5%B7%A5%E5%85%B7/"/>
     <id>http://yoursite.com/2018/05/29/Adm-zip工具/</id>
     <published>2018-05-29T01:12:01.000Z</published>
-    <updated>2018-05-29T01:55:12.665Z</updated>
+    <updated>2018-05-29T07:59:45.181Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Adm-zip介绍"><a href="#Adm-zip介绍" class="headerlink" title="Adm-zip介绍"></a>Adm-zip介绍</h3><hr><p><strong>Adm-zip是JavaScript中的一款与压缩文件相关的插件，其功能相当的强大（我看来），我用其实现了对Word文档的内容替换。</strong></p><font color="#00099ff" face="黑体">Word 文档本质上是一个压缩 文件夹，其中的word文件夹下的document.xml文件是包含文档内容的文件，而我们需要操作的也正是这个文件。</font><font color="#00099ff" face="微软雅黑">Adm-zip这款插件则正好满足我们即对压缩文件内部条目文件的处理，同时又保证不影响压缩文件内部其余文件的要求。</font><font face="黑体">我们需要的函数接口主要有四个，分别为：</font>  <p>读取压缩文件内指定目录里面的文件或者文件夹：  </p><pre><code>Admzip.readAsText()  </code></pre><p>删除压缩文件内的指定文件或者文件夹：</p><pre><code>Admzip.deleteFile()  </code></pre><p>将指定文件写入到压缩文件夹中：</p><pre><code>Admzip.addFile()  </code></pre><p>将所做的更改重新写入文件（可以是当前文件，也可以重命名的word文档）</p><pre><code>Admzip.writeZip()</code></pre><p><strong>关于Adm-zip的使用方法，暂时只发现了这样一种，其还有别的Api接口，有兴趣的小伙伴可以自己再研究下^_^</strong></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Adm-zip介绍"><a href="#Adm-zip介绍" class="headerlink" title="Adm-zip介绍"></a>Adm-zip介绍</h3><hr><p><strong>Adm-zip是JavaScript中的一款与压缩文件相关的插件，其功能相当的强大（我看来），我用其实现了对Word文档的内容替换。</strong></p><font color="#00099ff" face="黑体">Word 文档本质上是一个压缩 文件夹，其中的word文件夹下的document.xml文件是包含文档内容的文件，而我们需要操作的也正是这个文件。</font><font color="#00099ff" face="微软雅黑">Adm-zip这款插件则正好满足我们即对压缩文件内部条目文件的处理，同时又保证不影响压缩文件内部其余文件的要求。</font>  <font face="黑体">我们需要的函数接口主要有四个，分别为：</font>  <p>读取压缩文件内指定目录里面的文件或者文件夹：  </p><pre><code>Admzip.readAsText()  </code></pre><p>删除压缩文件内的指定文件或者文件夹：</p><pre><code>Admzip.deleteFile()  </code></pre><p>将指定文件写入到压缩文件夹中：</p><pre><code>Admzip.addFile()  </code></pre><p>将所做的更改重新写入文件（可以是当前文件，也可以重命名的word文档）</p><pre><code>Admzip.writeZip()</code></pre><p><strong>关于Adm-zip的使用方法，暂时只发现了这样一种，其还有别的Api接口，有兴趣的小伙伴可以自己再研究下^_^</strong></p>]]></content>
     
     <summary type="html">
     
@@ -49,7 +74,7 @@
     <link href="http://yoursite.com/2018/05/28/MARKDOWN%E8%AF%AD%E6%B3%95%E7%86%9F%E6%82%89/"/>
     <id>http://yoursite.com/2018/05/28/MARKDOWN语法熟悉/</id>
     <published>2018-05-28T09:03:28.000Z</published>
-    <updated>2018-05-29T01:12:34.740Z</updated>
+    <updated>2018-05-29T02:00:10.211Z</updated>
     
     <content type="html"><![CDATA[<h1 id="标题测试"><a href="#标题测试" class="headerlink" title="标题测试"></a>标题测试</h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="换行和分段"><a href="#换行和分段" class="headerlink" title="换行和分段"></a>换行和分段</h1><h4 id="未换行"><a href="#未换行" class="headerlink" title="未换行"></a>未换行</h4><p>未换行测试<br>示例</p><h4 id="换行后"><a href="#换行后" class="headerlink" title="换行后"></a>换行后</h4><p>已换行测试（后有两个空格）<br>示例</p><h4 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h4><p>分段测试</p><p>分段</p><h1 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h1><p><strong>加粗(使用两个*号)</strong><br><em>斜体（使用一个</em>号）*<br><del>删除线(使用两个波浪线)</del><br>‘底纹（单引号）’</p><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>在Markdown 下，无序列表直接在文字前加 「 - 」 或者 「 * 」 即可，有序列表则直接在文字前加 「1.」「2.」「3.」 。符号要和文字之间加上一个字符的空格。</p><p>无序列表： 在文本前加 「 <em> 」 即可生成一个无序列表。快捷键：control + L （只能生成列表，不能生成子列表）<br>在 「 </em> 」 前加两个空格键或者一个 tab 键就可以产生一个子列表。<br>有序列表： 在文本前加 「字母.」 或 「数字.」 即可生成一个有序列表。<br>注意，当你第一个序号使用什么作为标记的，那么同级别的列表就会自动使用其作为标记。</p><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><ul><li>1</li><li>2<ul><li>2.1<ul><li>2.1.1<ul><li>2.1.1.1</li></ul></li></ul></li></ul></li><li>3</li></ul><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><ol><li>1</li><li>2<br> a. 2.1<br> b. 2.2</li><li>3</li></ol><h4 id="有序列表与无序列表混排"><a href="#有序列表与无序列表混排" class="headerlink" title="有序列表与无序列表混排"></a>有序列表与无序列表混排</h4><ol><li>1</li><li>2<br> a. 2.1<br> b. 2.2<pre><code>* 2.2.1</code></pre></li></ol><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>只要在文本内容之前加 「 &gt; （大于号）」 即可将文本变成引用文本。</p><blockquote><p>这是引用文本</p></blockquote><h1 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h1><h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"></p><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a></p><h1 id="水平线"><a href="#水平线" class="headerlink" title="水平线"></a>水平线</h1><p>三个「 - 」或「 * 」都可以画出一条水平分割线</p><hr><p>使用（—）的水平分割线</p><hr><p>使用（***）的水平分割线</p><h4 id="代码框"><a href="#代码框" class="headerlink" title="代码框"></a>代码框</h4><p>两对「 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码前加四个空格键  </span><br><span class="line">代码前加一个 tab 键</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 两对‘ ``` ’包裹</span><br><span class="line">```print(&apos;Hello Word!&apos;);</span><br></pre></td></tr></table></figure></p><h4 id="四个空格"><a href="#四个空格" class="headerlink" title="四个空格"></a>四个空格</h4><pre><code>print(&apos;Hello Word!&apos;);</code></pre><h4 id="一个-tab-键"><a href="#一个-tab-键" class="headerlink" title="一个 tab 键"></a>一个 tab 键</h4><pre><code>print(&apos;Hello Word!&apos;);</code></pre><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>在 Markdown 下制作表格，是非常非常麻烦的一件事——你必须画出来！<br>（本人比较懒，故略去 -_-*）</p><h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1><p>脚注总是成对出现的，「 [^1] 」作为标记，可以点击跳至末尾注解。「 [^1]: 」填写注解，不论写在什么位置，都会出现在文章的末尾。</p><p>点击右上方的小数字有注解[^1]<br>[^1]:这里是注解<br>这是随机文本<br>这是随机文本<br>这是随机文本  </p><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>注释是给自己看的，预览时也不会出现，当然发布出去别人也不会看见。<br><!--注释，无法预览--></p><h1 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h1><p>关于首行缩进，网上争议很多，而技术本身并没有错，不是吗？在输入法的「全角」模式下，输入两个空格键即可。  </p><h1 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h1><p>在网页上写文章建议使用直角引号『「」』。</p>]]></content>
     
@@ -65,7 +90,7 @@
       <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="工具 Markdown" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7-Markdown/"/>
     
   </entry>
   
