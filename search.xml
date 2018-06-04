@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Django的网站逻辑]]></title>
-    <url>%2F2018%2F05%2F29%2FDjango%E5%AE%9E%E6%88%98%2F</url>
-    <content type="text"><![CDATA[Django实战——后台逻辑Django用户 （登录 注册 找回密码）登录 后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，并添加到函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。 对登录账户进行验证（采用类来做） 得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。 对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用request.user.user.is_authenticated来进行判断。决定显示哪一行代码。 自定义认证方法，实现邮箱的登录方式（重定义方式） Seesion和Cookie机制 无状态请求 有状态请求 注册 准备工具 添加插件（captcha） 提交注册信息（包括注册码）发送邮件验证注册信息激活账户 找回密码 采用类似于激活账户的方式来实现]]></content>
+    <title><![CDATA[照片]]></title>
+    <url>%2F2018%2F05%2F30%2F%E7%85%A7%E7%89%87%2F</url>
+    <content type="text"><![CDATA[照片]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[照片]]></title>
-    <url>%2F2018%2F05%2F29%2F%E7%85%A7%E7%89%87%2F</url>
-    <content type="text"><![CDATA[照片]]></content>
+    <title><![CDATA[Django的网站逻辑]]></title>
+    <url>%2F2018%2F05%2F29%2FDjango%E5%AE%9E%E6%88%98%2F</url>
+    <content type="text"><![CDATA[Django实战——后台逻辑Django用户 （登录 注册 找回密码）登录 后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，并添加到函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。 对登录账户进行验证（采用类来做） 得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。 对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用request.user.user.is_authenticated来进行判断。决定显示哪一行代码。 自定义认证方法，实现邮箱的登录方式（重定义方式） Seesion和Cookie机制 无状态请求 有状态请求 注册 准备工具 添加插件（captcha） 提交注册信息（包括注册码）发送邮件验证注册信息激活账户 找回密码 采用类似于激活账户的方式来实现]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
