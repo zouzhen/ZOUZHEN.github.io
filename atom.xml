@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-30T12:23:02.652Z</updated>
+  <updated>2018-06-04T03:48:43.452Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/05/29/Django%E5%AE%9E%E6%88%98/"/>
     <id>http://yoursite.com/2018/05/29/Django实战/</id>
     <published>2018-05-29T07:38:48.000Z</published>
-    <updated>2018-05-30T12:23:02.652Z</updated>
+    <updated>2018-06-04T03:48:43.452Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Django实战——后台逻辑"><a href="#Django实战——后台逻辑" class="headerlink" title="Django实战——后台逻辑"></a>Django实战——后台逻辑</h1><h2 id="Django用户-（登录-注册-找回密码）"><a href="#Django用户-（登录-注册-找回密码）" class="headerlink" title="Django用户 （登录 注册 找回密码）"></a>Django用户 （登录 注册 找回密码）</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><hr><p>后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，<br>并添加到<br>函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。  </p><h4 id="对登录账户进行验证（采用类来做）"><a href="#对登录账户进行验证（采用类来做）" class="headerlink" title="对登录账户进行验证（采用类来做）"></a>对登录账户进行验证（采用类来做）</h4><ol><li>得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，<br>然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。  </li><li>对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用<br>request.user.user.is_authenticated来进行判断。决定显示哪一行代码。</li><li>自定义认证方法，实现邮箱的登录方式（重定义方式）</li></ol><h4 id="Seesion和Cookie机制"><a href="#Seesion和Cookie机制" class="headerlink" title="Seesion和Cookie机制"></a>Seesion和Cookie机制</h4><ol><li>无状态请求</li><li>有状态请求 </li></ol><hr><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><hr><h4 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h4><ol><li>添加插件（captcha）</li></ol><h4 id="提交注册信息（包括注册码）"><a href="#提交注册信息（包括注册码）" class="headerlink" title="提交注册信息（包括注册码）"></a>提交注册信息（包括注册码）</h4><h4 id="发送邮件验证注册信息"><a href="#发送邮件验证注册信息" class="headerlink" title="发送邮件验证注册信息"></a>发送邮件验证注册信息</h4><h4 id="激活账户"><a href="#激活账户" class="headerlink" title="激活账户"></a>激活账户</h4><hr><h3 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h3><hr><p>采用类似于激活账户的方式来实现</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Django实战——后台逻辑"><a href="#Django实战——后台逻辑" class="headerlink" title="Django实战——后台逻辑"></a>Django实战——后台逻辑</h1><h2 id="Django用户-（登录-注册-找回密码）"><a href="#Django用户-（登录-注册-找回密码）" class="headerlink" title="Django用户 （登录 注册 找回密码）"></a>Django用户 （登录 注册 找回密码）</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><hr><p>后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，<br>并添加到<br>函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。  </p><h4 id="对登录账户进行验证（采用类来做）"><a href="#对登录账户进行验证（采用类来做）" class="headerlink" title="对登录账户进行验证（采用类来做）"></a>对登录账户进行验证（采用类来做）</h4><ol><li>得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，<br>然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。  </li><li>对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用<br>request.user.user.is_authenticated来进行判断。决定显示哪一行代码。</li><li>自定义认证方法，实现邮箱的登录方式（重定义方式）</li></ol><h4 id="Seesion和Cookie机制"><a href="#Seesion和Cookie机制" class="headerlink" title="Seesion和Cookie机制"></a>Seesion和Cookie机制</h4><ol><li>无状态请求</li><li>有状态请求 </li></ol><hr><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><hr><h4 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h4><ol><li>添加插件（captcha）</li></ol><h4 id="提交注册信息（包括注册码）"><a href="#提交注册信息（包括注册码）" class="headerlink" title="提交注册信息（包括注册码）"></a>提交注册信息（包括注册码）</h4><h4 id="发送邮件验证注册信息"><a href="#发送邮件验证注册信息" class="headerlink" title="发送邮件验证注册信息"></a>发送邮件验证注册信息</h4><h4 id="激活账户"><a href="#激活账户" class="headerlink" title="激活账户"></a>激活账户</h4><hr><h3 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h3><hr><p>采用类似于激活账户的方式来实现</p><p><img src="/images/background.jpg" alt="图片"></p>]]></content>
     
     <summary type="html">
     
