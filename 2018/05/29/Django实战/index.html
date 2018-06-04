@@ -123,6 +123,18 @@
 
 
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
@@ -160,12 +172,10 @@
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
 <meta property="og:description" content="Django实战——后台逻辑Django用户 （登录 注册 找回密码）登录 后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，并添加到函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。   对登录账户进行验证（采用类来做） 得到用户名和密码后，使用django.contrib.auth.authe">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/background.jpg">
-<meta property="og:updated_time" content="2018-06-04T03:48:43.452Z">
+<meta property="og:updated_time" content="2018-06-04T03:59:00.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django的网站逻辑">
 <meta name="twitter:description" content="Django实战——后台逻辑Django用户 （登录 注册 找回密码）登录 后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，并添加到函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。   对登录账户进行验证（采用类来做） 得到用户名和密码后，使用django.contrib.auth.authe">
-<meta name="twitter:image" content="http://yoursite.com/images/background.jpg">
 
 
 
@@ -444,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-04 11:48:43" itemprop="dateModified" datetime="2018-06-04T11:48:43+08:00">2018-06-04</time>
+                <time title="修改时间：2018-06-04 11:59:00" itemprop="dateModified" datetime="2018-06-04T11:59:00+08:00">2018-06-04</time>
               
             
           </span>
@@ -538,7 +548,6 @@
 <h4 id="提交注册信息（包括注册码）"><a href="#提交注册信息（包括注册码）" class="headerlink" title="提交注册信息（包括注册码）"></a>提交注册信息（包括注册码）</h4><h4 id="发送邮件验证注册信息"><a href="#发送邮件验证注册信息" class="headerlink" title="发送邮件验证注册信息"></a>发送邮件验证注册信息</h4><h4 id="激活账户"><a href="#激活账户" class="headerlink" title="激活账户"></a>激活账户</h4><hr>
 <h3 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h3><hr>
 <p>采用类似于激活账户的方式来实现</p>
-<p><img src="/images/background.jpg" alt="图片"></p>
 
       
     </div>
@@ -584,8 +593,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/29/Adm-zip工具/" rel="next" title="Adm-zip工具">
-                <i class="fa fa-chevron-left"></i> Adm-zip工具
+              <a href="/2018/05/29/照片/" rel="next" title="照片">
+                <i class="fa fa-chevron-left"></i> 照片
               </a>
             
           </div>
@@ -678,7 +687,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
