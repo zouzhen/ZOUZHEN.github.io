@@ -1847,7 +1847,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bb4aff;
+  background: #c9a7f7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2859,7 +2859,6 @@ hr {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
-    background-size: cover;
   }
   #footer a {
     color: #eee;
