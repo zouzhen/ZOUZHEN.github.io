@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[第一个博客！]]></title>
-    <url>%2F2018%2F06%2F04%2F%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[第一个博客从这个博客开始，新的学习阶段开启了！]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>NoteBook</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[照片]]></title>
     <url>%2F2018%2F05%2F30%2F%E7%85%A7%E7%89%87%2F</url>
-    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX19VII/Ls1c+8dLvulscIE95xgFQZdrxhL9SSI3Cj6S58BEQPwwvgwkqCO0lhWVWxexX8XUXt98z4khRUZPrr9DdlkKFqed6QS6N/ouskmfrrAA9C2eVYqjxdk5I0H5CJ+Pekf7QGNRNfFLWGQypoNYs/Xcgu/ZfHCNpRRakTkYdqGbgwdx20Nrf4GKCtzPVbV2Lj+v4+C0LwfqSEIooyYeJ7IVzq8oLlDcYXKJubMhFClKDFwetR7/A var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
+    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX19kcwDUnHLLjY1krihvw83GeL+dHZOTm03lu7x2TTpSwRB8O75UHgxFYFsLonjq4PWJ1FhEvXrShhnkm9txf/UJpq6vuipmZvxyo8LOHCsQzmr9X2NVLdWBOHhopO0FQwwSwSbcsMxn7J602L+wLy/hS0mnyOmk48l43F1vyl8cPBFpdrmj17uUTkOZkqgU/PJe7WjwzKI6x0cxmATHnuAc6cDr60fXLySjEjUuYVtWYuUjbQh57Opl var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
       <categories>
         <category>照片</category>
       </categories>
