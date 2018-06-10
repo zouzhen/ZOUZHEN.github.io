@@ -161,7 +161,7 @@
 <meta property="og:description" content="标题测试一级标题二级标题三级标题四级标题五级标题六级标题换行和分段未换行未换行测试示例 换行后已换行测试（后有两个空格）示例 分段分段测试 分段 文本样式加粗(使用两个*号)斜体（使用一个号）*删除线(使用两个波浪线)‘底纹（单引号）’ 列表在Markdown 下，无序列表直接在文字前加 「 - 」 或者 「 * 」 即可，有序列表则直接在文字前加 「1.」「2.」「3.」 。符号要和文字之间加上">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://mouapp.com/Mou_128.png">
-<meta property="og:updated_time" content="2018-05-29T02:00:10.211Z">
+<meta property="og:updated_time" content="2018-06-10T12:25:23.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MARKDOWN语法熟悉">
 <meta name="twitter:description" content="标题测试一级标题二级标题三级标题四级标题五级标题六级标题换行和分段未换行未换行测试示例 换行后已换行测试（后有两个空格）示例 分段分段测试 分段 文本样式加粗(使用两个*号)斜体（使用一个号）*删除线(使用两个波浪线)‘底纹（单引号）’ 列表在Markdown 下，无序列表直接在文字前加 「 - 」 或者 「 * 」 即可，有序列表则直接在文字前加 「1.」「2.」「3.」 。符号要和文字之间加上">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-29 10:00:10" itemprop="dateModified" datetime="2018-05-29T10:00:10+08:00">2018-05-29</time>
+                <time title="修改时间：2018-06-10 20:25:23" itemprop="dateModified" datetime="2018-06-10T20:25:23+08:00">2018-06-10</time>
               
             
           </span>
@@ -570,6 +570,107 @@
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>注释是给自己看的，预览时也不会出现，当然发布出去别人也不会看见。<br><!--注释，无法预览--></p>
 <h1 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h1><p>关于首行缩进，网上争议很多，而技术本身并没有错，不是吗？在输入法的「全角」模式下，输入两个空格键即可。  </p>
 <h1 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h1><p>在网页上写文章建议使用直角引号『「」』。</p>
+<h1 id="利用Markdown创建表格"><a href="#利用Markdown创建表格" class="headerlink" title="利用Markdown创建表格"></a>利用Markdown创建表格</h1><p>Markdown作为一种轻量级书写/写作语言，并没有提供很好的排版、编辑等功能。因此，如果想要利用Markdown创建表格（特别是复杂表格），其实是一项不太轻松的事情。<br>经过笔者在简书平台上的测试与其他若干帖子的表述，Markdown应是只提供了最简单的创建表格与内容对齐方式的功能。总结而言，有如下两种最为直观的创建表格方式：</p>
+<h3 id="简单方式"><a href="#简单方式" class="headerlink" title="简单方式"></a>简单方式</h3><pre><code>Name | Academy | score 
+- | :-: | -: 
+Harry Potter | Gryffindor| 90 
+Hermione Granger | Gryffindor | 100 
+Draco Malfoy | Slytherin | 90
+</code></pre><table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Academy</th>
+<th style="text-align:right">score </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harry Potter</td>
+<td style="text-align:center">Gryffindor</td>
+<td style="text-align:right">90 </td>
+</tr>
+<tr>
+<td>Hermione Granger</td>
+<td style="text-align:center">Gryffindor</td>
+<td style="text-align:right">100 </td>
+</tr>
+<tr>
+<td>Draco Malfoy</td>
+<td style="text-align:center">Slytherin</td>
+<td style="text-align:right">90 </td>
+</tr>
+</tbody>
+</table>
+<h3 id="原生方式"><a href="#原生方式" class="headerlink" title="原生方式"></a>原生方式</h3><pre><code>| Name | Academy | score | 
+| - | :-: | -: | 
+| Harry Potter | Gryffindor| 90 | 
+| Hermione Granger | Gryffindor | 100 | 
+| Draco Malfoy | Slytherin | 90 |
+</code></pre><table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Academy</th>
+<th style="text-align:right">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harry Potter</td>
+<td style="text-align:center">Gryffindor</td>
+<td style="text-align:right">90</td>
+</tr>
+<tr>
+<td>Hermione Granger</td>
+<td style="text-align:center">Gryffindor</td>
+<td style="text-align:right">100</td>
+</tr>
+<tr>
+<td>Draco Malfoy</td>
+<td style="text-align:center">Slytherin</td>
+<td style="text-align:right">90</td>
+</tr>
+</tbody>
+</table>
+<h4 id="语法说明："><a href="#语法说明：" class="headerlink" title="语法说明："></a>语法说明：</h4><ol>
+<li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行代表一个表格行； </li>
+<li>列与列之间用管道符号 “|” 隔开，原生方式的表格每一行的两边也要有管道符。 </li>
+<li>可在第二行指定不同列单元格内容的对齐方式，默认为左对齐，在 “-” 右边加上 “:” 为右对齐，在 “-” 两侧同时加上 “:” 为居中对齐。</li>
+</ol>
+<p>这样傻瓜的表格创建方式十分符合Markdown简小精悍的语言气质，具有上手快、即学即用的优势。但傻瓜的定义方式显然不能满足很多处女座的要求，比如<br>文章——“Linux备忘录-Linux中文件/文件夹按照时间顺序升序/降序排列”的表格如下：</p>
+<pre><code>| 参数 |详细解释|备注| 
+| - | :-: | -: | 
+| -l | use a long listing format |以长列表方式显示（显示出文件/文件夹详细信息） | 
+| -t | sort by modification time |按照修改时间排序（默认最近被修改的文件/文件夹排在最前面） | 
+|-r | reverse order while sorting |逆序排列|  
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">详细解释</th>
+<th style="text-align:right">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td style="text-align:center">use a long listing format</td>
+<td style="text-align:right">以长列表方式显示（显示出文件/文件夹详细信息）</td>
+</tr>
+<tr>
+<td>-t</td>
+<td style="text-align:center">sort by modification time</td>
+<td style="text-align:right">按照修改时间排序（默认最近被修改的文件/文件夹排在最前面）</td>
+</tr>
+<tr>
+<td>-r</td>
+<td style="text-align:center">reverse order while sorting</td>
+<td style="text-align:right">逆序排列</td>
+</tr>
+</tbody>
+</table>
+<p>单元格排列不齐整、第一列太窄而第三列略宽，如此不堪的视觉效果着实让强迫症患者们难以忍受。还好，利用HTML可以弥补Markdown这一缺陷，甚至可以在创建表格时其他诸多表现方面锦上添花。</p>
 
       
     </div>
@@ -708,7 +809,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -813,7 +914,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题测试"><span class="nav-number">1.</span> <span class="nav-text">标题测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#换行和分段"><span class="nav-number">3.</span> <span class="nav-text">换行和分段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#未换行"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">未换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#换行后"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">换行后</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分段"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">分段</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本样式"><span class="nav-number">4.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">5.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表与无序列表混排"><span class="nav-number">5.0.0.3.</span> <span class="nav-text">有序列表与无序列表混排</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">6.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片与链接"><span class="nav-number">7.</span> <span class="nav-text">图片与链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图片"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接"><span class="nav-number">7.0.0.2.</span> <span class="nav-text">链接</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#水平线"><span class="nav-number">8.</span> <span class="nav-text">水平线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码框"><span class="nav-number">8.0.0.1.</span> <span class="nav-text">代码框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四个空格"><span class="nav-number">8.0.0.2.</span> <span class="nav-text">四个空格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个-tab-键"><span class="nav-number">8.0.0.3.</span> <span class="nav-text">一个 tab 键</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">9.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚注"><span class="nav-number">10.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">11.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#首行缩进"><span class="nav-number">12.</span> <span class="nav-text">首行缩进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引号"><span class="nav-number">13.</span> <span class="nav-text">引号</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题测试"><span class="nav-number">1.</span> <span class="nav-text">标题测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#换行和分段"><span class="nav-number">3.</span> <span class="nav-text">换行和分段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#未换行"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">未换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#换行后"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">换行后</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分段"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">分段</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本样式"><span class="nav-number">4.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">5.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表与无序列表混排"><span class="nav-number">5.0.0.3.</span> <span class="nav-text">有序列表与无序列表混排</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">6.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片与链接"><span class="nav-number">7.</span> <span class="nav-text">图片与链接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图片"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接"><span class="nav-number">7.0.0.2.</span> <span class="nav-text">链接</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#水平线"><span class="nav-number">8.</span> <span class="nav-text">水平线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码框"><span class="nav-number">8.0.0.1.</span> <span class="nav-text">代码框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四个空格"><span class="nav-number">8.0.0.2.</span> <span class="nav-text">四个空格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个-tab-键"><span class="nav-number">8.0.0.3.</span> <span class="nav-text">一个 tab 键</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">9.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚注"><span class="nav-number">10.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">11.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#首行缩进"><span class="nav-number">12.</span> <span class="nav-text">首行缩进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引号"><span class="nav-number">13.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Markdown创建表格"><span class="nav-number">14.</span> <span class="nav-text">利用Markdown创建表格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单方式"><span class="nav-number">14.0.1.</span> <span class="nav-text">简单方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原生方式"><span class="nav-number">14.0.2.</span> <span class="nav-text">原生方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法说明："><span class="nav-number">14.0.2.1.</span> <span class="nav-text">语法说明：</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
