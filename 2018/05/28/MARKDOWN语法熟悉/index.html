@@ -161,7 +161,7 @@
 <meta property="og:description" content="基础标题测试一级标题二级标题三级标题四级标题五级标题六级标题换行和分段未换行未换行测试示例 换行后已换行测试（后有两个空格）示例 分段分段测试 分段 文本样式加粗(使用两个*号)斜体（使用一个号）*删除线(使用两个波浪线)‘底纹（单引号）’ 列表在Markdown 下，无序列表直接在文字前加 「 - 」 或者 「 * 」 即可，有序列表则直接在文字前加 「1.」「2.」「3.」 。符号要和文字之间">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://mouapp.com/Mou_128.png">
-<meta property="og:updated_time" content="2018-06-11T02:30:07.126Z">
+<meta property="og:updated_time" content="2018-06-11T02:35:12.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MARKDOWN语法熟悉">
 <meta name="twitter:description" content="基础标题测试一级标题二级标题三级标题四级标题五级标题六级标题换行和分段未换行未换行测试示例 换行后已换行测试（后有两个空格）示例 分段分段测试 分段 文本样式加粗(使用两个*号)斜体（使用一个号）*删除线(使用两个波浪线)‘底纹（单引号）’ 列表在Markdown 下，无序列表直接在文字前加 「 - 」 或者 「 * 」 即可，有序列表则直接在文字前加 「1.」「2.」「3.」 。符号要和文字之间">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-11 10:30:07" itemprop="dateModified" datetime="2018-06-11T10:30:07+08:00">2018-06-11</time>
+                <time title="修改时间：2018-06-11 10:35:12" itemprop="dateModified" datetime="2018-06-11T10:35:12+08:00">2018-06-11</time>
               
             
           </span>
@@ -803,31 +803,37 @@ Draco Malfoy | Slytherin | 90
 <p>$\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZ}$  </p>
 <h5 id="分组-有分组功能，如"><a href="#分组-有分组功能，如" class="headerlink" title="分组 - {}有分组功能，如"></a>分组 - {}有分组功能，如</h5><p>\$10^{10}\$ \&amp; \$10^10\$<br>$10^{10}$ &amp; $10^10$</p>
 <h5 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h5><ul>
-<li><p>小括号：\$()$呈现为  $()$  </p>
-</li>
-<li><p>中括号：\$[]$呈现为  $[]$  </p>
-</li>
-<li><p>尖括号：\$\langle\rangle$呈现为 $\langle\rangle$  </p>
-<ul>
-<li>此处为与分组符号{}相区别，使用转义字符\ </li>
+<li>小括号：\$()$呈现为</li>
 </ul>
-</li>
+<p>$()$  </p>
+<ul>
+<li>中括号：\$[]$呈现为</li>
+</ul>
+<p>$[]$  </p>
+<ul>
+<li>尖括号：\$\langle\rangle$呈现为</li>
+</ul>
+<p>$\langle\rangle$  </p>
+<pre><code>- 此处为与分组符号{}相区别，使用转义字符\
+</code></pre><ul>
 <li><p>使用\left(或\right)使符号大小与邻近的公式相适应；该语句适用于所有括号类型</p>
 <ul>
-<li><p>\$(\frac{x}{y})$呈现为  </p>
+<li><p>\$(\frac{x}{y})$呈现为</p>
 <p>$(\frac{x}{y})$  </p>
 </li>
-<li><p>而\left(\frac{x}{y}\right)呈现为  </p>
+<li><p>而\left(\frac{x}{y}\right)呈现为</p>
 <p>$\left(\frac{x}{y}\right)$</p>
 </li>
 </ul>
 </li>
 </ul>
-<p><strong>注意:</strong> 在公式的前后，必须留有一个空格，否则无法识别。</p>
+<p><strong>注意:</strong> 在公式的前后，必须留有一个空格或者换行，否则无法识别。</p>
 <h5 id="求和、极限与积分"><a href="#求和、极限与积分" class="headerlink" title="求和、极限与积分"></a>求和、极限与积分</h5><p>求和：\sum  </p>
-<pre><code>举例：\$\sum_{i=1}^n{a_i}$  
-</code></pre><ul>
+<ul>
+<li>举例：\$\sum_{i=1}^n{a_i}$  <ul>
 <li>$\sum_{i=1}^n{a_i}$ </li>
+</ul>
+</li>
 </ul>
 <p>极限：\$\lim_{x\to 0}$  </p>
 <ul>
