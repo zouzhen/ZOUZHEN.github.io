@@ -544,7 +544,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+vnoOybA9e/J7GRh8iWpJOExVB3LIiP0VEYVaXTiziwuMpVqCBa6sEthzwdhTNNh94noBCIGiV48YsKE70v4wFHhCfM7KYI2oce3ZuUjIkKuZLUixitdCnM4urFtHgSM4tzXmTWj7pQcS+8HBYUWKDYzOhhxZoGYDX0cUXbvRGWby9enJyXluhpkOk2xcHjkOpCh4T50IZ9Xc9G80GAbQrfBGQKh+56BFcvo+aNwY/zRSElv+Jw3nIvqcewcbQiA8X29qA0IVYVEvydnWBr/43MSou79mOUUI=</div>
+<div id="enc_content" style="display:none">U2FsdGVkX1+aHmwLVcuTvVwEShA2HcLaVG4ljW2fyTHCm4+gD4BLI5FqyxSSc/bXiNDttn2bee9kVYhkXtb+l98orlNOZ4wkHsFbuqqTCCuLJD+rR81uRuIvdwnh0IK2N8n2z2dArwC+QimY4Too5i0UFkGU7h2DwS7PErQ78f0LIlqxgFldkz7NPKaQeEr0+jhoIm9i/5j/1bD6+btTzU8tW1BZfOASGvXoqLH+UCIHHj2hIR1To6kgYQAxd1pcPXlG1JVqSZSep9zRV3VptJ45d0hQxdUjrPHIOU7cupM=</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
@@ -743,7 +743,9 @@ doDecrypt(passwd, onError);
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

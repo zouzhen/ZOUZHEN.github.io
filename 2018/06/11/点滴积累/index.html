@@ -160,7 +160,7 @@
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
 <meta property="og:description" content="hexo生成博文插入图片 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true   在你的hexo目录下执行这样一句话npm install hexo-asset-image –save   等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹   最后在x">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-05T13:30:21.262Z">
+<meta property="og:updated_time" content="2018-07-06T13:59:10.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="点滴积累">
 <meta name="twitter:description" content="hexo生成博文插入图片 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true   在你的hexo目录下执行这样一句话npm install hexo-asset-image –save   等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹   最后在x">
@@ -442,7 +442,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-05 21:30:21" itemprop="dateModified" datetime="2018-07-05T21:30:21+08:00">2018-07-05</time>
+                <time title="修改时间：2018-07-06 21:59:10" itemprop="dateModified" datetime="2018-07-06T21:59:10+08:00">2018-07-06</time>
               
             
           </span>
@@ -517,7 +517,7 @@
       
 
       
-        <h1 id="hexo生成博文插入图片"><a href="#hexo生成博文插入图片" class="headerlink" title="hexo生成博文插入图片"></a>hexo生成博文插入图片</h1><ol>
+        <h2 id="hexo生成博文插入图片"><a href="#hexo生成博文插入图片" class="headerlink" title="hexo生成博文插入图片"></a>hexo生成博文插入图片</h2><ol>
 <li>把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  </li>
 <li>在你的hexo目录下执行这样一句话npm install hexo-asset-image –save  </li>
 <li>等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹  </li>
@@ -530,12 +530,35 @@
 <ul>
 <li><strong>注意：</strong> xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。  </li>
 </ul>
-<h1 id="Error-That-port-is-already-in-use-的错误。"><a href="#Error-That-port-is-already-in-use-的错误。" class="headerlink" title="Error: That port is already in use.的错误。"></a>Error: That port is already in use.的错误。</h1><p>即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行)  </p>
+<h2 id="Error-That-port-is-already-in-use-的错误。"><a href="#Error-That-port-is-already-in-use-的错误。" class="headerlink" title="Error: That port is already in use.的错误。"></a>Error: That port is already in use.的错误。</h2><p>即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行)  </p>
 <p>那么找到该进程,kill掉即可.  </p>
 <p>或者最简单的解决方法就是：  </p>
 <p>在终端输入 sudo fuser -k 8000/tcp  </p>
 <p>这样和端口8000相关的进程就都关了。</p>
-<h1 id="centos下实现word转pdf"><a href="#centos下实现word转pdf" class="headerlink" title="centos下实现word转pdf"></a>centos下实现word转pdf</h1><p>libreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath</p>
+<h2 id="Centos下实现word转pdf"><a href="#Centos下实现word转pdf" class="headerlink" title="Centos下实现word转pdf"></a>Centos下实现word转pdf</h2><p>libreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath</p>
+<h2 id="爆破大数据平台"><a href="#爆破大数据平台" class="headerlink" title="爆破大数据平台"></a>爆破大数据平台</h2><h3 id="Nodejs后端"><a href="#Nodejs后端" class="headerlink" title="Nodejs后端"></a>Nodejs后端</h3><ul>
+<li><p>1 创建数据库  </p>
+<ol>
+<li>1 使用redis、mongodb</li>
+<li>2 使用Mysql  其中有DATATIME属性  </li>
+</ol>
+</li>
+<li><p>2 使用Admzip以及正则表达式实现文档的替换</p>
+</li>
+<li><p>3 将生成的文档转换为PDF</p>
+</li>
+</ul>
+<h3 id="Django后端"><a href="#Django后端" class="headerlink" title="Django后端"></a>Django后端</h3><ul>
+<li>1 设计Model</li>
+<li>2 前后端分离传递数据</li>
+<li>3 算法的嵌入</li>
+</ul>
+<h3 id="涉及算法"><a href="#涉及算法" class="headerlink" title="涉及算法"></a>涉及算法</h3><ul>
+<li><p>1 图像识别</p>
+</li>
+<li><p>2 自动布孔</p>
+</li>
+</ul>
 
       
     </div>
@@ -734,7 +757,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -791,7 +816,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo生成博文插入图片"><span class="nav-number">1.</span> <span class="nav-text">hexo生成博文插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-That-port-is-already-in-use-的错误。"><span class="nav-number">2.</span> <span class="nav-text">Error: That port is already in use.的错误。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#centos下实现word转pdf"><span class="nav-number">3.</span> <span class="nav-text">centos下实现word转pdf</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo生成博文插入图片"><span class="nav-number">1.</span> <span class="nav-text">hexo生成博文插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-That-port-is-already-in-use-的错误。"><span class="nav-number">2.</span> <span class="nav-text">Error: That port is already in use.的错误。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centos下实现word转pdf"><span class="nav-number">3.</span> <span class="nav-text">Centos下实现word转pdf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爆破大数据平台"><span class="nav-number">4.</span> <span class="nav-text">爆破大数据平台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nodejs后端"><span class="nav-number">4.1.</span> <span class="nav-text">Nodejs后端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Django后端"><span class="nav-number">4.2.</span> <span class="nav-text">Django后端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#涉及算法"><span class="nav-number">4.3.</span> <span class="nav-text">涉及算法</span></a></li></ol></li></ol></div>
             
 
           </div>
