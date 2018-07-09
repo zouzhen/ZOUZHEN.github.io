@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Nodejs与Django的跨域问题]]></title>
     <url>%2F2018%2F07%2F08%2FNodejs%E4%B8%8EDjango%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[Nodejs与Django的跨域问题 1 安装django-cors-headers pip install django-cors-headers 2 配置settings.py文件 OK！问题解决！]]></content>
+    <content type="text"><![CDATA[Nodejs与Django的跨域问题由于采用前后端分离的编程方式，Django的csrf_token验证失效，出现跨域问题，在此记录一下解决方法。 1 安装django-cors-headers pip install django-cors-headers 2 配置settings.py文件 OK！问题解决！]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
@@ -74,7 +74,7 @@
   <entry>
     <title><![CDATA[照片]]></title>
     <url>%2F2018%2F05%2F30%2F%E7%85%A7%E7%89%87%2F</url>
-    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX1+qauj7rRyE6WqZtiyRt5GPVfnJORdPYVA+/Cq2HwOxAXLjOh5HKvGmeRkFpHTjkz7tzUQ/vTRbzEBExqe6tt6tblqjLwX374XabFoMe00Wxwj30yOwTRLhh+iP+1bRXYDmxOVpIH0u4WEywZ/d8SFJJPGAcXNivrAQdBuCpz3C7vqrnRhF5aSmP2FQkHcSyeM9Wb1479P1EDoPRk3snBugJl31QDY+E0bAqKmkcFYzBevX2DabGv+7md1U9n8SngtNNnfjP//1h1yPnqJ8fegMm6IFEA6ouaU= var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
+    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX19NEreoKvZjDpfnkxv3+FHDEk9FZ8gpBULuT+SA/rNYDmEMzUSuwzVLA8joAqw1ISIXBF/Tkc2iB/iZLzaBz9lwJT+5ZbTI1QfWi9PfvXbN9EE/sDKQo1cw1Ew05S7Mb5Nk+RsW3duCJuuQsIBXPHkwKsOyHosaoFwVKHpwSqV59lWHeYT8N8ntZsG7YiSTAXS6GKfXhyVwleQIzXuR30V6mqE0tFgKqF2lE5x6z3GvUeZyEODiKh1n var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
       <categories>
         <category>照片</category>
       </categories>

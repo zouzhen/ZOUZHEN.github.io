@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-08T12:43:12.956Z</updated>
+  <updated>2018-07-09T00:38:12.861Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="http://yoursite.com/2018/07/08/Nodejs%E4%B8%8EDjango%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2018/07/08/Nodejs与Django的跨域问题/</id>
     <published>2018-07-08T12:23:10.000Z</published>
-    <updated>2018-07-08T12:43:12.956Z</updated>
+    <updated>2018-07-09T00:38:12.861Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Nodejs与Django的跨域问题"><a href="#Nodejs与Django的跨域问题" class="headerlink" title="Nodejs与Django的跨域问题"></a>Nodejs与Django的跨域问题</h2><ul><li><p>1 安装django-cors-headers  </p><p>  pip install django-cors-headers</p></li></ul><ul><li>2 配置settings.py文件<br><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题模块.png" alt="Nodejs与Django的跨域问题">  </li></ul><p><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题设置.png" alt="Nodejs与Django的跨域问题">  </p><p>OK！问题解决！</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Nodejs与Django的跨域问题"><a href="#Nodejs与Django的跨域问题" class="headerlink" title="Nodejs与Django的跨域问题"></a>Nodejs与Django的跨域问题</h2><p>由于采用前后端分离的编程方式，Django的csrf_token验证失效，出现跨域问题，在此记录一下解决方法。</p><ul><li><p>1 安装django-cors-headers  </p><p>  pip install django-cors-headers</p></li></ul><ul><li>2 配置settings.py文件<br><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题模块.png" alt="Nodejs与Django的跨域问题">  </li></ul><p><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题设置.png" alt="Nodejs与Django的跨域问题">  </p><p>OK！问题解决！</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;a href=&quot;#Nodejs与Django的跨域问题&quot; class=&quot;headerlink&quot; title=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;/a&gt;Nodejs与Django的跨域问题&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
+        &lt;h2 id=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;a href=&quot;#Nodejs与Django的跨域问题&quot; class=&quot;headerlink&quot; title=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;/a&gt;Nodejs与Django的跨域问题&lt;/h2&gt;&lt;p&gt;由于采用前后
       
     
     </summary>
@@ -221,17 +220,17 @@
     <published>2018-05-30T07:38:48.000Z</published>
     <updated>2018-07-07T10:04:04.136Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+qauj7rRyE6WqZtiyRt5GPVfnJORdPYVA+/Cq2HwOxAXLjOh5HKvGmeRkFpHTjkz7tzUQ/vTRbzEBExqe6tt6tblqjLwX374XabFoMe00Wxwj30yOwTRLhh+iP+1bRXYDmxOVpIH0u4WEywZ/d8SFJJPGAcXNivrAQdBuCpz3C7vqrnRhF5aSmP2FQkHcSyeM9Wb1479P1EDoPRk3snBugJl31QDY+E0bAqKmkcFYzBevX2DabGv+7md1U9n8SngtNNnfjP//1h1yPnqJ8fegMm6IFEA6ouaU=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src="/js/crypto-js.js"></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX19NEreoKvZjDpfnkxv3+FHDEk9FZ8gpBULuT+SA/rNYDmEMzUSuwzVLA8joAqw1ISIXBF/Tkc2iB/iZLzaBz9lwJT+5ZbTI1QfWi9PfvXbN9EE/sDKQo1cw1Ew05S7Mb5Nk+RsW3duCJuuQsIBXPHkwKsOyHosaoFwVKHpwSqV59lWHeYT8N8ntZsG7YiSTAXS6GKfXhyVwleQIzXuR30V6mqE0tFgKqF2lE5x6z3GvUeZyEODiKh1n</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/crypto-js.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
 function doDecrypt (pwd, onError) {
 	console.log(&#39;in doDecrypt&#39;);
-	const txt = document.getE
+	const txt = document.ge
       
     
     </summary>

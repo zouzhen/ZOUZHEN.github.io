@@ -517,7 +517,7 @@
       
 
       
-        <script src=/js/crypto-js.js></script>
+        <script src="/js/crypto-js.js"></script>
 <script>
 function doDecrypt (pwd, onError) {
 	console.log('in doDecrypt');
@@ -544,7 +544,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+qauj7rRyE6WqZtiyRt5GPVfnJORdPYVA+/Cq2HwOxAXLjOh5HKvGmeRkFpHTjkz7tzUQ/vTRbzEBExqe6tt6tblqjLwX374XabFoMe00Wxwj30yOwTRLhh+iP+1bRXYDmxOVpIH0u4WEywZ/d8SFJJPGAcXNivrAQdBuCpz3C7vqrnRhF5aSmP2FQkHcSyeM9Wb1479P1EDoPRk3snBugJl31QDY+E0bAqKmkcFYzBevX2DabGv+7md1U9n8SngtNNnfjP//1h1yPnqJ8fegMm6IFEA6ouaU=</div>
+<div id="enc_content" style="display:none">U2FsdGVkX19NEreoKvZjDpfnkxv3+FHDEk9FZ8gpBULuT+SA/rNYDmEMzUSuwzVLA8joAqw1ISIXBF/Tkc2iB/iZLzaBz9lwJT+5ZbTI1QfWi9PfvXbN9EE/sDKQo1cw1Ew05S7Mb5Nk+RsW3duCJuuQsIBXPHkwKsOyHosaoFwVKHpwSqV59lWHeYT8N8ntZsG7YiSTAXS6GKfXhyVwleQIzXuR30V6mqE0tFgKqF2lE5x6z3GvUeZyEODiKh1n</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
