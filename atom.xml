@@ -162,7 +162,7 @@
     <link href="http://yoursite.com/2018/06/11/%E7%82%B9%E6%BB%B4%E7%A7%AF%E7%B4%AF/"/>
     <id>http://yoursite.com/2018/06/11/点滴积累/</id>
     <published>2018-06-11T12:42:01.000Z</published>
-    <updated>2018-07-11T01:23:05.463Z</updated>
+    <updated>2018-07-11T09:54:51.835Z</updated>
     
     <content type="html"><![CDATA[<h2 id="hexo生成博文插入图片"><a href="#hexo生成博文插入图片" class="headerlink" title="hexo生成博文插入图片"></a>hexo生成博文插入图片</h2><ol><li>把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  </li><li>在你的hexo目录下执行这样一句话npm install hexo-asset-image –save  </li><li>等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹  </li><li><p>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：  </p><ul><li>! [你想输入的替代文字](xxxx/图片名.jpg)</li></ul></li></ol><ul><li><strong>注意：</strong> xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。  </li></ul><h2 id="Error-That-port-is-already-in-use-的错误。"><a href="#Error-That-port-is-already-in-use-的错误。" class="headerlink" title="Error: That port is already in use.的错误。"></a>Error: That port is already in use.的错误。</h2><p>即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行)  </p><p>那么找到该进程,kill掉即可.  </p><p>或者最简单的解决方法就是：  </p><p>在终端输入 sudo fuser -k 8000/tcp  </p><p>这样和端口8000相关的进程就都关了。</p><h2 id="Centos下实现word转pdf"><a href="#Centos下实现word转pdf" class="headerlink" title="Centos下实现word转pdf"></a>Centos下实现word转pdf</h2><p>libreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath</p><h2 id="爆破大数据平台"><a href="#爆破大数据平台" class="headerlink" title="爆破大数据平台"></a>爆破大数据平台</h2><h3 id="Nodejs后端"><a href="#Nodejs后端" class="headerlink" title="Nodejs后端"></a>Nodejs后端</h3><ul><li><p>1 创建数据库  </p><ol><li>1 使用redis、mongodb</li><li>2 使用Mysql  其中有DATATIME属性    </li></ol></li></ul><ul><li><p>2 使用Admzip以及正则表达式实现文档的替换</p></li><li><p>3 将生成的文档转换为PDF</p></li></ul><h3 id="Django后端"><a href="#Django后端" class="headerlink" title="Django后端"></a>Django后端</h3><ul><li>1 设计Model</li><li>2 前后端分离传递数据</li><li>3 算法的嵌入</li></ul><h3 id="涉及算法"><a href="#涉及算法" class="headerlink" title="涉及算法"></a>涉及算法</h3><ul><li><p>1 图像识别</p></li><li><p>2 自动布孔</p></li></ul><h2 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h2><h3 id="算法仓库"><a href="#算法仓库" class="headerlink" title="算法仓库"></a><strong>算法仓库</strong></h3><ul><li><p>ageitgey/face_recognition:  </p><p>  <a href="https://github.com/ageitgey/face_recognition" target="_blank" rel="noopener">https://github.com/ageitgey/face_recognition</a>  </p></li><li><p>davidsandberg/facenet:  </p><p>  <a href="https://github.com/davidsandberg/facenet" target="_blank" rel="noopener">https://github.com/davidsandberg/facenet</a>  </p></li><li><p>cmusatyalab/openface:  </p><p>  <a href="https://github.com/cmusatyalab/openface" target="_blank" rel="noopener">https://github.com/cmusatyalab/openface</a> </p></li><li><p>kpzhang93/MTCNN_face_detection_alignment(人脸检测):  </p><p>  <a href="https://github.com/kpzhang93/MTCNN_face_detection_alignment" target="_blank" rel="noopener">https://github.com/kpzhang93/MTCNN_face_detection_alignment</a>  </p></li><li><p>deepinsight/insightface:  </p><p>  <a href="https://github.com/deepinsight/insightface" target="_blank" rel="noopener">https://github.com/deepinsight/insightface</a>  </p></li><li><p>nyoki-mtl/keras-facenet:<br>  <a href="https://github.com/nyoki-mtl/keras-facenet" target="_blank" rel="noopener">https://github.com/nyoki-mtl/keras-facenet</a>  </p></li></ul><p><strong>相关博客</strong></p><ul><li><p><a href="https://blog.csdn.net/hongbin_xu/article/details/76284134" target="_blank" rel="noopener">https://blog.csdn.net/hongbin_xu/article/details/76284134</a>  </p></li><li></li></ul>]]></content>
     
@@ -228,13 +228,13 @@
   </entry>
   
   <entry>
-    <title>照片</title>
-    <link href="http://yoursite.com/2018/05/30/%E7%85%A7%E7%89%87/"/>
-    <id>http://yoursite.com/2018/05/30/照片/</id>
+    <title>学习的东西</title>
+    <link href="http://yoursite.com/2018/05/30/%E8%AE%A1%E5%88%92/"/>
+    <id>http://yoursite.com/2018/05/30/计划/</id>
     <published>2018-05-30T07:38:48.000Z</published>
-    <updated>2018-07-07T10:04:04.136Z</updated>
+    <updated>2018-07-11T10:33:55.835Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+v+qN6Tc3v8iOVj2DqI/v279CXe8yN8Ho8hcB3gSf6UW1GIHkxWbkd48IFO5uWKEwtDCvYlbaIvYq38qWHqKandXirHydVpu+qcx502GeN8M7qa8Pj8yFWHqVHdoQX47VBk4vjj8SZ5yjK0nQGi8qb1GbjErROvgYmqtBt/l/I6BIDTLbi1nhmmwrXAm4hWqeNML1TGxtZ6QSuEWoDTc3swhf0hGV2WEvvKCcTnN6j6eGiqz7NK0d8V83bI7pZY4aX1O88eYfur7d4QmJj+Bo64/xhIaHqOuw=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+nFQ96T8ocfW25iVbHQ7mS9bUrFHFNdFrfX0RGZ8/92G1tV9ve5z7rPBNtzxDnvk2TQRuCpBQnLKqskMuM5h5DiPnAXz24Ym9/blAZr+QZnKUh9Zc0b2/1/Tvrkpn2ThgHpkktbbqrui8nUI3NGFacEqTlqhjSgMgyGIdOcNTlBoGx0Wm9Smgw8KjvUSMyvbEUwxwDYfb0gIFl8QEsou27Kt2kkmWBEtmnpw71/TBwL12Z3p7Wz2tCxBzoxEx2E8iy9rwWOqD9sdps4co8RsnfM17HSeea6JDl7qbLXhsUr/dK9WGf1PawdynR88jrMT9BTQ4dyUZ2VwBJ6IvPKngegxTF3Ka9BYE3Yy6haKsT63E3NC0Nt4J9wXIIKHH577jtLZiSdoAJQLgHx6DN61wQuVh9UZjFlChBJqeEYLv6qsHF63vDoet9xdeMaxKREDGSINLj2o104audhsrsS5woIC6H3+FTNUf2rbikx8keNfv/pLyz/+EC10wAKuxLfoRDx1Lrh5TpGqmr0KFfghVvijA/dsfK/vR2iceOTF/pOe5JgDRoFvstzwvNDatjWWAa9O5tcl0TOzFtK06qPYiWUqBpT/Ofa0e2XGiWzzgx9tFZ7+dytjLOWcvhLfHBa0Nv6e/MDr4gkM3maqxQEzxTqNxAK/7chotKqJqg30dmVizTDlQ/zMUajGFcYkDWrZaEHC7zzMSlIv7sesfe0CIDTWTDHbcMKaZr9u6ok9HmlLa4rn2Ij9uBVGltxDJOWBeS55MaUv5UWCv+GGTpGHXsf6CA8cV0oh3wyXF3EdJ+y2A85S06Ek+9RPQroR7NHUdxJL6+3y3/ZD93vRIIrxLY05Zd7cX9fl128DMBHot+hcv9rocnqL48l9EahrDt+Tp5t3tzJs8vgFLzUzPjSES3uux3BgAFjueHMtBAX2gDm0oNmyDgYyVdCugZIaNERV0Od77mCivY+tarJveG0saZ3P6SHEwsqydWs6QyL5PbAnXoFDO/QYJ0d/L1wiDKdGRt2GscX3q4UT287ir3jZuqXQYwxI0KmOjlBixrzi3Mb8qOE+04h6lxg8bpfGycA+lNJZA6ECzA/kxmwdXEy0ZUd0ZkAxp614+MW5x7hW/eWA9kRmOPfqO0goKicXp/FWMWc+smx5LpEDqcOe9s3Hbxea2JzcQqrLd5+duAT2C8MVrkFSsYPXkQPhgdq/CKTwYJwldhxm4ovPhkRlOmupaErCsVmKPSRulvIklMwes1mSCrQ9Gles/BRWqWNFazaSxtiIue8sUVDR+n3SB3cHYhgzaq1AEANTNWQ2XpG8yZLcoviMw8i+NOzSF7B+5Wzn+5skW28qDY6lrd7sv8vg6TDzyopifAFcDPwBQzi6uLvEczfmBneSJcazUqPZfo6woQKcAOw1WC3MAAfN97O3n3Qkuk4lbYthGIsJ9uusO73jIomXJn2ae/ABBUJsr1p2/JtWLZgpI0zpZ9Q1JXWPwLvAw4Wu2mR7LXYbYxnHTHxuUBxcPIEi4DRT0SH/Ud//7hvxbcEo0xApi6Itt6nbu3R5FhsihBje7U7mc7deCpDNysvJqdpaTVYryRc1hreEhSkVNiHF8+8At8RrqcWWahHNzoj4h4BN5d73xf0t0vWrFGyq9JlwgsuuHXt9ig2o9xsWj+NlyJBucArm0rqREeSe19Obs21uSdmlBWn2bvY5nTmbjf4/Lf1GdFm9Chu09quv3PGxSNxF+s4eOx4yI7q2M8vyyNS/Rku4Td1/xIzsjpdKsY3cp/v/T+1bBw3pjQyJLuq3g+rw==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
@@ -249,10 +249,10 @@ function doDecrypt (pwd, onError) {
     
     </summary>
     
-      <category term="照片" scheme="http://yoursite.com/categories/%E7%85%A7%E7%89%87/"/>
+      <category term="自省" scheme="http://yoursite.com/categories/%E8%87%AA%E7%9C%81/"/>
     
     
-      <category term="白痴" scheme="http://yoursite.com/tags/%E7%99%BD%E7%97%B4/"/>
+      <category term="坚持" scheme="http://yoursite.com/tags/%E5%9D%9A%E6%8C%81/"/>
     
   </entry>
   
@@ -356,29 +356,6 @@ function doDecrypt (pwd, onError) {
     
     
       <category term="NoteBook" scheme="http://yoursite.com/tags/NoteBook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/05/25/hello-world/"/>
-    <id>http://yoursite.com/2018/05/25/hello-world/</id>
-    <published>2018-05-25T07:38:48.000Z</published>
-    <updated>2018-06-14T09:20:20.507Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
-    
     
   </entry>
   
