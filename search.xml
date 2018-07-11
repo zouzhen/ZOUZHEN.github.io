@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[人脸识别算法发展情况]]></title>
+    <url>%2F2018%2F07%2F10%2F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Nodejs与Django的跨域问题]]></title>
     <url>%2F2018%2F07%2F08%2FNodejs%E4%B8%8EDjango%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[Nodejs与Django的跨域问题由于采用前后端分离的编程方式，Django的csrf_token验证失效，出现跨域问题，在此记录一下解决方法。 1 安装django-cors-headers pip install django-cors-headers 2 配置settings.py文件 OK！问题解决！]]></content>
@@ -52,7 +57,7 @@
   <entry>
     <title><![CDATA[点滴积累]]></title>
     <url>%2F2018%2F06%2F11%2F%E7%82%B9%E6%BB%B4%E7%A7%AF%E7%B4%AF%2F</url>
-    <content type="text"><![CDATA[hexo生成博文插入图片 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true 在你的hexo目录下执行这样一句话npm install hexo-asset-image –save 等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片： ! [你想输入的替代文字](xxxx/图片名.jpg) 注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。 Error: That port is already in use.的错误。即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行) 那么找到该进程,kill掉即可. 或者最简单的解决方法就是： 在终端输入 sudo fuser -k 8000/tcp 这样和端口8000相关的进程就都关了。 Centos下实现word转pdflibreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath 爆破大数据平台Nodejs后端 1 创建数据库 1 使用redis、mongodb 2 使用Mysql 其中有DATATIME属性 2 使用Admzip以及正则表达式实现文档的替换 3 将生成的文档转换为PDF Django后端 1 设计Model 2 前后端分离传递数据 3 算法的嵌入 涉及算法 1 图像识别 2 自动布孔]]></content>
+    <content type="text"><![CDATA[hexo生成博文插入图片 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true 在你的hexo目录下执行这样一句话npm install hexo-asset-image –save 等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹 最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片： ! [你想输入的替代文字](xxxx/图片名.jpg) 注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。 Error: That port is already in use.的错误。即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行) 那么找到该进程,kill掉即可. 或者最简单的解决方法就是： 在终端输入 sudo fuser -k 8000/tcp 这样和端口8000相关的进程就都关了。 Centos下实现word转pdflibreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath 爆破大数据平台Nodejs后端 1 创建数据库 1 使用redis、mongodb 2 使用Mysql 其中有DATATIME属性 2 使用Admzip以及正则表达式实现文档的替换 3 将生成的文档转换为PDF Django后端 1 设计Model 2 前后端分离传递数据 3 算法的嵌入 涉及算法 1 图像识别 2 自动布孔 人脸识别算法仓库 ageitgey/face_recognition: https://github.com/ageitgey/face_recognition davidsandberg/facenet: https://github.com/davidsandberg/facenet cmusatyalab/openface: https://github.com/cmusatyalab/openface kpzhang93/MTCNN_face_detection_alignment(人脸检测): https://github.com/kpzhang93/MTCNN_face_detection_alignment deepinsight/insightface: https://github.com/deepinsight/insightface nyoki-mtl/keras-facenet: https://github.com/nyoki-mtl/keras-facenet 相关博客 https://blog.csdn.net/hongbin_xu/article/details/76284134]]></content>
       <categories>
         <category>笔记</category>
       </categories>
@@ -74,7 +79,7 @@
   <entry>
     <title><![CDATA[照片]]></title>
     <url>%2F2018%2F05%2F30%2F%E7%85%A7%E7%89%87%2F</url>
-    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX19NEreoKvZjDpfnkxv3+FHDEk9FZ8gpBULuT+SA/rNYDmEMzUSuwzVLA8joAqw1ISIXBF/Tkc2iB/iZLzaBz9lwJT+5ZbTI1QfWi9PfvXbN9EE/sDKQo1cw1Ew05S7Mb5Nk+RsW3duCJuuQsIBXPHkwKsOyHosaoFwVKHpwSqV59lWHeYT8N8ntZsG7YiSTAXS6GKfXhyVwleQIzXuR30V6mqE0tFgKqF2lE5x6z3GvUeZyEODiKh1n var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
+    <content type="text"><![CDATA[function doDecrypt (pwd, onError) { console.log('in doDecrypt'); const txt = document.getElementById('enc_content').innerHTML; let plantext; try { const bytes = CryptoJS.AES.decrypt(txt, pwd); var plaintext = bytes.toString(CryptoJS.enc.Utf8); } catch(err) { if(onError) { onError(err); } return; } document.getElementById('enc_content').innerHTML = plaintext; document.getElementById('enc_content').style.display = 'block'; document.getElementById('enc_passwd').style.display = 'none'; if(typeof MathJax !== 'undefined') { MathJax.Hub.Queue( ['resetEquationNumbers', MathJax.InputJax.TeX], ['PreProcess', MathJax.Hub], ['Reprocess', MathJax.Hub] ); } } U2FsdGVkX1+v+qN6Tc3v8iOVj2DqI/v279CXe8yN8Ho8hcB3gSf6UW1GIHkxWbkd48IFO5uWKEwtDCvYlbaIvYq38qWHqKandXirHydVpu+qcx502GeN8M7qa8Pj8yFWHqVHdoQX47VBk4vjj8SZ5yjK0nQGi8qb1GbjErROvgYmqtBt/l/I6BIDTLbi1nhmmwrXAm4hWqeNML1TGxtZ6QSuEWoDTc3swhf0hGV2WEvvKCcTnN6j6eGiqz7NK0d8V83bI7pZY4aX1O88eYfur7d4QmJj+Bo64/xhIaHqOuw= var onError = function(error) { document.getElementById("enc_error").innerHTML = "password error!" }; function decrypt() { var passwd = document.getElementById("enc_pwd_input").value; console.log(passwd); doDecrypt(passwd, onError); }]]></content>
       <categories>
         <category>照片</category>
       </categories>
