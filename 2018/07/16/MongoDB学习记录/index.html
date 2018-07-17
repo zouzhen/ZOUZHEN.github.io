@@ -152,13 +152,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZOUZHEN_BLOG">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
+<meta name="keywords" content="mongodb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB学习记录">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/MongoDB学习记录/index.html">
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
+<meta property="og:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-17T00:53:20.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZOUZHEN_BLOG">
+<meta name="twitter:title" content="MongoDB学习记录">
+<meta name="twitter:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
 
 
 
@@ -167,7 +172,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/07/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/16/MongoDB学习记录/"/>
 
 
 
@@ -177,7 +182,7 @@
   };
 </script>
 
-  <title>归档 | ZOUZHEN_BLOG</title>
+  <title>MongoDB学习记录 | ZOUZHEN_BLOG</title>
   
 
 
@@ -224,7 +229,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/zouzhen"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
@@ -294,7 +299,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -314,28 +319,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -384,376 +367,555 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/MongoDB学习记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZOUZHEN">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZOUZHEN_BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">MongoDB学习记录
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-16 11:51:17" itemprop="dateCreated datePublished" datetime="2018-07-16T11:51:17+08:00">2018-07-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-17 08:53:20" itemprop="dateModified" datetime="2018-07-17T08:53:20+08:00">2018-07-17</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 18 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/16/MongoDB学习记录/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/07/16/MongoDB学习记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2018/07/16/MongoDB学习记录/" class="leancloud_visitors" data-flag-title="MongoDB学习记录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/16/MongoDB学习记录/" itemprop="url">
-              
-                <span itemprop="name">MongoDB学习记录</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-16T11:51:17+08:00"
-              content="2018-07-16" >
-          07-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+          
 
 
-      
+          
 
-        
-        
-        
+          
 
-        
-        
+        </div>
+      </header>
+    
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/14/facenet详解/" itemprop="url">
-              
-                <span itemprop="name">facenet详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-14T16:35:26+08:00"
-              content="2018-07-14" >
-          07-14
-        </time>
-      </div>
-
-    </header>
-  </article>
+    
+    
+    
 
 
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/12/JavaScript使用记录/" itemprop="url">
-              
-                <span itemprop="name">JavaScript使用记录</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-12T14:20:08+08:00"
-              content="2018-07-12" >
-          07-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/12/Git使用/" itemprop="url">
-              
-                <span itemprop="name">Git使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-12T11:27:13+08:00"
-              content="2018-07-12" >
-          07-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/10/人脸识别算法发展情况/" itemprop="url">
-              
-                <span itemprop="name">人脸识别算法发展情况</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-10T17:09:03+08:00"
-              content="2018-07-10" >
-          07-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><p>文档<br>  是键值对的有序集合，这是MongDB的核心概念  </p>
+</li>
+<li><p>集合<br>  集合就是一组文档  </p>
+<ul>
+<li>动态模式<br>  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的</li>
+<li>命名<br>  集合使用名称进行命名  </li>
+</ul>
+</li>
+<li><p>数据库<br>  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合  </p>
+</li>
+<li><p>基本操作<br>  在终端运行mongod命令，启动时，shell将自动连接MongDB数据库，需确保数据库已启动，可充分利用Javascript的标准库，还可定义和调用Javascript函数。</p>
+<ul>
+<li><p>查看当前所处MongoDB  </p>
+<p>  <code>db</code>  </p>
+</li>
+<li><p>选择数据库  </p>
+<p>  <code>use databases</code>  </p>
+<p>  如果数据库存在，则进入指定数据库，否则，创建数据库 此时需要写入数据，数据库才能真正创建成功</p>
+</li>
+<li><p>查看所有数据库  </p>
+<p> <code>show databases | dbs</code></p>
+</li>
+<li><p>创建集合  </p>
+<p>  <code>db.createCollection(collection_name)</code>  </p>
+</li>
+<li><p>删除数据库 先进入要删除的数据库，然后执行命令  </p>
+<p>  <code>db.dropDatabase()</code></p>
+</li>
+<li><p>删除集合  </p>
+<p>  <code>db.collection_name.drop()</code>  </p>
+</li>
+<li><p>增  </p>
+<p>  <code>db.collection_name.insert(document)</code><br>  or:  </p>
+<pre><code>`db.students.insert({
+  name:&apos;James&apos;,  
+  age: 32,  
+  gender:&apos;man&apos;,  
+  career:&apos;player&apos;  
+  })`  
+</code></pre></li>
+<li><p>查  </p>
+<p>  <code>db.collection.find(&lt;query&gt;,&lt;projection&gt;)</code></p>
+<ul>
+<li>query: 查询条件</li>
+<li>projection: 投影操作  </li>
+</ul>
+</li>
+<li><p>改  </p>
+<p>  <code>db.collection.updateOne(&lt;query&gt;,&lt;update&gt;)</code> // 更新第一个符合条件的集合<br>  <code>db.collection.updateMany(&lt;query&gt;,&lt;update&gt;)</code>  // 更新所有符合条件的集合</p>
+<ul>
+<li>query: 查询条件</li>
+<li><p>update： 更新的内容  </p>
+<p>or:<br><code>db.students.update({name:&#39;James&#39;},{$set:{gender:&#39;woman&#39;}})</code></p>
+</li>
+</ul>
+</li>
+<li><p>删<br>  <code>db.collection_name.deleteOne(&lt;query&gt;)</code> // 删除第一个符合条件的集合<br>  <code>db.collection_name.deleteMany(&lt;query&gt;)</code> // 删除所有符合条件的集合<br>  or:<br>  <code>db.students.deleteOne({name:&#39;James&#39;})</code></p>
+</li>
+<li><h2 id="数据操作（重点）"><a href="#数据操作（重点）" class="headerlink" title="数据操作（重点）"></a>数据操作（重点）</h2></li>
+</ul>
+</li>
+</ul>
+<p>数据库的核心——CRUD，增加和删除较为简单，查询和修改较复杂</p>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><ul>
+<li><p><code>$gt 大于</code></p>
+</li>
+<li><p><code>$lt 小于</code></p>
+</li>
+<li><p><code>$gte  大于等于</code></p>
+</li>
+<li><p><code>$lte  小于等于</code></p>
+</li>
+<li><p><code>$eq | (key: value)  等于</code></p>
+</li>
+<li><p><code>$ne 不等于</code></p>
+</li>
+</ul>
+<p>先往数据库中添加一些数据</p>
+<pre><code>db.students.insert({&apos;name&apos;:&apos;张三&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:19,&apos;score&apos;: 89,&apos;address&apos;: &apos;海淀区&apos;})
+db.students.insert({&apos;name&apos;:&apos;李四&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:20,&apos;score&apos;: 100,&apos;address&apos;: &apos;朝阳区&apos;})
+db.students.insert({&apos;name&apos;:&apos;王五&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:22,&apos;score&apos;: 50,&apos;address&apos;: &apos;西城区&apos;})
+db.students.insert({&apos;name&apos;:&apos;赵六&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:21,&apos;score&apos;: 60,&apos;address&apos;: &apos;东城区&apos;})
+db.students.insert({&apos;name&apos;:&apos;孙七&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:19,&apos;score&apos;: 70,&apos;address&apos;: &apos;海淀区&apos;})
+db.students.insert({&apos;name&apos;:&apos;王八&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:23,&apos;score&apos;: 90,&apos;address&apos;: &apos;海淀区&apos;})
+db.students.insert({&apos;name&apos;:&apos;刘九&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:35,&apos;score&apos;: 56,&apos;address&apos;: &apos;朝阳区&apos;})
+db.students.insert({&apos;name&apos;:&apos;钱十&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:27,&apos;score&apos;: 89,&apos;address&apos;: &apos;海淀区&apos;})
+</code></pre><p>exp:</p>
+<ol>
+<li><p>查询姓名是张三的学生信息</p>
+<p> <code>db.students.find({name:’张三’}).pretty()</code></p>
+</li>
+<li><p>查询性别是男的学生信息</p>
+<p> <code>db.students.find({sex:’男’}).pretty()</code></p>
+</li>
+<li><p>查询年龄大于19岁的学生</p>
+<p> <code>db.students.find({age:{$gt:19}}).pretty()</code></p>
+</li>
+<li><p>查询成绩大于等于60分的学生</p>
+<p> <code>db.students.find({score:{$gte:60}}).pretty()</code> </p>
+</li>
+<li><p>查询姓名不是王五的信息</p>
+<p> <code>db.students.find({name:{$ne:’王五’}}).pretty()</code></p>
+</li>
+</ol>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><ul>
+<li><p><code>$and</code>   与</p>
+</li>
+<li><p><code>$or</code>   或</p>
+</li>
+<li><p><code>$not | $nor</code>  非</p>
+</li>
+</ul>
+<p>exp:</p>
+<ol>
+<li><p>查询年龄在19 ~ 22岁的学生信息</p>
+<p> <code>db.students.find({age:{$gte:19,$lte:22}}).pretty()</code></p>
+</li>
+</ol>
+<p>逻辑运算中与连接是最容易的，只需要利用<code>,</code>分割多个条件即可</p>
+<ol start="2">
+<li><p>查询年龄小于20岁，或者成绩大于90分的学生信息</p>
+<pre><code>db.students.find(
+{$or:
+    [ 
+    {age:{$lt:20}},
+    {score:{$gt:90}}
+    ]
+}).pretty()
+</code></pre></li>
+<li><p>查询年龄大于等于20岁，且成绩小于等于90分的学生信息</p>
+<pre><code>db.students.find(
+{$and:
+    [ 
+    {age:{$gte:20}},
+    {score:{$lte:90}}
+    ]
+}).pretty()
+</code></pre></li>
+<li><p>查询年龄小于20岁的学生信息</p>
+<p> <code>db.students.find({age:{$lt:20}}).pretty()</code><br> <code>db.students.find({age:{$not:{$gte:20}}}).pretty()</code></p>
+</li>
+</ol>
+<h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><p><code>$mod:[除数，余数]</code></p>
+<p>exp: 查询年龄除以20余1的学生信息  </p>
+<p><code>db.students.find({age:{$mod:[20,1]}}).pretty()</code></p>
+<h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><p><code>$in</code>: 在范围之中<br><code>$nin</code>: 不在范围之中</p>
+<p>exp:</p>
+<ol>
+<li><p>查询姓名是”张三“、”李四、”王五“的学生</p>
+<p> <code>db.students.find({name: {$in:[&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;]}}).pret ty()</code></p>
+</li>
+<li><p>查询姓名不是”张三“、”李四、”王五“的学生</p>
+<p> <code>db.students.find({name: {$nin:[&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;]}}).pretty()</code></p>
+</li>
+</ol>
+<h4 id="数组查询"><a href="#数组查询" class="headerlink" title="数组查询"></a>数组查询</h4><ul>
+<li><p><code>$all</code> </p>
+</li>
+<li><p><code>$size</code> </p>
+</li>
+<li><p><code>$slice</code> </p>
+</li>
+<li><p><code>$elemMatch</code></p>
+</li>
+</ul>
+<p>首先在数据库中新增一些数据</p>
+<pre><code>db.students.insert({name:&apos;a&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;]})
+db.students.insert({name:&apos;b&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;]})
+db.students.insert({name:&apos;c&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;]})
+db.students.insert({name:&apos;d&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;]})
+db.students.insert({name:&apos;e&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;政治&apos;]})
+</code></pre><p><code>$all</code>: 表示全都包括，用法：</p>
+<pre><code>{$all:[内容1,内容2]}
+</code></pre><p>exp:</p>
+<p>查询同时参加语文和数学的学生</p>
+<p><code>db.students.find({course:{$all:[&#39;语文&#39;,&#39;数学&#39;]}}).pretty()</code></p>
+<p>数组的操作，可以利用索引，使用<code>key.index</code>的方式来定义索引</p>
+<p>查询数组中第二个内容是数学的学生(sh)</p>
+<p><code>db.students.find({&#39;course.1&#39;:&#39;数学&#39;}).pretty()</code></p>
+<p><code>$size</code>: 控制数组元素数量</p>
+<p>exp:</p>
+<p>查询只有两门课程的学生</p>
+<pre><code>db.students.find({course:{$size: 2}}).pretty()
+</code></pre><p><code>$slice</code>: 控制查询结果的返回数量</p>
+<p>exp:</p>
+<p>查询年龄是19岁的学生，要求之显示两门参加的课程</p>
+<p><code>db.students.find({age:19},{course:{$slice:2}}).pretty()</code></p>
+<p>此时查询返回的是前两门课程，可以设置参数来取出想要的内容</p>
+<pre><code>$slice:-2   //后两门
+$slice: [1,2]   // 第一个参数表示跳过的数据量，第二个参数表示返回的数据量
+</code></pre><h4 id="嵌套集合运算"><a href="#嵌套集合运算" class="headerlink" title="嵌套集合运算"></a>嵌套集合运算</h4><p>对象里面套对象</p>
+<p>在数据库中新增数据</p>
+<pre><code>db.students.insert(
+{
+    name:&apos;A&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,
+    course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;],
+    parents:[
+        {name:&apos;A(father)&apos;,age:50,job:&apos;工人&apos;},
+        {name:&apos;A(mother)&apos;,age:50,job:&apos;职员&apos;}
+    ]
+})
+db.students.insert(
+{
+    name:&apos;B&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,
+    course:[&apos;语文&apos;,&apos;数学&apos;],
+    parents:[
+        {name:&apos;B(father)&apos;,age:50,job:&apos;处长&apos;},
+        {name:&apos;B(mother)&apos;,age:50,job:&apos;局长&apos;}
+    ]
+})
+db.students.insert(
+{
+    name:&apos;C&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,
+    course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;],
+    parents:[
+        {name:&apos;C(father)&apos;,age:50,job:&apos;工人&apos;},
+        {name:&apos;C(mother)&apos;,age:50,job:&apos;局长&apos;}
+        ]
+})
+</code></pre><p>对于嵌套的集合中数据的判断只能通过<code>$elemMatch</code>完成</p>
+<p>语法：<code>{ &lt;field&gt;: { $elemMatch: { &lt;query1&gt;, &lt;query2&gt;, ... } } }</code></p>
+<p>exp:</p>
+<p>查询父母中有人是局长的信息</p>
+<p><code>db.students.find({parents: {$elemMatch: {job: &#39;局长&#39;}}}).pretty()</code></p>
+<h4 id="判断某个字段是否存在"><a href="#判断某个字段是否存在" class="headerlink" title="判断某个字段是否存在"></a>判断某个字段是否存在</h4><p><code>{$exists:flag}</code>  flag为true表示存在，false表示不存在</p>
+<p>exp:</p>
+<ol>
+<li><p>查询具有parents成员的学生</p>
+<p> <code>db.students.find({parents:{$exists: true}}).pretty()</code></p>
+</li>
+<li><p>查询不具有course成员的学生</p>
+<p> <code>db.students.find({course: {$exists: false}}).pretty()</code></p>
+</li>
+</ol>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p><code>sort({ field: value })</code> value是1表示升序，-1表示降序</p>
+<p>exp:</p>
+<p>学生信息按照分数降序排列</p>
+<p><code>db.students.find().sort({score:-1}).pretty()</code></p>
+<h4 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h4><p><code>skip(n)</code>: 跳过n条数据</p>
+<p><code>limit(n)</code>: 返回n条数据</p>
+<p>exp:</p>
+<ol>
+<li><p>分页显示，第一页，每页显示5条数据</p>
+<p> <code>db.students.find({}).skip(0).limit(5).pretty()</code></p>
+</li>
+<li><p>分页显示，第二页，每页显示5条数据</p>
+<p> <code>db.students.find({}).skip(5).limit(5).pretty()</code></p>
+</li>
+</ol>
+<h3 id="数据修改-更新"><a href="#数据修改-更新" class="headerlink" title="数据修改 | 更新"></a>数据修改 | 更新</h3><p><code>updateOne()</code>     修改匹配的第一条数据</p>
+<p><code>updateMany()</code>    修改所有匹配的数据</p>
+<p>格式：<code>updateOne(&lt;filter&gt;,&lt;update&gt;)</code></p>
+<h4 id="修改器"><a href="#修改器" class="headerlink" title="修改器"></a>修改器</h4><p><code>$inc</code>: 操作数字字段的数据内容</p>
+<p>语法: <code>{&quot;$inc&quot; : {成员 : 内容}}</code></p>
+<p>exp: </p>
+<p>将所有年龄为19岁的学生成绩一律减少30分，年龄增加1</p>
+<pre><code>db.students.updateMany({age:19},{$inc:{score:-30,age:1}})
+</code></pre><p><code>$set</code>: 更新内容</p>
+<p>语法：<code>{$set: :{属性: 新内容}}</code></p>
+<p>exp: </p>
+<p>将20岁学生的成绩修改为89</p>
+<pre><code>db.students.updateMany({age: 20},{$set: {score: 89}})
+</code></pre><p><code>$unset</code>: 删除某个属性及其内容</p>
+<p>语法：<code>{$unset: {属性: 1}}</code></p>
+<p>exp:</p>
+<p>删除张三的年龄和成绩信息</p>
+<pre><code>db.students.updateOne({name:&apos;张三&apos;},{$unset: {age: 1,score: 1}})
+</code></pre><p><code>$push</code>: 向数组中添加数据</p>
+<p>语法：<code>{$push: {属性: value}}</code></p>
+<p>exp:</p>
+<p>在李四的课程中添加语文</p>
+<pre><code>db.students.updateOne({name: &apos;李四&apos;},{$push: {course: &apos;语文&apos;}})
+</code></pre><p>如果需要向数组中添加多个数据，则需要用到<code>$each</code></p>
+<p>exp: </p>
+<p>在李四的课程中添加数学、英语</p>
+<pre><code>db.students.updateOne(
+    {name:&apos;李四&apos;},
+    {$push:
+        {
+            course:{$each: [&apos;数学&apos;,&apos;英语&apos;]}
+        }
+    }
+)
+</code></pre><p><code>$addToSet</code>: 向数组里面添加一个新的数据</p>
+<p>与<code>$push</code>的区别，<code>$push</code>添加的数据可能是重复的，<code>$addToSet</code>只有这个数据不存在时才会添加（去重）</p>
+<p>语法：<code>{$addToSet: {属性：value}}</code></p>
+<p>exp:</p>
+<p>王五新增一门舞蹈课程</p>
+<pre><code>db.students.updateOne(
+    {name:&apos;王五&apos;},
+    {$addToSet: {course:&apos;舞蹈&apos;}}
+)
+</code></pre><p><code>$pop</code>: 删除数组内的数据</p>
+<p>语法：<code>{$pop: {field: value}}</code>,value为-1表示删除第一个，value为1表示删除最后一个</p>
+<p>exp:</p>
+<p>删除王五的第一个课程</p>
+<pre><code>db.students.updateOne({name:&apos;王五&apos;},{$pop:{course:-1}})
+</code></pre><p>只是删除属性的内容，属性还在</p>
+<p><code>$pull</code>: 从数组中删除一个指定内容的数据</p>
+<p>语法：<code>{$pull: {field：value}}</code> 进行数据比对，如果是该数据则删除</p>
+<p>exp:</p>
+<p>删除李四的语文课程</p>
+<pre><code>db.students.updateOne({name: &apos;李四&apos;},{$pull:{course:&apos;语文&apos;}})
+</code></pre><p><code>$pullAll</code>: 一次删除多个数据</p>
+<p>语法：<code>{$pullAll:{field:[value1,value2...]}}</code></p>
+<p>exp:</p>
+<p>删除a的语文数学英语课程</p>
+<pre><code>db.students.updateOne({name:&apos;a&apos;},{$pullAll:{course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;]}})
+</code></pre><p><code>$rename</code>: 属性重命名</p>
+<p>语法： <code>{$rename: {旧属性名：新属性名}}</code></p>
+<p>exp:</p>
+<p>把张三的name属性名改为姓名</p>
+<pre><code>db.students.updateOne({name:&apos;张三&apos;},{$rename:{name:&apos;姓名&apos;}})
+</code></pre>
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/08/Nodejs与Django的跨域问题/" itemprop="url">
-              
-                <span itemprop="name">Nodejs与Django的跨域问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-08T20:23:10+08:00"
-              content="2018-07-08" >
-          07-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/08/Django使用MongoDB数据库/" itemprop="url">
-              
-                <span itemprop="name">Django使用MongoDB数据库</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-08T20:22:47+08:00"
-              content="2018-07-08" >
-          07-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/05/CentOS7为firewalld添加开放端口及相关操作/" itemprop="url">
-              
-                <span itemprop="name">CentOS7为firewalld添加开放端口及相关操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-05T21:32:17+08:00"
-              content="2018-07-05" >
-          07-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/05/Nodejs与Django图片信息传输/" itemprop="url">
-              
-                <span itemprop="name">Nodejs与Django图片信息传输</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-05T21:11:22+08:00"
-              content="2018-07-05" >
-          07-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+      
+  <div>
+
+    <div style="text-align:center;color: #000;font-size:14px;">>>>----------本文结束^_^感谢您的阅读----------<<<</div>
+
+</div>
+  
+  </div>
+
+    
+      <div>
+
+
+    
+    
+    
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mongodb/" rel="tag"><i class="fa fa-tag"></i> mongodb</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/14/facenet详解/" rel="next" title="facenet详解">
+                <i class="fa fa-chevron-left"></i> facenet详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -774,8 +936,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -916,6 +1087,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MongoDB"><span class="nav-number">1.</span> <span class="nav-text">MongoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作（重点）"><span class="nav-number">1.1.</span> <span class="nav-text">数据操作（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查询"><span class="nav-number">1.1.1.</span> <span class="nav-text">查询</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关系运算符"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取模"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#范围查询"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">范围查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组查询"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">数组查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌套集合运算"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">嵌套集合运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断某个字段是否存在"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">判断某个字段是否存在</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页显示"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">分页显示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据修改-更新"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据修改 | 更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改器"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">修改器</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1049,6 +1236,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
