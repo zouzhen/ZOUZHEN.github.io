@@ -160,7 +160,7 @@
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
 <meta property="og:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-17T00:53:20.329Z">
+<meta property="og:updated_time" content="2018-07-17T01:03:15.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB学习记录">
 <meta name="twitter:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
@@ -442,7 +442,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-17 08:53:20" itemprop="dateModified" datetime="2018-07-17T08:53:20+08:00">2018-07-17</time>
+                <time title="修改时间：2018-07-17 09:03:15" itemprop="dateModified" datetime="2018-07-17T09:03:15+08:00">2018-07-17</time>
               
             
           </span>
@@ -530,69 +530,70 @@
 </li>
 <li><p>基本操作<br>  在终端运行mongod命令，启动时，shell将自动连接MongDB数据库，需确保数据库已启动，可充分利用Javascript的标准库，还可定义和调用Javascript函数。</p>
 <ul>
-<li><p>查看当前所处MongoDB  </p>
-<p>  <code>db</code>  </p>
+<li><p>创建数据库</p>
+<p>use database_name</p>
+<p>如果数据库存在，则进入指定数据库，否则，创建数据库<br>此时需要写入数据，数据库才能真正创建成功</p>
 </li>
-<li><p>选择数据库  </p>
-<p>  <code>use databases</code>  </p>
-<p>  如果数据库存在，则进入指定数据库，否则，创建数据库 此时需要写入数据，数据库才能真正创建成功</p>
-</li>
-<li><p>查看所有数据库  </p>
-<p> <code>show databases | dbs</code></p>
-</li>
-<li><p>创建集合  </p>
-<p>  <code>db.createCollection(collection_name)</code>  </p>
-</li>
-<li><p>删除数据库 先进入要删除的数据库，然后执行命令  </p>
-<p>  <code>db.dropDatabase()</code></p>
-</li>
-<li><p>删除集合  </p>
-<p>  <code>db.collection_name.drop()</code>  </p>
-</li>
-<li><p>增  </p>
-<p>  <code>db.collection_name.insert(document)</code><br>  or:  </p>
-<pre><code>`db.students.insert({
-  name:&apos;James&apos;,  
-  age: 32,  
-  gender:&apos;man&apos;,  
-  career:&apos;player&apos;  
-  })`  
+<li><p>查看所有数据库</p>
+<pre><code>show databases | dbs
 </code></pre></li>
-<li><p>查  </p>
-<p>  <code>db.collection.find(&lt;query&gt;,&lt;projection&gt;)</code></p>
+<li><p>创建集合</p>
+<pre><code>db.createCollection(collection_name)
+</code></pre></li>
+<li><p>删除数据库<br>先进入要删除的数据库，然后执行命令</p>
+<pre><code>db.dropDatabase()
+</code></pre></li>
+<li><p>删除集合</p>
+<p>  db.collection_name.drop()</p>
+</li>
+<li><p>增</p>
+<p>  db.collection_name.insert(document)</p>
+<p>  exp:</p>
+<pre><code>db.students.insert({
+name:&apos;James&apos;,
+age: 32,
+gender:&apos;man&apos;,
+career:&apos;player&apos;
+})
+</code></pre></li>
+<li><p>查</p>
+<pre><code>db.collection.find(&lt;query&gt;,&lt;projection&gt;)
+- query: 查询条件
+- projection: 投影操作
+</code></pre><p>  exp:</p>
+<pre><code>db.students.find()
+</code></pre></li>
+<li><p>改</p>
+<p>  db.collection.updateOne(<query>,<update>) // 更新第一个符合条件的集合<br>  db.collection.updateMany(<query>,<update>)  // 更新所有符合条件的集合</update></query></update></query></p>
 <ul>
 <li>query: 查询条件</li>
-<li>projection: 投影操作  </li>
-</ul>
-</li>
-<li><p>改  </p>
-<p>  <code>db.collection.updateOne(&lt;query&gt;,&lt;update&gt;)</code> // 更新第一个符合条件的集合<br>  <code>db.collection.updateMany(&lt;query&gt;,&lt;update&gt;)</code>  // 更新所有符合条件的集合</p>
-<ul>
-<li>query: 查询条件</li>
-<li><p>update： 更新的内容  </p>
-<p>or:<br><code>db.students.update({name:&#39;James&#39;},{$set:{gender:&#39;woman&#39;}})</code></p>
+<li><p>update： 更新的内容</p>
+<p>exp: </p>
+<p>  db.students.update({name:’James’},{$set:{gender:’woman’}})</p>
 </li>
 </ul>
 </li>
-<li><p>删<br>  <code>db.collection_name.deleteOne(&lt;query&gt;)</code> // 删除第一个符合条件的集合<br>  <code>db.collection_name.deleteMany(&lt;query&gt;)</code> // 删除所有符合条件的集合<br>  or:<br>  <code>db.students.deleteOne({name:&#39;James&#39;})</code></p>
-</li>
-<li><h2 id="数据操作（重点）"><a href="#数据操作（重点）" class="headerlink" title="数据操作（重点）"></a>数据操作（重点）</h2></li>
+<li><p>删</p>
+<p>  db.collection_name.deleteOne(<query>) // 删除第一个符合条件的集合<br>  db.collection_name.deleteMany(<query>) // 删除所有符合条件的集合</query></query></p>
+<p>  exp:</p>
+<pre><code>db.students.deleteOne({name:&apos;James&apos;})
+</code></pre></li>
 </ul>
 </li>
 </ul>
-<p>数据库的核心——CRUD，增加和删除较为简单，查询和修改较复杂</p>
+<h2 id="数据操作（重点）"><a href="#数据操作（重点）" class="headerlink" title="数据操作（重点）"></a>数据操作（重点）</h2><p>数据库的核心——CRUD，增加和删除较为简单，查询和修改较复杂</p>
 <h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><ul>
-<li><p><code>$gt 大于</code></p>
+<li><p>$gt 大于</p>
 </li>
-<li><p><code>$lt 小于</code></p>
+<li><p>$lt 小于</p>
 </li>
-<li><p><code>$gte  大于等于</code></p>
+<li><p>$gte  大于等于</p>
 </li>
-<li><p><code>$lte  小于等于</code></p>
+<li><p>$lte  小于等于</p>
 </li>
-<li><p><code>$eq | (key: value)  等于</code></p>
+<li><p>$eq | (key: value)  等于</p>
 </li>
-<li><p><code>$ne 不等于</code></p>
+<li><p>$ne 不等于</p>
 </li>
 </ul>
 <p>先往数据库中添加一些数据</p>
@@ -607,20 +608,20 @@ db.students.insert({&apos;name&apos;:&apos;钱十&apos;,&apos;sex&apos;:&apos;�
 </code></pre><p>exp:</p>
 <ol>
 <li><p>查询姓名是张三的学生信息</p>
-<p> <code>db.students.find({name:’张三’}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({name:’张三’}).pretty()
+</code></pre></li>
 <li><p>查询性别是男的学生信息</p>
-<p> <code>db.students.find({sex:’男’}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({sex:’男’}).pretty()
+</code></pre></li>
 <li><p>查询年龄大于19岁的学生</p>
-<p> <code>db.students.find({age:{$gt:19}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({age:{$gt:19}}).pretty()
+</code></pre></li>
 <li><p>查询成绩大于等于60分的学生</p>
-<p> <code>db.students.find({score:{$gte:60}}).pretty()</code> </p>
-</li>
+<pre><code>db.students.find({score:{$gte:60}}).pretty() 
+</code></pre></li>
 <li><p>查询姓名不是王五的信息</p>
-<p> <code>db.students.find({name:{$ne:’王五’}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({name:{$ne:’王五’}}).pretty()
+</code></pre></li>
 </ol>
 <h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><ul>
 <li><p><code>$and</code>   与</p>
@@ -633,8 +634,8 @@ db.students.insert({&apos;name&apos;:&apos;钱十&apos;,&apos;sex&apos;:&apos;�
 <p>exp:</p>
 <ol>
 <li><p>查询年龄在19 ~ 22岁的学生信息</p>
-<p> <code>db.students.find({age:{$gte:19,$lte:22}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({age:{$gte:19,$lte:22}}).pretty()
+</code></pre></li>
 </ol>
 <p>逻辑运算中与连接是最容易的，只需要利用<code>,</code>分割多个条件即可</p>
 <ol start="2">
@@ -657,30 +658,31 @@ db.students.insert({&apos;name&apos;:&apos;钱十&apos;,&apos;sex&apos;:&apos;�
 }).pretty()
 </code></pre></li>
 <li><p>查询年龄小于20岁的学生信息</p>
-<p> <code>db.students.find({age:{$lt:20}}).pretty()</code><br> <code>db.students.find({age:{$not:{$gte:20}}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({age:{$lt:20}}).pretty()
+db.students.find({age:{$not:{$gte:20}}}).pretty()
+</code></pre></li>
 </ol>
 <h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><p><code>$mod:[除数，余数]</code></p>
-<p>exp: 查询年龄除以20余1的学生信息  </p>
-<p><code>db.students.find({age:{$mod:[20,1]}}).pretty()</code></p>
-<h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><p><code>$in</code>: 在范围之中<br><code>$nin</code>: 不在范围之中</p>
+<p>exp: 查询年龄除以20余1的学生信息</p>
+<pre><code>db.students.find({age:{$mod:[20,1]}}).pretty()
+</code></pre><h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><p>$in: 在范围之中<br>$nin: 不在范围之中</p>
 <p>exp:</p>
 <ol>
 <li><p>查询姓名是”张三“、”李四、”王五“的学生</p>
-<p> <code>db.students.find({name: {$in:[&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;]}}).pret ty()</code></p>
-</li>
+<pre><code>db.students.find({name: {$in:[&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]}}).pret ty()
+</code></pre></li>
 <li><p>查询姓名不是”张三“、”李四、”王五“的学生</p>
-<p> <code>db.students.find({name: {$nin:[&#39;张三&#39;,&#39;李四&#39;,&#39;王五&#39;]}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({name: {$nin:[&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]}}).pretty()
+</code></pre></li>
 </ol>
 <h4 id="数组查询"><a href="#数组查询" class="headerlink" title="数组查询"></a>数组查询</h4><ul>
-<li><p><code>$all</code> </p>
+<li><p>$all </p>
 </li>
-<li><p><code>$size</code> </p>
+<li><p>$size </p>
 </li>
-<li><p><code>$slice</code> </p>
+<li><p>$slice </p>
 </li>
-<li><p><code>$elemMatch</code></p>
+<li><p>$elemMatch</p>
 </li>
 </ul>
 <p>首先在数据库中新增一些数据</p>
@@ -693,19 +695,19 @@ db.students.insert({name:&apos;e&apos;,sex:&apos;男&apos;,age:19,score:89,addre
 <pre><code>{$all:[内容1,内容2]}
 </code></pre><p>exp:</p>
 <p>查询同时参加语文和数学的学生</p>
-<p><code>db.students.find({course:{$all:[&#39;语文&#39;,&#39;数学&#39;]}}).pretty()</code></p>
-<p>数组的操作，可以利用索引，使用<code>key.index</code>的方式来定义索引</p>
+<pre><code>db.students.find({course:{$all:[&apos;语文&apos;,&apos;数学&apos;]}}).pretty()
+</code></pre><p>数组的操作，可以利用索引，使用<code>key.index</code>的方式来定义索引</p>
 <p>查询数组中第二个内容是数学的学生(sh)</p>
-<p><code>db.students.find({&#39;course.1&#39;:&#39;数学&#39;}).pretty()</code></p>
-<p><code>$size</code>: 控制数组元素数量</p>
+<pre><code>db.students.find({&apos;course.1&apos;:&apos;数学&apos;}).pretty()
+</code></pre><p><code>$size</code>: 控制数组元素数量</p>
 <p>exp:</p>
 <p>查询只有两门课程的学生</p>
 <pre><code>db.students.find({course:{$size: 2}}).pretty()
 </code></pre><p><code>$slice</code>: 控制查询结果的返回数量</p>
 <p>exp:</p>
 <p>查询年龄是19岁的学生，要求之显示两门参加的课程</p>
-<p><code>db.students.find({age:19},{course:{$slice:2}}).pretty()</code></p>
-<p>此时查询返回的是前两门课程，可以设置参数来取出想要的内容</p>
+<pre><code>db.students.find({age:19},{course:{$slice:2}}).pretty()
+</code></pre><p>此时查询返回的是前两门课程，可以设置参数来取出想要的内容</p>
 <pre><code>$slice:-2   //后两门
 $slice: [1,2]   // 第一个参数表示跳过的数据量，第二个参数表示返回的数据量
 </code></pre><h4 id="嵌套集合运算"><a href="#嵌套集合运算" class="headerlink" title="嵌套集合运算"></a>嵌套集合运算</h4><p>对象里面套对象</p>
@@ -741,31 +743,31 @@ db.students.insert(
 <p>语法：<code>{ &lt;field&gt;: { $elemMatch: { &lt;query1&gt;, &lt;query2&gt;, ... } } }</code></p>
 <p>exp:</p>
 <p>查询父母中有人是局长的信息</p>
-<p><code>db.students.find({parents: {$elemMatch: {job: &#39;局长&#39;}}}).pretty()</code></p>
-<h4 id="判断某个字段是否存在"><a href="#判断某个字段是否存在" class="headerlink" title="判断某个字段是否存在"></a>判断某个字段是否存在</h4><p><code>{$exists:flag}</code>  flag为true表示存在，false表示不存在</p>
+<pre><code>db.students.find({parents: {$elemMatch: {job: &apos;局长&apos;}}}).pretty()
+</code></pre><h4 id="判断某个字段是否存在"><a href="#判断某个字段是否存在" class="headerlink" title="判断某个字段是否存在"></a>判断某个字段是否存在</h4><p><code>{$exists:flag}</code>  flag为true表示存在，false表示不存在</p>
 <p>exp:</p>
 <ol>
 <li><p>查询具有parents成员的学生</p>
-<p> <code>db.students.find({parents:{$exists: true}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({parents:{$exists: true}}).pretty()
+</code></pre></li>
 <li><p>查询不具有course成员的学生</p>
-<p> <code>db.students.find({course: {$exists: false}}).pretty()</code></p>
-</li>
+<pre><code>db.students.find({course: {$exists: false}}).pretty()
+</code></pre></li>
 </ol>
 <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p><code>sort({ field: value })</code> value是1表示升序，-1表示降序</p>
 <p>exp:</p>
 <p>学生信息按照分数降序排列</p>
-<p><code>db.students.find().sort({score:-1}).pretty()</code></p>
-<h4 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h4><p><code>skip(n)</code>: 跳过n条数据</p>
+<pre><code>db.students.find().sort({score:-1}).pretty()
+</code></pre><h4 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h4><p><code>skip(n)</code>: 跳过n条数据</p>
 <p><code>limit(n)</code>: 返回n条数据</p>
 <p>exp:</p>
 <ol>
 <li><p>分页显示，第一页，每页显示5条数据</p>
-<p> <code>db.students.find({}).skip(0).limit(5).pretty()</code></p>
-</li>
+<pre><code>db.students.find({}).skip(0).limit(5).pretty()
+</code></pre></li>
 <li><p>分页显示，第二页，每页显示5条数据</p>
-<p> <code>db.students.find({}).skip(5).limit(5).pretty()</code></p>
-</li>
+<pre><code>db.students.find({}).skip(5).limit(5).pretty()
+</code></pre></li>
 </ol>
 <h3 id="数据修改-更新"><a href="#数据修改-更新" class="headerlink" title="数据修改 | 更新"></a>数据修改 | 更新</h3><p><code>updateOne()</code>     修改匹配的第一条数据</p>
 <p><code>updateMany()</code>    修改所有匹配的数据</p>
