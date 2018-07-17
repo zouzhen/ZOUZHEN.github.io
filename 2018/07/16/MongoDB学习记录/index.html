@@ -100,7 +100,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
@@ -152,18 +154,18 @@
 
 
 
-  <meta name="description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
+  <meta name="description" content="MongoDB转载自https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md 基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一">
 <meta name="keywords" content="mongodb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB学习记录">
 <meta property="og:url" content="http://yoursite.com/2018/07/16/MongoDB学习记录/index.html">
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
-<meta property="og:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
+<meta property="og:description" content="MongoDB转载自https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md 基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-17T01:03:15.025Z">
+<meta property="og:updated_time" content="2018-07-17T01:25:30.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB学习记录">
-<meta name="twitter:description" content="MongoDB基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合    基本操作  在终端运行mongod命令，启动时，shell将自动">
+<meta name="twitter:description" content="MongoDB转载自https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md 基本概念 文档  是键值对的有序集合，这是MongDB的核心概念    集合  集合就是一组文档    动态模式  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的 命名  集合使用名称进行命名     数据库  由多个集合构成数据库，一">
 
 
 
@@ -442,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-17 09:03:15" itemprop="dateModified" datetime="2018-07-17T09:03:15+08:00">2018-07-17</time>
+                <time title="修改时间：2018-07-17 09:25:30" itemprop="dateModified" datetime="2018-07-17T09:25:30+08:00">2018-07-17</time>
               
             
           </span>
@@ -517,7 +519,8 @@
       
 
       
-        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><p>转载自<a href="https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md" target="_blank" rel="noopener">https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md</a></p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
 <li><p>文档<br>  是键值对的有序集合，这是MongDB的核心概念  </p>
 </li>
 <li><p>集合<br>  集合就是一组文档  </p>
@@ -531,8 +534,8 @@
 <li><p>基本操作<br>  在终端运行mongod命令，启动时，shell将自动连接MongDB数据库，需确保数据库已启动，可充分利用Javascript的标准库，还可定义和调用Javascript函数。</p>
 <ul>
 <li><p>创建数据库</p>
-<p>use database_name</p>
-<p>如果数据库存在，则进入指定数据库，否则，创建数据库<br>此时需要写入数据，数据库才能真正创建成功</p>
+<pre><code>use database_name
+</code></pre><p>如果数据库存在，则进入指定数据库，否则，创建数据库<br>此时需要写入数据，数据库才能真正创建成功</p>
 </li>
 <li><p>查看所有数据库</p>
 <pre><code>show databases | dbs
@@ -544,11 +547,11 @@
 <pre><code>db.dropDatabase()
 </code></pre></li>
 <li><p>删除集合</p>
-<p>  db.collection_name.drop()</p>
-</li>
+<pre><code>db.collection_name.drop()
+</code></pre></li>
 <li><p>增</p>
-<p>  db.collection_name.insert(document)</p>
-<p>  exp:</p>
+<pre><code>db.collection_name.insert(document)
+</code></pre><p>  exp:</p>
 <pre><code>db.students.insert({
 name:&apos;James&apos;,
 age: 32,
@@ -564,8 +567,9 @@ career:&apos;player&apos;
 <pre><code>db.students.find()
 </code></pre></li>
 <li><p>改</p>
-<p>  db.collection.updateOne(<query>,<update>) // 更新第一个符合条件的集合<br>  db.collection.updateMany(<query>,<update>)  // 更新所有符合条件的集合</update></query></update></query></p>
-<ul>
+<pre><code>db.collection.updateOne(&lt;query&gt;,&lt;update&gt;) // 更新第一个符合条件的集合
+db.collection.updateMany(&lt;query&gt;,&lt;update&gt;)  // 更新所有符合条件的集合
+</code></pre><ul>
 <li>query: 查询条件</li>
 <li><p>update： 更新的内容</p>
 <p>exp: </p>
@@ -574,8 +578,9 @@ career:&apos;player&apos;
 </ul>
 </li>
 <li><p>删</p>
-<p>  db.collection_name.deleteOne(<query>) // 删除第一个符合条件的集合<br>  db.collection_name.deleteMany(<query>) // 删除所有符合条件的集合</query></query></p>
-<p>  exp:</p>
+<pre><code>db.collection_name.deleteOne(&lt;query&gt;) // 删除第一个符合条件的集合
+db.collection_name.deleteMany(&lt;query&gt;) // 删除所有符合条件的集合
+</code></pre><p>  exp:</p>
 <pre><code>db.students.deleteOne({name:&apos;James&apos;})
 </code></pre></li>
 </ul>
@@ -1206,22 +1211,22 @@ db.students.insert(
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="/vendors/canvas-nest/canvas-nest.min.js"></script>
   
 
 
