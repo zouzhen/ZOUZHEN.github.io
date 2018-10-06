@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-30T07:21:18.750Z</updated>
+  <updated>2018-10-06T03:12:28.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自省</title>
+    <link href="http://yoursite.com/2018/10/06/%E8%87%AA%E7%9C%81/"/>
+    <id>http://yoursite.com/2018/10/06/自省/</id>
+    <published>2018-10-06T03:06:43.000Z</published>
+    <updated>2018-10-06T03:12:28.241Z</updated>
+    
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+PsgauMqI7UVjd9WBa1w99VAmbvW2w8SFCz/87LtfQqyAVPHN1XCRuA6DnmaiYyOjE5V5Wr/SSHlIL+6jA2n3hSTF6b6hdoAgzA9Z3rDN1rbEZ3EYbZqWNs9Z77HTaphbbqWZLo4y+e3nzOwpMkMUz5KSYdXTcMDSCPE7KSU9QdeZF+ZOGjWvQdXpvsFYxPeKKKM4Ujrhl8bM3MO2/VVxF0kkz75QwKfmqWH1L8Zvf064YJTl7JBTIEQBt2NTfIyYFBpYuFjklQnHKmtK/ofxSA9+Aa+XbOSTnGWP/A6d6rWGkUYxsghUAVCqJT++gvYO7xumu/Fg4iFc4CgEdwto3Zi+3CGaKq1Q=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;
+&lt;script&gt;
+function doDecrypt (pwd, onError) {
+	console.log(&#39;in doDecrypt&#39;);
+	const txt = document.getE
+      
+    
+    </summary>
+    
+      <category term="感悟" scheme="http://yoursite.com/categories/%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="自我反省" scheme="http://yoursite.com/tags/%E8%87%AA%E6%88%91%E5%8F%8D%E7%9C%81/"/>
+    
+  </entry>
   
   <entry>
     <title>Python入门整理</title>
@@ -479,9 +508,9 @@
     <link href="http://yoursite.com/2018/05/30/%E8%AE%A1%E5%88%92/"/>
     <id>http://yoursite.com/2018/05/30/计划/</id>
     <published>2018-05-30T07:38:48.000Z</published>
-    <updated>2018-09-08T09:33:16.010Z</updated>
+    <updated>2018-10-06T03:12:16.484Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
@@ -496,35 +525,10 @@ function doDecrypt (pwd, onError) {
     
     </summary>
     
-      <category term="自省" scheme="http://yoursite.com/categories/%E8%87%AA%E7%9C%81/"/>
+      <category term="感悟" scheme="http://yoursite.com/categories/%E6%84%9F%E6%82%9F/"/>
     
     
       <category term="坚持" scheme="http://yoursite.com/tags/%E5%9D%9A%E6%8C%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django的网站逻辑</title>
-    <link href="http://yoursite.com/2018/05/29/Django%E5%AE%9E%E6%88%98/"/>
-    <id>http://yoursite.com/2018/05/29/Django实战/</id>
-    <published>2018-05-29T07:38:48.000Z</published>
-    <updated>2018-06-04T03:59:00.810Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Django实战——后台逻辑"><a href="#Django实战——后台逻辑" class="headerlink" title="Django实战——后台逻辑"></a>Django实战——后台逻辑</h1><h2 id="Django用户-（登录-注册-找回密码）"><a href="#Django用户-（登录-注册-找回密码）" class="headerlink" title="Django用户 （登录 注册 找回密码）"></a>Django用户 （登录 注册 找回密码）</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><hr><p>后台的操作放在对应app的views文件下，当我们在路由中添加一个url，django会自动为我们生成一个request，<br>并添加到<br>函数里面。首先判断请求方法，是POST还是GET。然后跳转到对应的页面进行操作。  </p><h4 id="对登录账户进行验证（采用类来做）"><a href="#对登录账户进行验证（采用类来做）" class="headerlink" title="对登录账户进行验证（采用类来做）"></a>对登录账户进行验证（采用类来做）</h4><ol><li>得到用户名和密码后，使用django.contrib.auth.authenticate进行验证，验证成功的话得到一个对象，<br>然后进行对应后台逻辑的编写，即调用django.contrib.auth.login进行验证。  </li><li>对登录成功后返回index.html文件的状态处理，需要在html文件中进行判断，用户是否登录，调用<br>request.user.user.is_authenticated来进行判断。决定显示哪一行代码。</li><li>自定义认证方法，实现邮箱的登录方式（重定义方式）</li></ol><h4 id="Seesion和Cookie机制"><a href="#Seesion和Cookie机制" class="headerlink" title="Seesion和Cookie机制"></a>Seesion和Cookie机制</h4><ol><li>无状态请求</li><li>有状态请求 </li></ol><hr><h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><hr><h4 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h4><ol><li>添加插件（captcha）</li></ol><h4 id="提交注册信息（包括注册码）"><a href="#提交注册信息（包括注册码）" class="headerlink" title="提交注册信息（包括注册码）"></a>提交注册信息（包括注册码）</h4><h4 id="发送邮件验证注册信息"><a href="#发送邮件验证注册信息" class="headerlink" title="发送邮件验证注册信息"></a>发送邮件验证注册信息</h4><h4 id="激活账户"><a href="#激活账户" class="headerlink" title="激活账户"></a>激活账户</h4><hr><h3 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h3><hr><p>采用类似于激活账户的方式来实现</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Django实战——后台逻辑&quot;&gt;&lt;a href=&quot;#Django实战——后台逻辑&quot; class=&quot;headerlink&quot; title=&quot;Django实战——后台逻辑&quot;&gt;&lt;/a&gt;Django实战——后台逻辑&lt;/h1&gt;&lt;h2 id=&quot;Django用户-（登录-注册-找
-      
-    
-    </summary>
-    
-      <category term="Web开发" scheme="http://yoursite.com/categories/Web%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
     
   </entry>
   
