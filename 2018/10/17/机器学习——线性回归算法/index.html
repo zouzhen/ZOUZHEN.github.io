@@ -162,7 +162,7 @@
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
 <meta property="og:description" content="线性回归简述在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。 优点：结果易于理解，计算上不复杂。缺点：对非线性数据拟合不好。适用数据类型：数值型和标称型数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-17T12:43:17.819Z">
+<meta property="og:updated_time" content="2018-10-17T12:49:51.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习——线性回归算法">
 <meta name="twitter:description" content="线性回归简述在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。 优点：结果易于理解，计算上不复杂。缺点：对非线性数据拟合不好。适用数据类型：数值型和标称型数">
@@ -427,7 +427,7 @@
                 
               
 
-              <time title="创建时间：2018-10-17 18:01:24 / 修改时间：20:43:17" itemprop="dateCreated datePublished" datetime="2018-10-17T18:01:24+08:00">2018-10-17</time>
+              <time title="创建时间：2018-10-17 18:01:24 / 修改时间：20:49:51" itemprop="dateCreated datePublished" datetime="2018-10-17T18:01:24+08:00">2018-10-17</time>
             
 
             
@@ -524,7 +524,7 @@
 </li>
 <li><p>而应用梯度下降法到线性回归，则公式如下：  </p>
 <p>$$\theta_0 := \theta_0 - \alpha\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2$$<br>$$\theta_1 := \theta_1 - \alpha\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i.x^i)^2$$  </p>
-<p>公式中的$\alpha$称为学习率(learning rate)，它决定了我们沿着能让代价函数下降程度最大的方向向下迈进的步子有多大。<br>在梯度下降中，还涉及都一个参数更新的问题，即更新$(θ_0,θ<em>1)$，一般我们的做法是同步更新。<br>最后，上述梯度下降算法公式实际上是一个叫批量梯度下降(batch gradient descent)，即它在每次梯度下降中都是使用整个训练集的数据，所以公式中是带有$\sum</em>{i=1}^m$。</p>
+<p>公式中的$\alpha$称为学习率(learning rate)，它决定了我们沿着能让代价函数下降程度最大的<br>方向向下迈进的步子有多大。<br>在梯度下降中，还涉及都一个参数更新的问题，即更新$(\theta_0,\theta_1)$,一般我们的做法是同步更新.<br>最后，上述梯度下降算法公式实际上是一个叫批量梯度下降(batch gradient descent)，即它在<br>每次梯度下降中都是使用整个训练集的数据，所以公式中是带有$ \sum_{i=1}^m $.</p>
 </li>
 </ul>
 </li>
