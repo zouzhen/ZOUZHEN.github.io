@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-06T03:12:28.241Z</updated>
+  <updated>2018-10-17T10:02:59.306Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,70 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习——线性回归算法</title>
+    <link href="http://yoursite.com/2018/10/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/10/17/机器学习——线性回归算法/</id>
+    <published>2018-10-17T10:01:24.000Z</published>
+    <updated>2018-10-17T10:02:59.306Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="机器学习算法" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="线性回归算法" scheme="http://yoursite.com/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-learn整理</title>
+    <link href="http://yoursite.com/2018/10/17/scikit-learn%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/10/17/scikit-learn整理/</id>
+    <published>2018-10-17T07:54:09.000Z</published>
+    <updated>2018-10-17T09:51:48.931Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flask整理</title>
+    <link href="http://yoursite.com/2018/10/17/Flask%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/10/17/Flask整理/</id>
+    <published>2018-10-17T07:50:11.000Z</published>
+    <updated>2018-10-17T09:51:48.921Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a><strong>使用工具</strong></h2><h4 id="Flask后端-Postgresql数据库-JS前端（我未使用）"><a href="#Flask后端-Postgresql数据库-JS前端（我未使用）" class="headerlink" title="Flask后端 + Postgresql数据库 + JS前端（我未使用）"></a>Flask后端 + Postgresql数据库 + JS前端（我未使用）</h4><h2 id="Flask搭建"><a href="#Flask搭建" class="headerlink" title="Flask搭建"></a>Flask搭建</h2><ul><li><p><strong>确定确定目录结构</strong></p><ol><li>app/algorithms: 用来存放相关的算法文件</li><li>app/models: 用来存放数据库的操作</li><li>app/web: 用来存放路由和视图函数</li><li>manage: flask的启动文件</li></ol></li><li><p><strong>确定路由注册方式</strong></p><ol><li>使用蓝图形式来注册路由</li></ol></li><li><p><strong>确定数据库操作方式</strong></p><ol><li>使用sqlalchemy及psycopg2来控制Postgresql数据库</li><li>由于主要是用来进行数据读取的，所以采用非ORM方式构建的表结构，这种方式方便进行查询过滤操作</li></ol></li></ul><h2 id="基于sqlalchemy的Postgresql数据库访问操作"><a href="#基于sqlalchemy的Postgresql数据库访问操作" class="headerlink" title="基于sqlalchemy的Postgresql数据库访问操作"></a>基于sqlalchemy的Postgresql数据库访问操作</h2><ul><li><strong>创建表结构</strong></li></ul><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy.engine <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.schema <span class="keyword">import</span> MetaData, Table, Column, ForeignKey, Sequence</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.types <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.sql.expression <span class="keyword">import</span> select,and_</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">engine = create_engine(<span class="string">'postgres://user:password@hosts/builder'</span>, echo=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">metadata = MetaData()</span><br><span class="line">metadata.bind = engine</span><br><span class="line">    <span class="comment"># 创建桥梁索引表</span></span><br><span class="line">bridges_table = Table(<span class="string">'bridges'</span>, metadata,</span><br><span class="line">                      Column(<span class="string">'id'</span>, Integer, primary_key=<span class="keyword">True</span>),</span><br><span class="line">                      Column(<span class="string">'org_id'</span>, Integer, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'user_id'</span>, Integer, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'name'</span>, VARCHAR(length=<span class="number">255</span>), nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'created_date'</span>, TIMESTAMP, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'finished_date'</span>, TIMESTAMP, nullable=<span class="keyword">True</span>),</span><br><span class="line">                    <span class="comment">#   autoload=True,</span></span><br><span class="line">                      )</span><br></pre></td></tr></table></figure><p>这种方式，有助于进行表查询，具体的相关API介绍及使用放那格式可<a href="https://docs.sqlalchemy.org/en/latest/genindex.html" target="_blank" rel="noopener">点此</a>查看。</p><ul><li><strong>相关操作</strong></li></ul><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">()</span>:</span></span><br><span class="line">    s = book_table.insert().values(title=<span class="string">'测试写入2'</span>,time=datetime.now())</span><br><span class="line">    c = engine.execute(s)</span><br><span class="line">    c.close()</span><br><span class="line">    <span class="keyword">return</span> c.inserted_primary_key</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">query_code</span><span class="params">(id)</span>:</span></span><br><span class="line">    info = &#123;<span class="string">'id'</span>: <span class="string">''</span>, <span class="string">'title'</span>: <span class="string">''</span>&#125;</span><br><span class="line">    s = select([bridge_jobs_table.c.id.label(<span class="string">'name'</span>)]).where(and_(bridge_jobs_table.c.kind==<span class="string">'桩基'</span>,bridge_jobs_table.c.name==<span class="string">'起钻'</span>))</span><br><span class="line">    codename_query = engine.execute(s)</span><br><span class="line">    print(codename_query.keys())</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> codename_query:</span><br><span class="line">        print(row[<span class="number">0</span>])</span><br><span class="line">    codename_query.close()</span><br><span class="line">    <span class="keyword">return</span> info</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">updata</span><span class="params">(id, title)</span>:</span></span><br><span class="line">    s = book_table.update().where(book_table.c.id == id).values(title=title, id=id)</span><br><span class="line">    c = engine.execute(s)</span><br><span class="line">    c.close()</span><br></pre></td></tr></table></figure><h2 id="Flask相关知识"><a href="#Flask相关知识" class="headerlink" title="Flask相关知识"></a>Flask相关知识</h2><ul><li><p><strong>路由操作</strong></p><ol><li><p>静态路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello world!'</span></span><br></pre></td></tr></table></figure></li><li><p>参数路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello/&lt;string:name&gt;', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello %d '</span>% name</span><br></pre></td></tr></table></figure></li><li><p>JSON返回</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello/&lt;string:name&gt;', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> jsonify(<span class="string">'hello %d '</span>% name)</span><br></pre></td></tr></table></figure></li><li><p>使用蓝图方式注册路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_app</span><span class="params">()</span>:</span></span><br><span class="line">    app = Flask(__name__)</span><br><span class="line">    app.config.from_object(<span class="string">'app.setting'</span>)</span><br><span class="line"></span><br><span class="line">    register_blueprint(app)</span><br><span class="line">    <span class="comment"># db.init_app(app)</span></span><br><span class="line">    <span class="comment"># db.create_app(app=app)</span></span><br><span class="line">    <span class="keyword">return</span> app</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">register_blueprint</span><span class="params">(app)</span>:</span></span><br><span class="line">    <span class="keyword">from</span> app.web.view <span class="keyword">import</span> web</span><br><span class="line">    app.register_blueprint(web)</span><br></pre></td></tr></table></figure></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;使用工具&quot;&gt;&lt;a href=&quot;#使用工具&quot; class=&quot;headerlink&quot; title=&quot;使用工具&quot;&gt;&lt;/a&gt;&lt;strong&gt;使用工具&lt;/strong&gt;&lt;/h2&gt;&lt;h4 id=&quot;Flask后端-Postgresql数据库-JS前端（我未使用）&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+      <category term="Python后端" scheme="http://yoursite.com/categories/Python%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="flask框架" scheme="http://yoursite.com/tags/flask%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自省</title>
     <link href="http://yoursite.com/2018/10/06/%E8%87%AA%E7%9C%81/"/>
     <id>http://yoursite.com/2018/10/06/自省/</id>
     <published>2018-10-06T03:06:43.000Z</published>
     <updated>2018-10-06T03:12:28.241Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+PsgauMqI7UVjd9WBa1w99VAmbvW2w8SFCz/87LtfQqyAVPHN1XCRuA6DnmaiYyOjE5V5Wr/SSHlIL+6jA2n3hSTF6b6hdoAgzA9Z3rDN1rbEZ3EYbZqWNs9Z77HTaphbbqWZLo4y+e3nzOwpMkMUz5KSYdXTcMDSCPE7KSU9QdeZF+ZOGjWvQdXpvsFYxPeKKKM4Ujrhl8bM3MO2/VVxF0kkz75QwKfmqWH1L8Zvf064YJTl7JBTIEQBt2NTfIyYFBpYuFjklQnHKmtK/ofxSA9+Aa+XbOSTnGWP/A6d6rWGkUYxsghUAVCqJT++gvYO7xumu/Fg4iFc4CgEdwto3Zi+3CGaKq1Q=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1/EPcKDYQw++DnmL629fh8LVk33T1e6Wogvwp29RxTcOLXZQREq8eOJTYG+h6DZrgsoDq1YJAv1kK/rIJwq3+yYxmG/ECDx0Wv8xEW1DTIdoEVaSW3jt6vwsovpw06FNzB+DEJWO8pGmiGbUD8lzc8Zk8Vq6P0yp1gTRKsg9PcrmcFhYfyt5vdFL2bBiZZFz//hyGfRt31X4H5McaFaPlQadVf5GjO5f0k72Kcvd1lOr8K/ssgQXAOGxG3eQ4OcEZk9LPYGbPG56aL8kbHcC5nvsIRGwhiLxl0Lr04paPILqtEidqCPR3CXiCrQpvFnLI+8qp9Se+N0GPHHxUW2uqp1pnCXqPrivws=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
@@ -42,6 +99,42 @@ function doDecrypt (pwd, onError) {
     
     
       <category term="自我反省" scheme="http://yoursite.com/tags/%E8%87%AA%E6%88%91%E5%8F%8D%E7%9C%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PostgreSQL学习记录</title>
+    <link href="http://yoursite.com/2018/09/26/PostgreSQL%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2018/09/26/PostgreSQL学习记录/</id>
+    <published>2018-09-26T06:26:56.000Z</published>
+    <updated>2018-10-17T09:54:05.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>select<br>fetchall()<br>fetchmany()<br>fetchone()</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;select&lt;br&gt;fetchall()&lt;br&gt;fetchmany()&lt;br&gt;fetchone()&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker基础</title>
+    <link href="http://yoursite.com/2018/09/03/docker%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/09/03/docker基础/</id>
+    <published>2018-09-03T02:44:54.000Z</published>
+    <updated>2018-10-17T09:51:48.925Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
     
   </entry>
   
@@ -409,126 +502,6 @@ function doDecrypt (pwd, onError) {
       <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
     
       <category term="Nodejs" scheme="http://yoursite.com/tags/Nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django文档——Model字段类型</title>
-    <link href="http://yoursite.com/2018/06/14/Django%E6%96%87%E6%A1%A3%E2%80%94%E2%80%94Model%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://yoursite.com/2018/06/14/Django文档——Model字段类型/</id>
-    <published>2018-06-14T09:13:15.000Z</published>
-    <updated>2018-06-14T09:27:24.049Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="字段类型-Field-types"><a href="#字段类型-Field-types" class="headerlink" title="字段类型(Field types)"></a>字段类型(Field types)</h1><h3 id="AutoField"><a href="#AutoField" class="headerlink" title="AutoField"></a>AutoField</h3><p>它是一个根据 ID 自增长的 IntegerField 字段。通常，你不必直接使用该字段。如果你没在别的字段上指定主 键，Django 就会自动添加主键字段。</p><h3 id="BigIntegerField"><a href="#BigIntegerField" class="headerlink" title="BigIntegerField"></a>BigIntegerField</h3><p>64位整数，类似于IntegerField，范围从-9223372036854775808 到9223372036854775807。默认的form widget 是TextInput。</p><h3 id="BooleanField"><a href="#BooleanField" class="headerlink" title="BooleanField"></a>BooleanField</h3><p>一个布尔值(true/false)字段。</p><p>默认的form widget是CheckboxInput。</p><p>如果要使用null作为空值，可使用NullBooleanField。</p><h3 id="CharField"><a href="#CharField" class="headerlink" title="CharField"></a>CharField</h3><pre><code>class CharField(max_length=None[, **options])</code></pre><p>它是一个字符串字段，对小字符串和大字符串都适用。</p><p>对于更大的文本，应该使用TextField 。</p><p>默认的form widget是TextInput。</p><p>CharField 有一个必须传入的参数：max_length,字段的最大字符数。它作用于数据库层级和 Django 的数据验证层级。</p><h3 id="CommaSeparatedInterField"><a href="#CommaSeparatedInterField" class="headerlink" title="CommaSeparatedInterField"></a>CommaSeparatedInterField</h3><p>class CommaSeparatedIntegerField(max_length=None[, **options])</p><p>它用来存放以逗号间隔的整数序列。和 CharField 一样，必须为它提供 max_length 参数。而且要注意不同数据库对 max_length 的限制。</p><h3 id="DateField"><a href="#DateField" class="headerlink" title="DateField"></a>DateField</h3><pre><code>class DateField([auto_now=False, auto_now_add=False, **options])</code></pre><p>该字段利用 Python 的 datetime.date 实例来表示日期。下面是它额外的可选参数：</p><p>DateField.auto_now：每一次保存对象时，Django 都会自动将该字段的值设置为当前时间。一般用来表示 “最后修改” 时间。要注意使用的是当前日期，而并非默认值，所以</p><p>不能通过重写默认值的办法来改变保存时间。</p><p>DateField.auto_now_add：在第一次创建对象时，Django 自动将该字段的值设置为当前时间，一般用来表示对象创建时间。它使用的同样是当前日期，而非默认值。</p><p>默认的form widget是TextInput。</p><p>Note:当auto_now或者auto_now_add设置为True时，字段会有editable=True和blank=True的设定。</p><h3 id="DateTimeField"><a href="#DateTimeField" class="headerlink" title="DateTimeField"></a>DateTimeField</h3><pre><code>class DateTimeField([auto_now=False, auto_now_add=False, **options])</code></pre><p>该字段利用 datetime.datetime 实例表示日期和时间。该字段所按受的参数和 DateField 一样。</p><p>默认的form widget是TextInput。Django 的admin使用两个带有 JavaScript 快捷选项TextInput分别表示日期和时间。</p><h3 id="DecimalField"><a href="#DecimalField" class="headerlink" title="DecimalField"></a>DecimalField</h3><pre><code>class DecimalField(max_digits=None, decimal_places=None[, **options])</code></pre><p>它是使用 Decimal 实例表示固定精度的十进制数的字段。它有两个必须的参数：</p><p>DecimalField.max_digits：数字允许的最大位数</p><p>DecimalField.decimal_places：小数的最大位数</p><p>例如，要存储的数字最大值是999，而带有两个小数位，你可以使用：</p><p>1<br>models.DecimalField(…, max_digits=5, decimal_places=2)<br>要存储大约是十亿级且带有10个小数位的数字，就这样写：</p><p>1<br>models.DecimalField(…, max_digits=19, decimal_places=10)<br>默认的form widget是TextInput。</p><h3 id="EmailField"><a href="#EmailField" class="headerlink" title="EmailField"></a>EmailField</h3><pre><code>class EmailField([max_length=75, **options])</code></pre><p>它是带有 email 合法性检测的A CharField 。</p><p>Note：最大长度默认为75，并不能存储所有与RFC3696/5321兼容的email地址。如果要存储所有，请设置 </p><p>max_length=254。设置为75是历史遗留问题。</p><h3 id="FileField"><a href="#FileField" class="headerlink" title="FileField"></a>FileField</h3><pre><code>class FileField(upload_to=None[, max_length=100, **options])</code></pre><p>文件上传字段</p><p>Note：该字段不支持 primary_key 和 unique 参数，否则会抛出 TypeError 异常。</p><p>它有一个必须的参数：</p><p>FileField.upload_to</p><p>用于保存文件的本地文件系统。它根据 MEDIA_ROOT 设置确定该文件的 url 属性。</p><p>该路径可以包含 时间格式串strftime()，可以在上传文件的时候替换成当时日期／时间(这样，就不会出现在上传文件把某个目录塞满的情况了)。</p><p>该参数也可以是一个可调用项，比如是一个函数，可以调用函数获得包含文件名的上传路径。这个可调用项必须要接受两个参数，</p><p>并且返回一个保存文件用的 Unix-Style 的路径(用 / 斜杠)。两个参数分别是：</p><pre><code>instance ：定义了当前 FileField 的 model 实例。更准确地说，就是以该文件为附件的 model 实例。</code></pre><p>大多数情况下，在保存该文件时， model 实例对象还并没有保存到数据库，这是因为它很有可能使用默认的 AutoField，而此时它还没有从数据库中获得主键值。</p><pre><code>filename ：上传文件的原始名称。在生成最终路径的时候，有可能会用到它。</code></pre><p>还有一个可选的参数：</p><p>FileField.storage</p><p>负责保存和获取文件的对象。</p><p>默认的form widget是FileInput。</p><p>Note：在 model 中使用 FileField 或 ImageField 要按照以下的步骤：</p><p>1.在项目settings文件中，你要定义 MEDIA_ROOT ，将它的值设为用来存放上传文件的目录的完整路径。(基于性能的考虑，Django 没有将文件保存在数据库中).</p><p>然后定义 MEDIA_URL ，将它的值设为表示该目录的网址。 </p><p>要确保 web 服务器所用的帐号拥有对该目录的写权限。</p><p>2.在 model 里面添加 FileField 或 ImageField ，并且确认已定义了 upload_to 项，让 Django 知道应该用 </p><p>MEDIA_ROOT 的哪个子目录来保存文件。</p><p>3.存储在数据库当中的仅仅只是文件的路径(而且是相对于 MEDIA_ROOT 的相对路径)。你可能已经想到利用 </p><p>Django 提供的 url 这个方便的属性。举个例子，如果你的 ImageField 名称是 mug_shot，那么你可以在模板 </p><p>中使用</p><p>1<br><br>就能得到图片的完整网址。</p><p>例如，假设你的 MEDIA_ROOT 被设为 ‘/home/media’，upload_to 被设为 ‘photos/%Y/%m/%d’。 upload_to 中 </p><p>的 ‘%Y/%m/%d’ 是一个strftime()， ‘%Y’ 是四位的年份，’%m’ 是两位的月份， ‘%d’ 是两位的日子。如果你 </p><p>在2007年01月15号上传了一个文件，那么这个文件就保存在 /home/media/photos/2007/01/15 目录下。</p><p>如果你想得到上传文件的本地文件名称，文件网址，或是文件的大小，你可以使用 name, url 和 size 属性。</p><p>Note：在上传文件时，要警惕保存文件的位置和文件的类型，这么做的原因是为了避免安全漏洞。对每一个上传 </p><p>文件都要验证，这样你才能确保上传的文件是你想要的文件。举个例子，如果你盲目地让别人上传文件，而没有 </p><p>对上传文件进行验证，如果保存文件的目录处于 web 服务器的根目录下，万一有人上传了一个 CGI 或是 PHP </p><p>脚本，然后通过访问脚本网址来运行上传的脚本，那可就太危险了。千万不要让这样的事情发生！</p><p>默认情况下，FileField 实例在数据库中的对应列是 varchar(100) ，和其他字段一样，你可以利用max_length 参数改变字段的最大长度。</p><p>FileField and FieldFile<br>  class FieldFile</p><p>当你访问一个Model的FileField字段时，会得到一个FieldFile的实例作为代理去访问底层文件。实例有几种属性和方法可以用来和文件数据进行互动。</p><p>FieldFile.url</p><p>通过只读的方式调用底层存储(Storage)类的 url() 方法，来访问该文件的相对URL。</p><p>FieldFile.open(mode=’rb’)</p><p>类似于python的open()方法。</p><p>FieldFile.close()</p><p>类似于python的close()方法。</p><p>FieldFile.save(name,content,save=True)</p><p>这种方法将filename和文件内容传递到该字段然后存储到该模型。该方法需要两个必须的参数：name， 文件的名称， content， 包含文件内容的对象。save 参数是可选的，主 </p><p>要是控制文件修改后实例是否保存。默认是 True 。需要注意的是，content 参数是 django.core.files.File 的一个实例，不是Python的内置File对象。你可以使 </p><p>用他从现有的Python文件对象中构建一个文件，如下所示：</p><p>1<br>2<br>3<br>4<br>from django.core.files import File</p><h1 id="Open-an-existing-file-using-Python’s-built-in-open"><a href="#Open-an-existing-file-using-Python’s-built-in-open" class="headerlink" title="Open an existing file using Python’s built-in open()"></a>Open an existing file using Python’s built-in open()</h1><p>f = open(‘/tmp/hello.world’)<br>myfile = File(f)<br>或者从字符串中构造：</p><p>1<br>2<br>from django.core.files.base import ContentFile<br>myfile = ContentFile(“hello world”)<br>FieldFile.delete(save=True)</p><p>删除此实例相关的文件，并清除该字段的所有属性。</p><p>Note：当delete()被调用时，如果文件正好是打开的，该方法将关闭文件。</p><p>save 参数是可选的，控制文件删除后实例是否保存。默认是 True 。</p><p>需要注意的是，当一个模型被删除时，相关文件不被删除。如果想删除这些孤立的文件，需要自己去处理（比如，可以手动运行命令清理，也可以通过cron来定期执行清理命令）</p><p>FilePathField<br>class FilePathField(path=None[, match=None, recursive=False, max_length=100, **options])</p><p>它是一个 CharField ，它用来选择文件系统下某个目录里面的某些文件。它有三个专有的参数，只有第一个参 </p><p>数是必须的：</p><p>FilePathField.path</p><p>这个参数是必需的。它是一个目录的绝对路径，而这个目录就是 FilePathField 用来选择文件的那个目录。比 </p><p>如： “/home/images”.</p><p>FilePathField.match</p><p>可选参数。它是一个正则表达式字符串， FilePathField 用它来过滤文件名称，只有符合条件的文件才出现在 </p><p>文件选择列表中。要注意正则表达式只匹配文件名，而不是匹配文件路径。例如：”foo.*.txt$” 只匹配名为 </p><p>foo23.txt 而不匹配 bar.txt 和 foo23.gif。</p><p>FilePathField.recursive</p><p>可选参数。它的值是 True 或 False。默认值是 False。它指定是否包含 path 下的子目录。</p><p>FilePathField.allow_files</p><p>该项属于Django1.5新增内容。可选参数，它的值是 True 或 False。默认值是 True。它指定是否包含指定位置的文件。该项与allow_folders 必须有一个是 True。</p><p>FilePathField.allow_folders</p><p>Django1.5新增内容。可选参数，它的值是True或False。默认是False。它指定是否包含指定位置的目录。该项与allow_files必须有一个是 True。</p><p>前面已经提到了 match 只匹配文件名称，而不是文件路径。所以下面这个例子：</p><p>1<br>FilePathField(path=”/home/images”, match=”foo.*”, recursive=True)<br>将匹配 /home/images/foo.gif ，而不匹配 /home/images/foo/bar.gif。这是因为 match 只匹配文件名<br>(foo.gif 和 bar.gif).</p><p>默认情况下， FilePathField 实例在数据库中的对应列是varchar(100) 。和其他字段一样，你可以利用 max_length 参数改变字段的最大长度。</p><h3 id="FloatField"><a href="#FloatField" class="headerlink" title="FloatField"></a>FloatField</h3><pre><code>class FloatField([**options])</code></pre><p>该字段在 Python 中使用float 实例来表示一个浮点数。</p><p>默认的form widget是TextInput。</p><p>请注意FloatField与DecimalField的区别。</p><h3 id="ImageField"><a href="#ImageField" class="headerlink" title="ImageField"></a>ImageField</h3><pre><code>class ImageField(upload_to=None[, height_field=None, width_field=None, max_length=100,**options])</code></pre><p>和 FileField 一样，只是会验证上传对象是不是一个合法的图象文件。</p><p>除了那些在 FileField 中有效的参数之外， ImageField 还可以使用 File.height and File.width 两个属性 。</p><p>它有两个可选参数：</p><p>ImageField.height_field</p><p>保存图片高度的字段名称。在保存对象时，会根据该字段设定的高度，对图片文件进行缩放转换。</p><p>ImageField.width_field</p><p>保存图片宽度的字段名称。在保存对象时，会根据该字段设定的宽度，对图片文件进行缩放转换。</p><p>默认情况下， ImageField 实例对应着数据库中的varchar(100) 列。和其他字段一样，你可以使 用 max_length 参数来改变字段的最大长度。</p><h3 id="IntegerField"><a href="#IntegerField" class="headerlink" title="IntegerField"></a>IntegerField</h3><pre><code>class IntegerField([**options])</code></pre><p>整数字段。默认的form widget是TextInput。</p><h3 id="IPAddressField"><a href="#IPAddressField" class="headerlink" title="IPAddressField"></a>IPAddressField</h3><pre><code>class IPAddressField([**options])</code></pre><p>以字符串形式(比如 “192.0.2.30”)表示 IP 地址字段。默认的form widget是TextInput。</p><h3 id="GenericIPAddressField"><a href="#GenericIPAddressField" class="headerlink" title="GenericIPAddressField"></a>GenericIPAddressField</h3><pre><code>class GenericIPAddressField([**options])</code></pre><p>Django1.4新增。</p><p>以字符串形式(比如 “192.0.2.30”或者”2a02:42fe::4”)表示 IP4或者IP6 地址字段。默认的form widget是TextInput。</p><p>IPv6的地址格式遵循RFC 4291 section 2.2。比如如果这个地址实际上是IPv4的地址，后32位可以用10进制数表示，例如 “::ffff:192.0.2.0”。</p><p>2001:0::0:01可以写成2001::1,而::ffff:0a0a:0a0a可以写成::ffff:10.10.10.10。字母都为小写。</p><p>GenericIPAddressField.protocol</p><p>验证输入协议的有效性。默认值是 ‘both’ 也就是IPv4或者IPv6。该项不区分大小写。</p><p>GenericIPAddressField.unpack_ipv4</p><p>解释IPv4映射的地址，像   ::ffff:192.0.2.1  。如果启用该选项，该地址将必解释为 192.0.2.1 。默认是禁止的。只有当 protocol 被设置为 ‘both’ 时才可以启用。</p><h3 id="NullBooleanField"><a href="#NullBooleanField" class="headerlink" title="NullBooleanField"></a>NullBooleanField</h3><pre><code>class NullBooleanField([**options])</code></pre><p>与 BooleanField 相似，但多了一个 NULL 选项。建议用该字段代替使用 null=True 选项的 BooleanField 。 </p><p>默认的form widget是NullBooleanSelect。</p><h3 id="PositiveIntegerField"><a href="#PositiveIntegerField" class="headerlink" title="PositiveIntegerField"></a>PositiveIntegerField</h3><pre><code>class PositiveIntegerField([**options])</code></pre><p>和 IntegerField 相似，但字段值必须是非负数。</p><h3 id="PositiveSmallIntegerField"><a href="#PositiveSmallIntegerField" class="headerlink" title="PositiveSmallIntegerField"></a>PositiveSmallIntegerField</h3><pre><code>class PositiveSmallIntegerField([**options])</code></pre><p>和 PositiveIntegerField 类似，但数值的取值范围较小，受限于数据库设置。</p><h3 id="SlugField"><a href="#SlugField" class="headerlink" title="SlugField"></a>SlugField</h3><pre><code>class SlugField([max_length=50, **options])</code></pre><p>Slug 是一个新闻术语，是指某个事件的短标签。它只能由字母，数字，下划线或连字符组成。通赏情况下，它被用做网址的一部分。</p><p>和 CharField 类似，你可以指定 max_length (要注意数据库兼容性和本节提到的 max_length )。如果没有指定 max_length ，Django 会默认字段长度为50。</p><p>该字段会自动设置 Field.db_index to True。</p><p>基于其他字段的值来自动填充 Slug 字段是很有用的。你可以在 Django 的管理后台中使用prepopulated_fields 来做到这一点。</p><h3 id="SmallIntegerField"><a href="#SmallIntegerField" class="headerlink" title="SmallIntegerField"></a>SmallIntegerField</h3><pre><code>class SmallIntegerField([**options])</code></pre><p>和 IntegerField 类似，但数值的取值范围较小，受限于数据库的限制。</p><h3 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a>TextField</h3><pre><code>class TextField([**options])</code></pre><p>大文本字段。默认的form widget是Textarea。</p><h3 id="TimeField"><a href="#TimeField" class="headerlink" title="TimeField"></a>TimeField</h3><pre><code>class TimeField([auto_now=False, auto_now_add=False, **options])</code></pre><p>该字段使用 Python 的 datetime.time 实例来表示时间。它和 DateField 接受同样的自动填充的参数。</p><p>默认的form widget是TextInput。</p><h3 id="URLField"><a href="#URLField" class="headerlink" title="URLField"></a>URLField</h3><pre><code>class URLField([max_length=200, **options])</code></pre><p>保存 URL 的 CharField 。</p><p>和所有 CharField 子类一样，URLField 接受可选的 max_length 参数，该参数默认值是200。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;字段类型-Field-types&quot;&gt;&lt;a href=&quot;#字段类型-Field-types&quot; class=&quot;headerlink&quot; title=&quot;字段类型(Field types)&quot;&gt;&lt;/a&gt;字段类型(Field types)&lt;/h1&gt;&lt;h3 id=&quot;AutoFie
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>点滴积累</title>
-    <link href="http://yoursite.com/2018/06/11/%E7%82%B9%E6%BB%B4%E7%A7%AF%E7%B4%AF/"/>
-    <id>http://yoursite.com/2018/06/11/点滴积累/</id>
-    <published>2018-06-11T12:42:01.000Z</published>
-    <updated>2018-08-05T09:10:09.449Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="hexo生成博文插入图片"><a href="#hexo生成博文插入图片" class="headerlink" title="hexo生成博文插入图片"></a>hexo生成博文插入图片</h2><ol><li>把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true  </li><li>在你的hexo目录下执行这样一句话npm install hexo-asset-image –save  </li><li>等待一小段时间后，再运行hexo n “xxxx”来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹  </li><li><p>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：  </p><ul><li>! [你想输入的替代文字](xxxx/图片名.jpg)</li></ul></li></ol><ul><li><strong>注意：</strong> xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。  </li></ul><h2 id="Error-That-port-is-already-in-use-的错误。"><a href="#Error-That-port-is-already-in-use-的错误。" class="headerlink" title="Error: That port is already in use.的错误。"></a>Error: That port is already in use.的错误。</h2><p>即端口号已经被占用,说明servr已经在运行了(也有可能在后台运行)  </p><p>那么找到该进程,kill掉即可.  </p><p>或者最简单的解决方法就是：  </p><p>在终端输入 sudo fuser -k 8000/tcp  </p><p>这样和端口8000相关的进程就都关了。</p><h2 id="Centos下实现word转pdf"><a href="#Centos下实现word转pdf" class="headerlink" title="Centos下实现word转pdf"></a>Centos下实现word转pdf</h2><p>libreoffice –headless –invisible –convert-to pdf 模版123.docx –outdir /filepath</p><h2 id="爆破大数据平台"><a href="#爆破大数据平台" class="headerlink" title="爆破大数据平台"></a>爆破大数据平台</h2><h3 id="Nodejs后端"><a href="#Nodejs后端" class="headerlink" title="Nodejs后端"></a>Nodejs后端</h3><ul><li><p>1 创建数据库  </p><ol><li>1 使用redis、mongodb</li><li>2 使用Mysql  其中有DATATIME属性    </li></ol></li></ul><ul><li><p>2 使用Admzip以及正则表达式实现文档的替换</p></li><li><p>3 将生成的文档转换为PDF</p></li></ul><h3 id="Django后端"><a href="#Django后端" class="headerlink" title="Django后端"></a>Django后端</h3><ul><li>1 设计Model</li><li>2 前后端分离传递数据</li><li>3 算法的嵌入</li></ul><h3 id="涉及算法"><a href="#涉及算法" class="headerlink" title="涉及算法"></a>涉及算法</h3><ul><li><p>1 图像识别</p></li><li><p>2 自动布孔</p></li></ul><h3 id="Github学习资源"><a href="#Github学习资源" class="headerlink" title="Github学习资源"></a>Github学习资源</h3><ul><li><p><a href="https://morvanzhou.github.io/（莫烦）" target="_blank" rel="noopener">https://morvanzhou.github.io/（莫烦）</a></p></li><li><p><a href="https://cn.wordpress.org/（博客主题）" target="_blank" rel="noopener">https://cn.wordpress.org/（博客主题）</a>  </p></li><li><p><a href="https://blog.evjang.com" target="_blank" rel="noopener">https://blog.evjang.com</a></p></li><li><p><a href="http://bamos.github.io/" target="_blank" rel="noopener">http://bamos.github.io/</a></p></li></ul><h3 id="GAN生成对抗网络"><a href="#GAN生成对抗网络" class="headerlink" title="GAN生成对抗网络"></a>GAN生成对抗网络</h3><ul><li><p>GAN多种网络分析<br><a href="http://nooverfit.com/wp/%E7%8B%AC%E5%AE%B6%EF%BD%9Cgan%E5%A4%A7%E7%9B%98%E7%82%B9%EF%BC%8C%E8%81%8A%E8%81%8A%E8%BF%99%E4%BA%9B%E5%B9%B4%E7%9A%84%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C-lsgan-wgan-cgan-info/" target="_blank" rel="noopener">http://nooverfit.com/wp/%E7%8B%AC%E5%AE%B6%EF%BD%9Cgan%E5%A4%A7%E7%9B%98%E7%82%B9%EF%BC%8C%E8%81%8A%E8%81%8A%E8%BF%99%E4%BA%9B%E5%B9%B4%E7%9A%84%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C-lsgan-wgan-cgan-info/</a>  </p></li><li><p>DCGAN代码：<br><a href="https://github.com/carpedm20/DCGAN-tensorflow" target="_blank" rel="noopener">https://github.com/carpedm20/DCGAN-tensorflow</a>   tensorflow<br><a href="https://github.com/jacobgil/keras-dcgan" target="_blank" rel="noopener">https://github.com/jacobgil/keras-dcgan</a>    keras</p></li><li><p>论文资料：<br><a href="https://github.com/zhangqianhui/AdversarialNetsPapers" target="_blank" rel="noopener">https://github.com/zhangqianhui/AdversarialNetsPapers</a></p></li><li><p>DCGAN、WGAN、WGAN-GP、LSGAN、BEGAN原理总结及对比：<br><a href="https://blog.csdn.net/qq_25737169/article/details/78857788" target="_blank" rel="noopener">https://blog.csdn.net/qq_25737169/article/details/78857788</a>  </p></li><li><p>WGAN-GP：<br><a href="https://github.com/caogang/wgan-gp" target="_blank" rel="noopener">https://github.com/caogang/wgan-gp</a><br><a href="https://github.com/tjwei/GANotebooks" target="_blank" rel="noopener">https://github.com/tjwei/GANotebooks</a><br><a href="https://github.com/jalola/improved-wgan-pytorch" target="_blank" rel="noopener">https://github.com/jalola/improved-wgan-pytorch</a><br><a href="https://blog.csdn.net/omnispace/article/details/54942668(博客介绍)" target="_blank" rel="noopener">https://blog.csdn.net/omnispace/article/details/54942668(博客介绍)</a></p></li><li><p>BEGAN全称是Boundary Equilibrium GANs：<br><a href="https://github.com/carpedm20/BEGAN-tensorflow" target="_blank" rel="noopener">https://github.com/carpedm20/BEGAN-tensorflow</a><br><a href="https://github.com/Heumi/BEGAN-tensorflow" target="_blank" rel="noopener">https://github.com/Heumi/BEGAN-tensorflow</a><br><a href="https://github.com/carpedm20/BEGAN-pytorch" target="_blank" rel="noopener">https://github.com/carpedm20/BEGAN-pytorch</a>  </p></li><li><p>Keras implementation of Image OutPainting：<br><a href="https://github.com/bendangnuksung/Image-OutPainting" target="_blank" rel="noopener">https://github.com/bendangnuksung/Image-OutPainting</a>  </p></li><li><p>WGAN-GP与WGAN及GAN的比较：<br><a href="https://blog.csdn.net/qq_38826019/article/details/80786061" target="_blank" rel="noopener">https://blog.csdn.net/qq_38826019/article/details/80786061</a></p></li></ul><h3 id="待查询问题"><a href="#待查询问题" class="headerlink" title="待查询问题"></a>待查询问题</h3><ul><li><p>基于动量的优化算法（包括momentum和Adam）</p></li><li><p>RMSProp的基本概念</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;hexo生成博文插入图片&quot;&gt;&lt;a href=&quot;#hexo生成博文插入图片&quot; class=&quot;headerlink&quot; title=&quot;hexo生成博文插入图片&quot;&gt;&lt;/a&gt;hexo生成博文插入图片&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;把主页配置文件_config.yml 里的pos
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="日常记录" scheme="http://yoursite.com/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
-    
-      <category term="小技巧" scheme="http://yoursite.com/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习——EM算法</title>
-    <link href="http://yoursite.com/2018/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94EM%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/06/10/机器学习——EM算法/</id>
-    <published>2018-06-10T11:18:20.000Z</published>
-    <updated>2018-06-11T13:37:57.355Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="EM算法"><a href="#EM算法" class="headerlink" title="EM算法"></a>EM算法</h1><h2 id="EM简介"><a href="#EM简介" class="headerlink" title="EM简介"></a>EM简介</h2><p>EM(Expectation Mmaximization) 是一种迭代算法， 用于含隐变量(Latent Variable) 的概率模型参数的极大似然估计， 或极大后验概率估计 EM算法由两步组成， 求期望的E步，和求极大的M步。<br>EM算法可以看成是特殊情况下计算极大似然的一种算法。现实的数据经常有一些比较奇怪的问题，比如缺失数据、含有隐变量等问题。当这些问题出现的时候，计算极大似然函数通常是比较困难的，而EM算法可以解决这个问题。</p><p>EM算法已经有很多应用，比如最经典的Hidden Markov模型等。经济学中，除了逐渐开始受到重视的HMM模型（例如Yin and Zhao, 2015），其他领域也有可能涉及到EM算法，比如在Train的《Discrete Choice Methods with Simulation》就给出了一个 $mixed logit$ 模型的EM算法。</p><h2 id="EM算法的预备知识"><a href="#EM算法的预备知识" class="headerlink" title="EM算法的预备知识"></a>EM算法的预备知识</h2><ol><li><p>极大似然估计</p><ol><li><p>1  举例说明：经典问题——学生身高问题  </p><p>我们需要调查我们学校的男生和女生的身高分布。 假设你在校园里随便找了100个男生和100个女生。他们共200个人。将他们按照性别划分为两组，然后先统计抽样得到的100个男生的身高。假设他们的身高是服从高斯分布的。但是这个分布的均值u和方差∂2我们不知道，这两个参数就是我们要估计的。记作θ=[u, ∂]T。<br>问题：我们知道样本所服从的概率分布的模型和一些样本，而不知道该模型中的参数。<br>我们已知的有两个：（1）样本服从的分布模型（2）随机抽取的样本  需要通过极大似然估计求出的包括：模型的参数<br>总的来说：极大似然估计就是用来估计模型参数的统计学方法。 </p></li><li><p>2  如何估计  </p><p>问题数学化：</p></li></ol><ul><li>(1)样本集: x={$x_1,x_2,…,x_N$}, $N=100$。</li><li>(2)概率密度：$p(x_i|\theta)$ 抽到男生$i$（的身高）的概率 100个样本之间独立同分布，所以我同时抽到这100个男生的概率就是他们各自概率的乘积。就是从分布是$p(x|\theta)$ 的总体样本中抽取到这100个样本的概率，也就是样本集X中各个样本的联合概率，用下式表示：<br>$$L(\theta)=L(x_1,…,x_n;\theta)=\prod_{i=1}^n{p(x_i|\theta)},\theta\in\phi$$<br>这个概率反映了，在概率密度函数的参数是$\theta$时，得到X这组样本的概率。 需要找到一个参数θ，其对应的似然函数$L(\theta)$最大，也就是说抽到这100个男生（的身高）概率最大。这个叫做$\theta$的最大似然估计量，记为<br>$$argmaxL(\theta)$$  </li></ul><ol start="3"><li><p>3  求最大似然函数估计值的一般步骤  </p><p>首先，写出似然函数：<br>$$L(\theta)=L(x_1,…,x_n;\theta)=\prod_{i=1}^n{p(x_i|\theta)},\theta\in\phi$$<br>其次，对似然函数取对数，并整理：<br>$$H(\theta)=lnL(\theta)=ln\prod_{i=1}^n{p(x_i|\theta)}=\sum_{i=1}^n{lnp(x_i|\theta)}$$<br>然后，求导数，令导数为0，得到似然方程；最后，解似然方程，得到的参数即为所求。</p></li><li><p>4  总结  </p><p>多数情况下我们是根据已知条件来推算结果，而极大似然估计是已经知道了结果，然后寻求使该结果出现的可能性最大的条件，以此作为估计值。</p></li></ol></li></ol><p><img src="/2018/06/10/机器学习——EM算法/797505-20160401125718941-1997034466.png" alt="图片"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;EM算法&quot;&gt;&lt;a href=&quot;#EM算法&quot; class=&quot;headerlink&quot; title=&quot;EM算法&quot;&gt;&lt;/a&gt;EM算法&lt;/h1&gt;&lt;h2 id=&quot;EM简介&quot;&gt;&lt;a href=&quot;#EM简介&quot; class=&quot;headerlink&quot; title=&quot;EM简介&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS环境搭建</title>
-    <link href="http://yoursite.com/2018/06/05/CentOS%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2018/06/05/CentOS环境搭建/</id>
-    <published>2018-06-05T11:13:28.000Z</published>
-    <updated>2018-06-06T10:00:56.509Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><h2 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h2><ol><li>微星1080Ti</li><li>至强E5 -2620v4</li><li><p>技嘉的主板</p><h3 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h3><p>将CentOS 7.4镜像刻到U盘之后，向服务器安装时，使用U盘启动会出现两种启动选项，一种是UEFI启动选项，一种是默认的启动选项，如果不使用UEFI方式安装，那么一般是没有问题的，如果选择UEFI方式安装系统，那么引导系统时会出现如下的提示：</p><p> [sdb] No Caching mode page found</p><p> [sdb] Assuming drive cache:write through</p><p> Could not boot  /dev/root does not exist</p></li></ol><p>　　然后命令行就卡在这了，现在只需要耐心等待，等一会之后会不断的滚动错误警告，这个时候继续等待，那么一会就会出来命令行输入界面，这个时候输入以下命令：</p><pre><code>ls /dev/sd*</code></pre><p>　　输入命令之后会列出所有的存储设备，这个时候一般情况下第一块硬盘是sda，如果有多个分区，那么依次就是sda1、sda2等等，如果有两块硬盘那么就是sdb，U盘一般是排最后的号，如果有一块硬盘，那么U盘就是sdb，如果有两块硬盘，那么U盘就是sdc，U盘一般会有sdc和sdc4两个选项，sdc属于U盘存储，sdc4就是镜像所在分区了，这样一般是没有问题的，如果出现问题，那么接下来多配置几次就好了，接下来输入命令reboot重启计算机，在安装界面，先不要选择安装，这个时候按一下e键，会进入编辑界面，移动光标进行如下修改：</p><p>　　在第二行默认是：vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 rd.live.check quiet</p><p>　　把这行修改为：vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sdc4:/ quiet</p><p>　　就是把hd:和quiet之间的内容修改为U盘镜像所在位置这样就可以了，注意要写成/dev/sdc4:/</p><p>　　然后根据提示按Ctrl+X键就可以开始安装了，现在就正常进入安装界面了</p><h1 id="NVIDIA驱动安装"><a href="#NVIDIA驱动安装" class="headerlink" title="NVIDIA驱动安装"></a>NVIDIA驱动安装</h1><p>1、在官网上<a href="http://www.geforce.cn/drivers搜索到对应型号的显卡驱动并下载，下载到的驱动文件是一个后缀名为.run的文件（例如NVIDIA-Linux-x86_64-384.98.run）；" target="_blank" rel="noopener">http://www.geforce.cn/drivers搜索到对应型号的显卡驱动并下载，下载到的驱动文件是一个后缀名为.run的文件（例如NVIDIA-Linux-x86_64-384.98.run）；</a></p><p>2、安装gcc编译环境以及内核相关的包：<br>    yum install kernel-devel kernel-doc kernel-headers gcc* glibc*  glibc-*<br>注意：安装内核包时需要先检查一下当前内核版本是否与所要安装的kernel-devel/kernel-doc/kernel-headers的版本一致，请务必保持两者版本一致，否则后续的编译过程会出问题。</p><p>3、禁用系统默认安装的 nouveau 驱动，修改/etc/modprobe.d/blacklist.conf 文件：  </p><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><pre><code>echo -e &quot;blacklist nouveau\noptions nouveau modeset=0&quot; &gt; /etc/modprobe.d/blacklist.conf</code></pre><h3 id="备份原来的镜像文件"><a href="#备份原来的镜像文件" class="headerlink" title="备份原来的镜像文件"></a>备份原来的镜像文件</h3><pre><code>mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak</code></pre><h3 id="重建新镜像文件"><a href="#重建新镜像文件" class="headerlink" title="重建新镜像文件"></a>重建新镜像文件</h3><pre><code>dracut /boot/initramfs-$(uname -r).img $(uname -r)</code></pre><h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><pre><code>reboot  </code></pre><h3 id="在命令行界面"><a href="#在命令行界面" class="headerlink" title="在命令行界面"></a>在命令行界面</h3><pre><code>init 5 </code></pre><h3 id="查看nouveau是否启动，如果结果为空即为禁用成功"><a href="#查看nouveau是否启动，如果结果为空即为禁用成功" class="headerlink" title="查看nouveau是否启动，如果结果为空即为禁用成功"></a>查看nouveau是否启动，如果结果为空即为禁用成功</h3><pre><code>lsmod | grep nouveau</code></pre><p>4、安装DKMS模块</p><p>DKMS全称是DynamicKernel ModuleSupport，它可以帮我们维护内核外的驱动程序，在内核版本变动之后可以自动重新生成新的模块。  </p><pre><code>sudo yum install DKMS  </code></pre><p>5、执行显卡驱动安装脚本（如果内核版本一致，就不需要指定–kernel-source-path和-k）  </p><pre><code>./NVIDIA-Linux-x86_64-384.98.run --kernel-source-path=/usr/src/kernels/3.10.0-693.11.1.el7.x86_64/ -k $(uname -r) --dkms -s</code></pre><p>6、若步骤5执行过程中没报错，则安装成功。重启，执行nvidia-smi可查看相关信息。<br>如若出现重启系统驱动找不到的情况，在装完驱动后，切记，先不要重启，使用</p><pre><code>init5</code></pre><p>和  </p><pre><code>init 3</code></pre><p>交替切换，几次后，会进入图形界面（其中init 5为进入图形界面的命令），之后，在图形界面，重新编译一下启动项。</p><h1 id="CUDA-amp-amp-CUDNN"><a href="#CUDA-amp-amp-CUDNN" class="headerlink" title="CUDA&amp;&amp;CUDNN"></a>CUDA&amp;&amp;CUDNN</h1><p>　　关于cuda和cudnn的安装，这一点尤其要注意。我在CentOS7.5(更新后的版本，初始装的时候为7.4)上安装CUDA9.2时，无法与NVIDIA的驱动匹配，因此退而求其次，选择了CUDA9.1，同时CUDNN选择7.0.5版本。<br><strong>注意</strong> 不要下载cudnn-9.1-linux-ppc64le-v7.1.tgz，因为ppc64le并不是针对X64的电脑系统<br>CUDA的安装我选择了使用yum安装的方式，因为之前使用命令行，出现了未知的错误，导致系统重装。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;系统安装&quot;&gt;&lt;a href=&quot;#系统安装&quot; class=&quot;headerlink&quot; title=&quot;系统安装&quot;&gt;&lt;/a&gt;系统安装&lt;/h1&gt;&lt;h2 id=&quot;电脑配置&quot;&gt;&lt;a href=&quot;#电脑配置&quot; class=&quot;headerlink&quot; title=&quot;电脑配置&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>学习的东西</title>
-    <link href="http://yoursite.com/2018/05/30/%E8%AE%A1%E5%88%92/"/>
-    <id>http://yoursite.com/2018/05/30/计划/</id>
-    <published>2018-05-30T07:38:48.000Z</published>
-    <updated>2018-10-06T03:12:16.484Z</updated>
-    
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;
-&lt;script&gt;
-function doDecrypt (pwd, onError) {
-	console.log(&#39;in doDecrypt&#39;);
-	const txt = document.getE
-      
-    
-    </summary>
-    
-      <category term="感悟" scheme="http://yoursite.com/categories/%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="坚持" scheme="http://yoursite.com/tags/%E5%9D%9A%E6%8C%81/"/>
     
   </entry>
   
