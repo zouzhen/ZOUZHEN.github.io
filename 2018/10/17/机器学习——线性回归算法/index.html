@@ -154,15 +154,18 @@
 
 
 
-  <meta name="keywords" content="线性回归算法">
+  <meta name="description" content="线性回归简述在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。 优点：结果易于理解，计算上不复杂。缺点：对非线性数据拟合不好。适用数据类型：数值型和标称型数">
+<meta name="keywords" content="线性回归算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习——线性回归算法">
 <meta property="og:url" content="http://yoursite.com/2018/10/17/机器学习——线性回归算法/index.html">
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
+<meta property="og:description" content="线性回归简述在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。 优点：结果易于理解，计算上不复杂。缺点：对非线性数据拟合不好。适用数据类型：数值型和标称型数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-17T10:02:59.306Z">
+<meta property="og:updated_time" content="2018-10-17T11:57:08.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习——线性回归算法">
+<meta name="twitter:description" content="线性回归简述在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。 优点：结果易于理解，计算上不复杂。缺点：对非线性数据拟合不好。适用数据类型：数值型和标称型数">
 
 
 
@@ -424,7 +427,7 @@
                 
               
 
-              <time title="创建时间：2018-10-17 18:01:24 / 修改时间：18:02:59" itemprop="dateCreated datePublished" datetime="2018-10-17T18:01:24+08:00">2018-10-17</time>
+              <time title="创建时间：2018-10-17 18:01:24 / 修改时间：19:57:08" itemprop="dateCreated datePublished" datetime="2018-10-17T18:01:24+08:00">2018-10-17</time>
             
 
             
@@ -504,7 +507,15 @@
       
 
       
-        
+        <h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a><strong>线性回归</strong></h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a><strong>简述</strong></h3><p>在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。</p>
+<p>优点：结果易于理解，计算上不复杂。<br>缺点：对非线性数据拟合不好。<br>适用数据类型：数值型和标称型数据。<br>算法类型：回归算法</p>
+<p>线性回归的模型函数如下： </p>
+<p>$$h_\theta = \theta^Tx$$</p>
+<p>它的损失函数如下：</p>
+<p>$$J(\theta) = \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2$$<br>J(θ)=12m∑i=1m(hθ(x(i))−y(i))2<br>J(θ)=12m∑i=1m(hθ(x(i))−y(i))2</p>
+<p>通过训练数据集寻找参数的最优解，即求解可以得到minJ(θ)minJ(θ)的参数向量θθ,其中这里的参数向量也可以分为参数和w和b和w和b,分别表示权重和偏置值。</p>
+<h2 id="求解最优解的方法有最小二乘法和梯度下降法。"><a href="#求解最优解的方法有最小二乘法和梯度下降法。" class="headerlink" title="求解最优解的方法有最小二乘法和梯度下降法。"></a>求解最优解的方法有最小二乘法和梯度下降法。</h2><p>作者：spearhead_cai<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/lc013/article/details/55002463?utm_source=copy" target="_blank" rel="noopener">https://blog.csdn.net/lc013/article/details/55002463?utm_source=copy</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
+
       
     </div>
 
@@ -609,8 +620,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -776,6 +796,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简述"><span class="nav-number">1.1.</span> <span class="nav-text">简述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解最优解的方法有最小二乘法和梯度下降法。"><span class="nav-number">2.</span> <span class="nav-text">求解最优解的方法有最小二乘法和梯度下降法。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

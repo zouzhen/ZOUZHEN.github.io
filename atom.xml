@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-17T10:02:59.306Z</updated>
+  <updated>2018-10-17T11:57:08.491Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2018/10/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2018/10/17/机器学习——线性回归算法/</id>
     <published>2018-10-17T10:01:24.000Z</published>
-    <updated>2018-10-17T10:02:59.306Z</updated>
+    <updated>2018-10-17T11:57:08.491Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a><strong>线性回归</strong></h2><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a><strong>简述</strong></h3><p>在统计学中，线性回归（Linear Regression）是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合（自变量都是一次方）。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。</p><p>优点：结果易于理解，计算上不复杂。<br>缺点：对非线性数据拟合不好。<br>适用数据类型：数值型和标称型数据。<br>算法类型：回归算法</p><p>线性回归的模型函数如下： </p><p>$$h_\theta = \theta^Tx$$</p><p>它的损失函数如下：</p><p>$$J(\theta) = \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2$$<br>J(θ)=12m∑i=1m(hθ(x(i))−y(i))2<br>J(θ)=12m∑i=1m(hθ(x(i))−y(i))2</p><p>通过训练数据集寻找参数的最优解，即求解可以得到minJ(θ)minJ(θ)的参数向量θθ,其中这里的参数向量也可以分为参数和w和b和w和b,分别表示权重和偏置值。</p><h2 id="求解最优解的方法有最小二乘法和梯度下降法。"><a href="#求解最优解的方法有最小二乘法和梯度下降法。" class="headerlink" title="求解最优解的方法有最小二乘法和梯度下降法。"></a>求解最优解的方法有最小二乘法和梯度下降法。</h2><p>作者：spearhead_cai<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/lc013/article/details/55002463?utm_source=copy" target="_blank" rel="noopener">https://blog.csdn.net/lc013/article/details/55002463?utm_source=copy</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;线性回归&quot;&gt;&lt;a href=&quot;#线性回归&quot; class=&quot;headerlink&quot; title=&quot;线性回归&quot;&gt;&lt;/a&gt;&lt;strong&gt;线性回归&lt;/strong&gt;&lt;/h2&gt;&lt;h3 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; tit
+      
     
     </summary>
     
@@ -80,7 +87,7 @@
     <published>2018-10-06T03:06:43.000Z</published>
     <updated>2018-10-06T03:12:28.241Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1/EPcKDYQw++DnmL629fh8LVk33T1e6Wogvwp29RxTcOLXZQREq8eOJTYG+h6DZrgsoDq1YJAv1kK/rIJwq3+yYxmG/ECDx0Wv8xEW1DTIdoEVaSW3jt6vwsovpw06FNzB+DEJWO8pGmiGbUD8lzc8Zk8Vq6P0yp1gTRKsg9PcrmcFhYfyt5vdFL2bBiZZFz//hyGfRt31X4H5McaFaPlQadVf5GjO5f0k72Kcvd1lOr8K/ssgQXAOGxG3eQ4OcEZk9LPYGbPG56aL8kbHcC5nvsIRGwhiLxl0Lr04paPILqtEidqCPR3CXiCrQpvFnLI+8qp9Se+N0GPHHxUW2uqp1pnCXqPrivws=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+afsignsTJC0w0c0hN1nsaEi3qUX35scsDsvubGHlkxR/tW449dfibaPxEvy6iTQ2LXdPbXknR8dlPF/CAV+vSLawsb2OeCt68YpmoY0boz+9DeyaGgEg4xt2OkMZIG7RQkbgmqxwnwcVWUKXATsNh+M2iX0yArWpn9OhjK7Wi30k+n1AYAKi181DOyk038i+0MJGF85UdjAAcboKtRtC2cJ6IkCvPwV4p5LqxCy98HCl+H+Vmnl+3+54rcvqCrZrXbbvlSaQaMYvB9yq23L5Mjqu+ZJdudwGtBUlusmdwro8BC7u/KqYofqH/uGONucXNPI4sJQbsYcZl7b7y7kv05cdRYCWzTtc=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
