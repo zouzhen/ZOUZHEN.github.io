@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-13T03:19:20.839Z</updated>
+  <updated>2019-03-28T03:29:07.274Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,190 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh传输文件</title>
+    <link href="http://yoursite.com/2019/03/28/ssh%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2019/03/28/ssh传输文件/</id>
+    <published>2019-03-28T03:27:27.000Z</published>
+    <updated>2019-03-28T03:29:07.274Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="利用ssh传输文件"><a href="#利用ssh传输文件" class="headerlink" title="利用ssh传输文件"></a>利用ssh传输文件</h2><p>在linux下一般用scp这个命令来通过ssh传输文件。</p><h3 id="1、从服务器上下载文件"><a href="#1、从服务器上下载文件" class="headerlink" title="1、从服务器上下载文件"></a>1、从服务器上下载文件</h3><p>scp username@servername:/path/filename /var/www/local_dir（本地目录）</p><p> 例如scp <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p><h3 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h3><p>scp /path/filename username@servername:/path   </p><p>例如scp /var/www/test.php  <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p><h3 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h3><p>scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</p><p>例如:scp -r <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/test  /var/www/  </p><h3 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h3><p>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:root@192.168.0.101" target="_blank" rel="noopener">root@192.168.0.101</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p><p>注：目标服务器要开启写入权限。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;利用ssh传输文件&quot;&gt;&lt;a href=&quot;#利用ssh传输文件&quot; class=&quot;headerlink&quot; title=&quot;利用ssh传输文件&quot;&gt;&lt;/a&gt;利用ssh传输文件&lt;/h2&gt;&lt;p&gt;在linux下一般用scp这个命令来通过ssh传输文件。&lt;/p&gt;
+&lt;h3 id=&quot;1
+      
+    
+    </summary>
+    
+      <category term="远程操作" scheme="http://yoursite.com/categories/%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C/"/>
+    
+    
+      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习框架简介</title>
+    <link href="http://yoursite.com/2019/03/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2019/03/18/深度学习框架简介/</id>
+    <published>2019-03-18T10:02:24.000Z</published>
+    <updated>2019-03-28T03:30:28.991Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="theano"><a href="#theano" class="headerlink" title="theano"></a>theano</h2><p>theano最初于2008年开始开发，是第一个有较大影响力的框架。<br>theano是一个Python库，可用于定义、优化和计算数学表达式，特别是多维数组（numpy.ndarray）<br>theano诞生于研究机构，服务于研究人员，其设计具有较浓厚的学术气息，但在工业设计上有较大的缺陷。</p><h2 id="Tensorflow"><a href="#Tensorflow" class="headerlink" title="Tensorflow"></a>Tensorflow</h2><p>Tendorflow是Google于2015年11月10日推出的全新的机器学习开源框架。Tensorflow在很大程度上可以看作是Theano的后继者，都是基于计算图实现自动微分系统。Tensoflow支持多种语言，Java、Go、R和Haskell的alpha版本也被支持。<br>但是Tensorflow也存在一些问题：</p><ul><li>过于复杂的系统设计</li><li>频繁变动的接口</li><li>接口设计过于晦涩难懂</li><li>文档混乱脱节</li></ul><p>直接使用Tensorflow的生产力很低下，因而出现了Keras等第三方封装库（PS：我不认为Keras等第三方封装库可以被称之为深度学习框架）<br>虽然不完美，但是最流行的深度学习框架，社区强大，适合生产环境</p><h2 id="Caffe-Caffe2"><a href="#Caffe-Caffe2" class="headerlink" title="Caffe/Caffe2"></a>Caffe/Caffe2</h2><p>caffe是一个清晰、高效的深度学习框架，可信语言是C++，既可以在CPU上运行，也可以在GPU上运行。其优点为简洁快速、缺点是缺少灵活性。Caffe灵活性的缺失主要是因为它的设计。caffe的作者在FAIR担任主管的时候，开发了Caffe2，Caffe2的设计追求轻量级，在保有扩展性和高性能的同时，Caffe2也强调了便携性。<br>文档不够完善，但性能优异，几乎全平台支持Caffe2，适合生产环境。</p><h2 id="MXNet"><a href="#MXNet" class="headerlink" title="MXNet"></a>MXNet</h2><p>MXNet是一个深度学习库，支持C++、Python、JavaScript等语言；支持命令和符号编程；可以运行在CPU、GPU、集群、服务器、台式机或者移动设备上。<br>MXNet以其超强的分布式支持，明显的内存、显存优化为人所称道。<br>文档略混乱、但分布式性能强大、语言支持最多、适合AWS平台开发。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;theano&quot;&gt;&lt;a href=&quot;#theano&quot; class=&quot;headerlink&quot; title=&quot;theano&quot;&gt;&lt;/a&gt;theano&lt;/h2&gt;&lt;p&gt;theano最初于2008年开始开发，是第一个有较大影响力的框架。&lt;br&gt;theano是一个Python库，
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>框架梳理——RetinaNet/keras</title>
+    <link href="http://yoursite.com/2019/01/17/%E6%A1%86%E6%9E%B6%E6%A2%B3%E7%90%86%E2%80%94%E2%80%94RetinaNet-keras/"/>
+    <id>http://yoursite.com/2019/01/17/框架梳理——RetinaNet-keras/</id>
+    <published>2019-01-17T06:28:36.000Z</published>
+    <updated>2019-03-28T03:30:28.985Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="框架梳理——RetinaNet-keras"><a href="#框架梳理——RetinaNet-keras" class="headerlink" title="框架梳理——RetinaNet/keras"></a>框架梳理——RetinaNet/keras</h1><p>代码地址：<a href="https://travis-ci.org/fizyr/keras-retinanet" target="_blank" rel="noopener">https://travis-ci.org/fizyr/keras-retinanet</a></p><h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><ul><li><p>keras-retinanet  </p><p>  │<br>  ├── examples(例图和测试Notebook)<br>  │<br>  ├── images(测试图片)<br>  │<br>  ├── keras_retinanet(主要的框架代码)<br>  │<br>  ├── snapshots(模型保存地址)<br>  │<br>  └── tests(测试文件夹，包含对模型的各种测试)</p></li><li><p>keras_retinanet(主要的框架代码)<br>  │<br>  ├── backend(tf或者th相关的设置)<br>  │<br>  ├── bin(包含模型转换、调试、评价、训练等文件)<br>  │<br>  ├── callbacks(与召回相关的函数)<br>  │<br>  ├── layers(基础网络层之上的采样层处理，过滤预选框)<br>  │<br>  ├── callbacks(与召回相关的函数)<br>  │<br>  ├── models(基础网络文件夹，包括densenet、mobilenet、resnet、retinanet、vgg等网络)<br>  │<br>  ├── preprocessing(数据集相关，包括各种数据集的获取、解析等)<br>  │<br>  ├── utils(附属工具，包括锚点框、非最大值抑制等)<br>  │<br>  └── losses.py/initializers.py(损失和初始化等)</p></li></ul><h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>关于模型的训练文件，在bin文件夹下，其训练文件的流程大致如下</p><p><img src="/2019/01/17/框架梳理——RetinaNet-keras/keras-retinanet解析.jpg" alt="图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;框架梳理——RetinaNet-keras&quot;&gt;&lt;a href=&quot;#框架梳理——RetinaNet-keras&quot; class=&quot;headerlink&quot; title=&quot;框架梳理——RetinaNet/keras&quot;&gt;&lt;/a&gt;框架梳理——RetinaNet/keras&lt;/
+      
+    
+    </summary>
+    
+      <category term="框架实现" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6%E5%AE%9E%E7%8E%B0/"/>
+    
+    
+      <category term="RetinaNet" scheme="http://yoursite.com/tags/RetinaNet/"/>
+    
+      <category term="keras" scheme="http://yoursite.com/tags/keras/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>keras-RetinaNet问题记录</title>
+    <link href="http://yoursite.com/2019/01/16/keras-RetinaNet%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2019/01/16/keras-RetinaNet问题记录/</id>
+    <published>2019-01-16T07:39:30.000Z</published>
+    <updated>2019-03-28T03:30:28.971Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="框架搭建"><a href="#框架搭建" class="headerlink" title="框架搭建"></a>框架搭建</h2><h3 id="获取代码"><a href="#获取代码" class="headerlink" title="获取代码"></a>获取代码</h3><ul><li><p>克隆代码库。  </p><p>  git clone <a href="https://github.com/fizyr/keras-retinanet.git" target="_blank" rel="noopener">https://github.com/fizyr/keras-retinanet.git</a></p></li></ul><h3 id="编译支持"><a href="#编译支持" class="headerlink" title="编译支持"></a>编译支持</h3><p>编译Cython代码</p><ul><li>python setup.py build_ext –inplace</li></ul><h2 id="Retinanet训练Pascal-VOC-2007"><a href="#Retinanet训练Pascal-VOC-2007" class="headerlink" title="Retinanet训练Pascal VOC 2007"></a>Retinanet训练Pascal VOC 2007</h2><h3 id="train"><a href="#train" class="headerlink" title="train"></a>train</h3><pre><code># trainpython3 keras_retinanet/bin/train.py pascal /path/to/VOCdevkit/VOC2007# 使用 --backbone=xxx 选择网络结构，默认是resnet50# xxx可以是resnet模型（`resnet50`，`resnet101`，`resnet152`）# 或`mobilenet`模型（`mobilenet128_1.0`，`mobilenet128_0.75`，`mobilenet160_1.0`等）# 也可以使用models目录下的 resnet.py，mobilenet.py等来自定义网络</code></pre><h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>1 首先需要进行模型转换，将训练好的模型转换为测试所需模型，<br>keras-retinanet的训练程序与训练模型一起使用。 与测试模型相比，这些是精简版本，仅包含培训所需的层（回归和分类值）。 如果您希望对模型进行测试（对图像执行对象检测），则需要将训练模型转换为测试模型。</p><pre><code># Running directly from the repository:keras_retinanet/bin/convert_model.py /path/to/training/model.h5 /path/to/save/inference/model.h5# Using the installed script:retinanet-convert-model /path/to/training/model.h5 /path/to/save/inference/model.h5</code></pre><p>2 测试代码</p><pre><code># import kerasimport keras# import keras_retinanetfrom keras_retinanet import modelsfrom keras_retinanet.utils.image import read_image_bgr, preprocess_image, resize_imagefrom keras_retinanet.utils.visualization import draw_box, draw_captionfrom keras_retinanet.utils.colors import label_color# import miscellaneous modulesimport matplotlib.pyplot as pltimport cv2import osimport numpy as npimport time# set tf backend to allow memory to grow, instead of claiming everythingimport tensorflow as tfdef get_session():    config = tf.ConfigProto()    config.gpu_options.allow_growth = True    return tf.Session(config=config)# use this environment flag to change which GPU to use#os.environ[&quot;CUDA_VISIBLE_DEVICES&quot;] = &quot;1&quot;# set the modified tf session as backend in keraskeras.backend.tensorflow_backend.set_session(get_session())# adjust this to point to your downloaded/trained model# models can be downloaded here: https://github.com/fizyr/keras-retinanet/releasesmodel_path = os.path.join(&apos;..&apos;, &apos;snapshots&apos;, &apos;resnet50_coco_best_v2.1.0.h5&apos;)# load retinanet modelmodel = models.load_model(model_path, backbone_name=&apos;resnet50&apos;)# if the model is not converted to an inference model, use the line below# see: https://github.com/fizyr/keras-retinanet#converting-a-training-model-to-inference-model#model = models.convert_model(model)#print(model.summary())# load label to names mapping for visualization purposeslabels_to_names = {0: &apos;person&apos;, 1: &apos;bicycle&apos;, 2: &apos;car&apos;, 3: &apos;motorcycle&apos;, 4: &apos;airplane&apos;, 5: &apos;bus&apos;, 6: &apos;train&apos;, 7: &apos;truck&apos;, 8: &apos;boat&apos;, 9: &apos;traffic light&apos;, 10: &apos;fire hydrant&apos;, 11: &apos;stop sign&apos;, 12: &apos;parking meter&apos;, 13: &apos;bench&apos;, 14: &apos;bird&apos;, 15: &apos;cat&apos;, 16: &apos;dog&apos;, 17: &apos;horse&apos;, 18: &apos;sheep&apos;, 19: &apos;cow&apos;, 20: &apos;elephant&apos;, 21: &apos;bear&apos;, 22: &apos;zebra&apos;, 23: &apos;giraffe&apos;, 24: &apos;backpack&apos;, 25: &apos;umbrella&apos;, 26: &apos;handbag&apos;, 27: &apos;tie&apos;, 28: &apos;suitcase&apos;, 29: &apos;frisbee&apos;, 30: &apos;skis&apos;, 31: &apos;snowboard&apos;, 32: &apos;sports ball&apos;, 33: &apos;kite&apos;, 34: &apos;baseball bat&apos;, 35: &apos;baseball glove&apos;, 36: &apos;skateboard&apos;, 37: &apos;surfboard&apos;, 38: &apos;tennis racket&apos;, 39: &apos;bottle&apos;, 40: &apos;wine glass&apos;, 41: &apos;cup&apos;, 42: &apos;fork&apos;, 43: &apos;knife&apos;, 44: &apos;spoon&apos;, 45: &apos;bowl&apos;, 46: &apos;banana&apos;, 47: &apos;apple&apos;, 48: &apos;sandwich&apos;, 49: &apos;orange&apos;, 50: &apos;broccoli&apos;, 51: &apos;carrot&apos;, 52: &apos;hot dog&apos;, 53: &apos;pizza&apos;, 54: &apos;donut&apos;, 55: &apos;cake&apos;, 56: &apos;chair&apos;, 57: &apos;couch&apos;, 58: &apos;potted plant&apos;, 59: &apos;bed&apos;, 60: &apos;dining table&apos;, 61: &apos;toilet&apos;, 62: &apos;tv&apos;, 63: &apos;laptop&apos;, 64: &apos;mouse&apos;, 65: &apos;remote&apos;, 66: &apos;keyboard&apos;, 67: &apos;cell phone&apos;, 68: &apos;microwave&apos;, 69: &apos;oven&apos;, 70: &apos;toaster&apos;, 71: &apos;sink&apos;, 72: &apos;refrigerator&apos;, 73: &apos;book&apos;, 74: &apos;clock&apos;, 75: &apos;vase&apos;, 76: &apos;scissors&apos;, 77: &apos;teddy bear&apos;, 78: &apos;hair drier&apos;, 79: &apos;toothbrush&apos;}# load imageimage = read_image_bgr(&apos;000000008021.jpg&apos;)# copy to draw ondraw = image.copy()draw = cv2.cvtColor(draw, cv2.COLOR_BGR2RGB)# preprocess image for networkimage = preprocess_image(image)image, scale = resize_image(image)# process imagestart = time.time()boxes, scores, labels = model.predict_on_batch(np.expand_dims(image, axis=0))print(&quot;processing time: &quot;, time.time() - start)# correct for image scaleboxes /= scale# visualize detectionsfor box, score, label in zip(boxes[0], scores[0], labels[0]):    # scores are sorted so we can break    if score &lt; 0.5:        break    color = label_color(label)    b = box.astype(int)    draw_box(draw, b, color=color)    caption = &quot;{} {:.3f}&quot;.format(labels_to_names[label], score)    draw_caption(draw, b, caption)plt.figure(figsize=(15, 15))plt.axis(&apos;off&apos;)plt.imshow(draw)plt.show()</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;框架搭建&quot;&gt;&lt;a href=&quot;#框架搭建&quot; class=&quot;headerlink&quot; title=&quot;框架搭建&quot;&gt;&lt;/a&gt;框架搭建&lt;/h2&gt;&lt;h3 id=&quot;获取代码&quot;&gt;&lt;a href=&quot;#获取代码&quot; class=&quot;headerlink&quot; title=&quot;获取代码&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="算法实现" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/"/>
+    
+    
+      <category term="RetinaNet" scheme="http://yoursite.com/tags/RetinaNet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FPN——CNN特征提取</title>
+    <link href="http://yoursite.com/2019/01/14/FPN%E2%80%94%E2%80%94CNN%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/"/>
+    <id>http://yoursite.com/2019/01/14/FPN——CNN特征提取/</id>
+    <published>2019-01-14T09:22:16.000Z</published>
+    <updated>2019-03-28T03:30:28.944Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载自：<a href="https://www.jianshu.com/p/5a28ae9b365d" target="_blank" rel="noopener">https://www.jianshu.com/p/5a28ae9b365d</a> 如有侵权，请联系删除</p><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>FPN是一种利用常规CNN模型来高效提取图片中各维度特征的方法。在计算机视觉学科中，多维度的目标检测一直以来都是通过将缩小或扩大后的不同维度图片作为输入来生成出反映不同维度信息的特征组合。这种办法确实也能有效地表达出图片之上的各种维度特征，但却对硬件计算能力及内存大小有较高要求，因此只能在有限的领域内部使用。<br>FPN通过利用常规CNN模型内部从底至上各个层对同一scale图片不同维度的特征表达结构，提出了一种可有效在单一图片视图下生成对其的多维度特征表达的方法。它可以有效地赋能常规CNN模型，从而可以生成出表达能力更强的feature maps以供下一阶段计算机视觉任务像object detection/semantic segmentation等来使用。本质上说它是一种加强主干网络CNN特征表达的方法。</p><h2 id="Featurized-image-pyramid"><a href="#Featurized-image-pyramid" class="headerlink" title="Featurized image pyramid"></a>Featurized image pyramid</h2><p>下图中描述了四种不同的得到一张图片多维度特征组合的方法。  </p><p><img src="/2019/01/14/FPN——CNN特征提取/1.JPG" alt="图片"><br>上图(a)中的方法即为常规的生成一张图片的多维度特征组合的经典方法。即对某一输入图片我们通过压缩或放大从而形成不同维度的图片作为模型输入，使用同一模型对这些不同维度的图片分别处理后，最终再将这些分别得到的特征（feature maps）组合起来就得到了我们想要的可反映多维度信息的特征集。此种方法缺点在于需要对同一图片在更改维度后输入处理多次，因此对计算机的算力及内存大小都有较高要求。<br>图(b)中的方法则只拿单一维度的图片做为输入，然后经CNN模型处理后，拿最终一层的feature maps作为最终的特征集。显然此种方法只能得到单一维度的信息。优点是计算简单，对计算机算力及内存大小都无过高需求。此方法为大多数R-CNN系列目标检测方法所用像R-CNN/Fast-RCNN/Faster-RCNN等。因此最终这些模型对小维度的目标检测性能不是很好。<br>图(c)中的方法同样是拿单一维度的图片做为输入，不过最终选取用于接下来分类或检测任务时的特征组合时，此方法不只选用了最后一层的high level feature maps，同样也会选用稍靠下的反映图片low level 信息的feature maps。然后将这些不同层次（反映不同level的图片信息）的特征简单合并起来（一般为concat处理），用于最终的特征组合输出。此方法可见于SSD当中。不过SSD在选取层特征时都选用了较高层次的网络。比如在它以VGG16作为主干网络的检测模型里面所选用的最低的Convolution的层为Conv4，这样一些具有更低级别信息的层特征像Conv2/Conv3就被它给漏掉了，于是它对更小维度的目标检测效果就不大好。<br>图(d)中的方法同图(c)中的方法有些类似，也是拿单一维度的图片作为输入，然后它会选取所有层的特征来处理然后再联合起来做为最终的特征输出组合。（作者在论文中拿Resnet为实例时并没选用Conv1层，那是为了算力及内存上的考虑，毕竟Conv1层的size还是比较大的，所包含的特征跟直接的图片像素信息也过于接近）。另外还对这些反映不同级别图片信息的各层自上向下进行了再处理以能更好地组合从而形成较好的特征表达（详细过程会在下面章节中进一步介绍）。而此方法正是我们本文中要讲的FPN CNN特征提取方法。</p><h2 id="FPN基本架构"><a href="#FPN基本架构" class="headerlink" title="FPN基本架构"></a>FPN基本架构</h2><p>FPN会使用CNN网络中每一层的信息来生成最后的表达特征组合。下图是它的基本架构。从中我们能看到FPN会模型每个CNN层的特征输出进行处理以生成反映此维度信息的特征。而自上至下处理后所生成出的特征之间也有个关联关系，即上层high level的特征会影响下一层次的low level特征表达。最终所有的特征一起用来作为下一步的目标检测或类别分析等任务的输入。</p><p><img src="/2019/01/14/FPN——CNN特征提取/2.JPG" alt="图片"></p><h2 id="FPN详细介绍"><a href="#FPN详细介绍" class="headerlink" title="FPN详细介绍"></a>FPN详细介绍</h2><p>FPN是传统CNN网络对图片信息进行表达输出的一种增强。它目的是为了改进CNN网络的特征提取方式，从而可以使最终输出的特征更好地表示出输入图片各个维度的信息。它的基本过程有三个分别为：自下至上的通路即自下至上的不同维度特征生成；自上至下的通路即自上至下的特征补充增强；CNN网络层特征与最终输出的各维度特征之间的关联表达。<br>我们在下图中能看出这三个过程的细粒度表示。</p><p><img src="/2019/01/14/FPN——CNN特征提取/3.JPG" alt="图片"></p><ul><li><p>自下至上的通路（Bottom-top pathway）：这个没啥奇怪就是指的普通CNN特征自底至上逐层浓缩表达特征的一个过程。此过程很早即被认识到了即较底的层反映较浅层次的图片信息特征像边缘等；较高的层则反映较深层次的图片特征像物体轮廓、乃至类别等；</p></li><li><p>自上至下的通路（Top-bottome pathway）：上层的特征输出一般其feature map size比较小，但却能表示更大维度（同时也是更加high level）的图片信息。此类high level信息经实验证明能够对后续的目标检测、物体分类等任务发挥关键作用。因此我们在处理每一层信息时会参考上一层的high level信息做为其输入（这里只是在将上层feature map等比例放大后再与本层的feature maps做element wise相加）;</p></li><li><p>CNN层特征与每一级别输出之间的表达关联：在这里作者实验表明使用1x1的Conv即可生成较好的输出特征，它可有效地降低中间层次的channels 数目。最终这些1x1的Convs使得我们输出不同维度的各个feature maps有着相同的channels数目（本文用到的Resnet-101主干网络中，各个层次特征的最终输出channels数目为256）。</p></li></ul><h2 id="FPN在目标检测中的实际应用"><a href="#FPN在目标检测中的实际应用" class="headerlink" title="FPN在目标检测中的实际应用"></a>FPN在目标检测中的实际应用</h2><p>以下为一个FPN特征提取方法在RCNN目标检测框架中应用的例子。从中我们可以更加详细地了解到它的具体实现。</p><p><img src="/2019/01/14/FPN——CNN特征提取/4.JPG" alt="图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转载自：&lt;a href=&quot;https://www.jianshu.com/p/5a28ae9b365d&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/5a28ae9b365d&lt;/a&gt; 如有侵权，请联系删除
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="图像识别" scheme="http://yoursite.com/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/"/>
+    
+      <category term="FPN" scheme="http://yoursite.com/tags/FPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>目标检测——RetinaNet</title>
+    <link href="http://yoursite.com/2019/01/14/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E2%80%94%E2%80%94RetinaNet/"/>
+    <id>http://yoursite.com/2019/01/14/目标检测——RetinaNet/</id>
+    <published>2019-01-14T08:23:53.000Z</published>
+    <updated>2019-03-28T03:30:28.993Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载自：<a href="https://www.jianshu.com/p/8e501a159b28" target="_blank" rel="noopener">https://www.jianshu.com/p/8e501a159b28</a> 如有侵权，请联系删除</p><h1 id="RetinaNet-Focal-loss在目标检测网络中的应用"><a href="#RetinaNet-Focal-loss在目标检测网络中的应用" class="headerlink" title="RetinaNet: Focal loss在目标检测网络中的应用"></a>RetinaNet: Focal loss在目标检测网络中的应用</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>RetinaNet是2018年Facebook AI团队在目标检测领域新的贡献。它的重要作者名单中Ross Girshick与Kaiming He赫然在列。来自Microsoft的Sun Jian团队与现在Facebook的Ross/Kaiming团队在当前视觉目标分类、检测领域有着北乔峰、南慕容一般的独特地位。这两个实验室的文章多是行业里前进方向的提示牌。<br>RetinaNet只是原来FPN网络与FCN网络的组合应用，因此在目标网络检测框架上它并无特别亮眼创新。文章中最大的创新来自于Focal loss的提出及在单阶段目标检测网络RetinaNet（实质为Resnet + FPN + FCN）的成功应用。Focal loss是一种改进了的交叉熵(cross-entropy, CE)loss，它通过在原有的CE loss上乘了个使易检测目标对模型训练贡献削弱的指数式，从而使得Focal loss成功地解决了在目标检测时，正负样本区域极不平衡而目标检测loss易被大批量负样本所左右的问题。此问题是单阶段目标检测框架（如SSD/Yolo系列）与双阶段目标检测框架（如Faster-RCNN/R-FCN等）accuracy gap的最大原因。在Focal loss提出之前，已有的目标检测网络都是通过像Boot strapping/Hard example mining等方法来解决此问题的。作者通过后续实验成功表明Focal loss可在单阶段目标检测网络中成功使用，并最终能以更快的速率实现与双阶段目标检测网络近似或更优的效果。</p><h2 id="类别不平衡问题"><a href="#类别不平衡问题" class="headerlink" title="类别不平衡问题"></a>类别不平衡问题</h2><p>常规的单阶段目标检测网络像SSD一般在模型训练时会先大密度地在模型终端的系列feature maps上生成出10,000甚至100,0000个目标候选区域。然后再分别对这些候选区域进行分类与位置回归识别。而在这些生成的数万个候选区域中，绝大多数都是不包含待检测目标的图片背景，这样就造成了机器学习中经典的训练样本正负不平衡的问题。它往往会造成最终算出的training loss为占绝对多数但包含信息量却很少的负样本所支配，少样正样本提供的关键信息却不能在一般所用的training loss中发挥正常作用，从而无法得出一个能对模型训练提供正确指导的loss。<br>常用的解决此问题的方法就是负样本挖掘。或其它更复杂的用于过滤负样本从而使正负样本数维持一定比率的样本取样方法。而在此篇文章中作者提出了可通过候选区域包含潜在目标概率进而对最终的training loss进行较正的方法。实验表明这种新提出的focal loss在单阶段目标检测任务上表现突出，有效地解决了此领域里面潜在的类别不平衡问题。</p><h2 id="Focal-loss"><a href="#Focal-loss" class="headerlink" title="Focal loss"></a>Focal loss</h2><ul><li><p>CE(cross-entropy) loss<br>  以下为典型的交叉熵loss，它广泛用于当下的图像分类、检测CNN网络当中。</p><p>  <img src="/2019/01/14/目标检测——RetinaNet/1.JPG" alt="图片"></p></li><li><p>Balanced CE loss<br>  考虑到上节中提到的类别不平衡问题对最终training loss的不利影响，我们自然会想到可通过在loss公式中使用与目标存在概率成反比的系数对其进行较正。如下公式即是此朴素想法的体现。它也是作者最终Focus loss的baseline。</p><p>  <img src="/2019/01/14/目标检测——RetinaNet/2.JPG" alt="图片"></p></li><li><p>Focal loss定义<br>  以下是作者提出的focal loss的想法。</p><p>  <img src="/2019/01/14/目标检测——RetinaNet/3.JPG" alt="图片"><br>  下图为focal loss与常规CE loss的对比。从中，我们易看出focal loss所加的指数式系数可对正负样本对loss的贡献自动调节。当某样本类别比较明确些，它对整体loss的贡献就比较少；而若某样本类别不易区分，则对整体loss的贡献就相对偏大。这样得到的loss最终将集中精力去诱导模型去努力分辨那些难分的目标类别，于是就有效提升了整体的目标检测准度。不过在此focus loss计算当中，我们引入了一个新的hyper parameter即γ。一般来说新参数的引入，往往会伴随着模型使用难度的增加。在本文中，作者有试者对其进行调节，线性搜索后得出将γ设为2时，模型检测效果最好。</p><p>  <img src="/2019/01/14/目标检测——RetinaNet/4.JPG" alt="图片"></p><p>  在最终所用的focal loss上，作者还引入了α系数，它能够使得focal loss对不同类别更加平衡。实验表明它会比原始的focal loss效果更好。</p><p>  <img src="/2019/01/14/目标检测——RetinaNet/5.JPG" alt="图片"></p></li></ul><h2 id="模型的初始化参数选择"><a href="#模型的初始化参数选择" class="headerlink" title="模型的初始化参数选择"></a>模型的初始化参数选择</h2><p>一般我们初始化CNN网络模型时都会使用无偏的参数对其初始化，比如Conv的kernel 参数我们会以bias 为0，variance为0.01的某分布来对其初始化。但是如果我们的模型要去处理类别极度不平衡的情况，那么就会考虑到这样对训练数据分布无任选先验假设的初始化会使得在训练过程中，我们的参数更偏向于拥有更多数量的负样本的情况去进化。作者观察下来发现它在训练时会出现极度的不稳定。于是作者在初始化模型最后一层参数时考虑了数据样本分布的不平衡性，这样使得初始训练时最终得出的loss不会对过多的负样本数量所惊讶到，从而有效地规避了初始训练时模型的震荡与不稳定</p><h2 id="RetinaNet检测框架"><a href="#RetinaNet检测框架" class="headerlink" title="RetinaNet检测框架"></a>RetinaNet检测框架</h2><p>RetinaNet本质上是Resnet + FPN + 两个FCN子网络。<br>以下为RetinaNet目标框架框架图。有了之前blog里面提到的FPN与FCN的知识后，我们很容易理解此框架的设计含义。</p><p><img src="/2019/01/14/目标检测——RetinaNet/6.JPG" alt="图片"></p><p>一般主干网络可选用任一有效的特征提取网络如vgg16或resnet系列，此处作者分别尝试了resnet-50与resnet-101。而FPN则是对resnet-50里面自动形成的多尺度特征进行了强化利用，从而得到了表达力更强、包含多尺度目标区域信息的feature maps集合。最后在FPN所吐出的feature maps集合上，分别使用了两个FCN子网络（它们有着相同的网络结构却各自独立，并不share参数）用来完成目标框类别分类与位置回归任务。</p><h2 id="模型的推理与训练"><a href="#模型的推理与训练" class="headerlink" title="模型的推理与训练"></a>模型的推理与训练</h2><ul><li><p>模型推理 </p><p>  一旦我们有了训练好的模型，在正式部署时，只需对其作一次forward，然后对最终生成的目标区域进行过渡。然后只对每个FPN level上目标存在概率最高的前1000个目标框进一步地decoding处理。接下来再将所有FPN level上得到的目标框汇集起来，统一使用极大值抑制的方法进一步过渡（其中极大值抑制时所用的阈值为0.5）。这样，我们就得到了最终的目标与其位置框架。</p></li><li><p>模型训练</p><p>  模型训练中主要在后端Loss计算时采用了Focal loss，另外也在模型初始化时考虑到了正负样本极度不平衡的情况进而对模型最后一个conv layer的bias参数作了有偏初始化。 </p><p>  训练时用了SGD，mini batch size为16，在8个GPU上一块训练，每个GPU上local batch size为2。最大iterations数目为90,000；模型初始lr为0.01,接下来随着训练进行分step wisely 降低。真正的training loss则为表达目标类别的focus loss与表达目标框位置回归信息的L1 loss的和。  </p><p>  下图为RetinaNet模型的检测准度与性能<br>  <img src="/2019/01/14/目标检测——RetinaNet/7.JPG" alt="图片"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转载自：&lt;a href=&quot;https://www.jianshu.com/p/8e501a159b28&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jianshu.com/p/8e501a159b28&lt;/a&gt; 如有侵权，请联系删除
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="RetinaNet" scheme="http://yoursite.com/tags/RetinaNet/"/>
+    
+      <category term="目标检测" scheme="http://yoursite.com/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目整理</title>
+    <link href="http://yoursite.com/2019/01/14/%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2019/01/14/项目整理/</id>
+    <published>2019-01-14T01:25:39.000Z</published>
+    <updated>2019-03-28T03:30:29.015Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="渝黔高速——隧道"><a href="#渝黔高速——隧道" class="headerlink" title="渝黔高速——隧道"></a>渝黔高速——隧道</h1><p>开发工具：JavaScript + Git + Docker + Postgresql<br>IDE：Vscode</p><p>表结构设计：</p><ul><li>隧道表</li><li>衬砌表</li><li>工法分区表</li><li>衬砌工程量表</li><li>分区工程量表</li><li>模型表</li><li>进度表</li><li>施工劳务记录表</li><li>劳务合同清单表</li></ul><h2 id="业务分析"><a href="#业务分析" class="headerlink" title="业务分析"></a>业务分析</h2><h3 id="模型的创建"><a href="#模型的创建" class="headerlink" title="模型的创建"></a>模型的创建</h3><ul><li>隧道的创建以及获取信息</li><li>衬砌的创建以及信息获取</li><li>工法分区的创建以及信息获取</li><li>衬砌工程量的录入</li><li>隧道段的创建、查询、修改</li><li>在段下面创建模型（根据衬砌类型和分区批量创建）</li><li>分区工程量参数设置（根据已经创建的模型，对每一个分区进行分区工程量参数设置）、修改</li><li>分区工程量参数</li></ul><h3 id="进度"><a href="#进度" class="headerlink" title="进度"></a>进度</h3><ul><li>根据模型获取相关的工程量，起止桩号</li><li>创建进尺</li><li>修改完成状态</li><li>查看已完成进尺</li></ul><h3 id="工程量"><a href="#工程量" class="headerlink" title="工程量"></a>工程量</h3><ul><li>统计当前施工完成的工程量</li><li>根据时间筛选当前完成的工程量</li></ul><h3 id="产值"><a href="#产值" class="headerlink" title="产值"></a>产值</h3><ul><li>根据工程量计算得到当前施工的总产值以及单个隧道产值</li></ul><h3 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h3><ul><li>合同工程量清单的创建、获取</li><li>劳务成本的计算</li></ul><h3 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h3><p><img src="/2019/01/14/项目整理/1.png" alt="图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;渝黔高速——隧道&quot;&gt;&lt;a href=&quot;#渝黔高速——隧道&quot; class=&quot;headerlink&quot; title=&quot;渝黔高速——隧道&quot;&gt;&lt;/a&gt;渝黔高速——隧道&lt;/h1&gt;&lt;p&gt;开发工具：JavaScript + Git + Docker + Postgresql&lt;br
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="项目" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+      <category term="隧道" scheme="http://yoursite.com/tags/%E9%9A%A7%E9%81%93/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Pytorch的特征图提取</title>
@@ -197,7 +381,7 @@
     <published>2018-10-06T03:06:43.000Z</published>
     <updated>2018-10-29T11:44:55.364Z</updated>
     
-    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX19eplejUSLMEQLyBYTrcH76p9u5J7K2C6pbIFM2mmvg0EQKSaoji1KVGb7W4bI6jnwuDC9WtH9hgetpfjBu4cAo9nHeXU4+47iSKzN820y43KfZWLip1H0f/0FFoVpAZ6EYdfvuiq6bm07PAxnJqLWjEcMg/18uGfKSdKgDOV8ctiIZW2At3s8Tyrw6oecQ9r2/Io4iYhAYEqYhFDf653MNPIgWCXCGdJ12w0fqo5WdG4I24O8Cg5csxm8MkRq0wcklgI97XLEYcmyEAFY1Vs8dQYTBJWq3JtQfesZ6oi2M4jKGqPxb0cDI6aIHdGZ0oVZQu6pJqKh08T0JaNPd/u5R/NR+uFslLp2BvYYILO7CJ11lxuFbYw3tiQtz5aQaAQlSZ3aR+AXsx/vxk9Lu8NW+s2wHLXqzKHgurKCFCjEfQiAYgDF0uq9D/6OnsxFUQCJlwF5R3/q321a14XnGM5YA/+YtesFNSSETVsZ6pm0bObruBrHR0iwJ</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX188xf+vlXICG22c3xImFW4BK+Wfjdk2tjnoD/dRSVBAuF7KBb7FDojG9aTQOsrHkcD/Fx1sIS1rY6QTCQi5+HcV3NyfZHRQ/H6cCYsHCUKZVmOgYuHGM/Nh4OEj7Lsn/aLZ4niPGJSOAJTx+M/l6nkTMFDjWEBVtOSpQiZgWlJ7K2Ao5FCRO0gHEErUHeYdqn1eUx80ztf4a0pGi3tWsFbQr/YKic8jslEawBWwee21J2LK0jMuigeK/tz5e8m+1r7eiWH4gRHVMeRHROkeqqlmRWFh4lrHLsSfl/4V/2A06kOjRRcDN05UzKoxEsPH2Hqmnd2v+47NQKHVYt3IbQIO/tpf/BC7WaVqcMmtGClVJyvWsr96S+2xjgBgFnXS+LoiSKTOokb1TmnZdS9vJsjku21JbCm97ZQzpoFZ0Evo7bCz4vTm6o2TkC0Iy5Cej0oyHoAIaebHomc0WyFNUN5hR9Vf5JFQAT2SuFtaYTi4IT+E7FPKjwM0</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
     
     <summary type="html">
     
@@ -332,185 +516,6 @@ function doDecrypt (pwd, onError) {
     
     
       <category term="pytorch" scheme="http://yoursite.com/tags/pytorch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于facenet的实时人脸检测</title>
-    <link href="http://yoursite.com/2018/07/27/%E5%9F%BA%E4%BA%8Efacenet%E7%9A%84%E5%AE%9E%E6%97%B6%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B/"/>
-    <id>http://yoursite.com/2018/07/27/基于facenet的实时人脸检测/</id>
-    <published>2018-07-27T09:33:00.000Z</published>
-    <updated>2018-07-27T12:48:52.121Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>参考自</strong>  <a href="https://github.com/shanren7/real_time_face_recognition" target="_blank" rel="noopener">https://github.com/shanren7/real_time_face_recognition</a>  </p><p><strong>本人的项目代码</strong>  <a href="https://github.com/zouzhen/real_time_face_recognize" target="_blank" rel="noopener">https://github.com/zouzhen/real_time_face_recognize</a></p><p><del>虽然名字相同，但里面的内容可是有很大的不同</del><br>由于不能满足当前的tensorflow版本，以及未能满足设计要求，进行了优化与重新设计</p><h2 id="基于facenet的实时人脸检测"><a href="#基于facenet的实时人脸检测" class="headerlink" title="基于facenet的实时人脸检测"></a>基于facenet的实时人脸检测</h2><h3 id="工作环境"><a href="#工作环境" class="headerlink" title="工作环境"></a>工作环境</h3><ul><li>python 3.6</li><li>tensorflow==1.9.0(可运行在无gpu版)</li></ul><h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><p>real_time_face_recognize  </p><ul><li>|—— model_check_point（保存人脸识别模型）</li><li>|—— models（储存了facenet采用的神经网络模型）</li><li>|—— detect_face.py(主要实现人脸的检测，同时返回可能的人脸框)</li><li>|—— facenet.py（这里存储了facenet的主要函数）</li><li>|—— real_time_face_recognize.py(实现了实时人脸检测)  </li></ul><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><ol><li>从 <a href="https://github.com/davidsandberg/facenet" target="_blank" rel="noopener">https://github.com/davidsandberg/facenet</a> 中下载预训练的分类模型，放在model_check_point下  </li><li>使用pip install requirements.txt安装需要的包，建议在virtualenv环境安装  </li><li>在目录下新建picture文件，将需要识别的人的图片放入其中，每人放入一张清晰的图片即可  </li><li>执行python real_time_face_recognize.py </li></ol><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>除可在facenet作者的github中下载模型外，我自己基于lfw训练集训练了一个模型，<a href="https://download.csdn.net/download/zouzhen_id/10568660" target="_blank" rel="noopener">点击</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;参考自&lt;/strong&gt;  &lt;a href=&quot;https://github.com/shanren7/real_time_face_recognition&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/
-      
-    
-    </summary>
-    
-      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="人脸识别" scheme="http://yoursite.com/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MongoDB学习记录</title>
-    <link href="http://yoursite.com/2018/07/16/MongoDB%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2018/07/16/MongoDB学习记录/</id>
-    <published>2018-07-16T03:51:17.000Z</published>
-    <updated>2018-07-17T01:25:30.547Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><p>转载自<a href="https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md" target="_blank" rel="noopener">https://github.com/zxhyJack/MyBlog/blob/master/mongodb/mongodb.md</a></p><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul><li><p>文档<br>  是键值对的有序集合，这是MongDB的核心概念  </p></li><li><p>集合<br>  集合就是一组文档  </p><ul><li>动态模式<br>  集合是动态模式的，这意味着集合里面的文档可以是是各式各样的</li><li>命名<br>  集合使用名称进行命名  </li></ul></li><li><p>数据库<br>  由多个集合构成数据库，一个MongDB实例可以承载多个数据库，每个数据库拥有0个或多个集合  </p></li><li><p>基本操作<br>  在终端运行mongod命令，启动时，shell将自动连接MongDB数据库，需确保数据库已启动，可充分利用Javascript的标准库，还可定义和调用Javascript函数。</p><ul><li><p>创建数据库</p><pre><code>use database_name</code></pre><p>如果数据库存在，则进入指定数据库，否则，创建数据库<br>此时需要写入数据，数据库才能真正创建成功</p></li><li><p>查看所有数据库</p><pre><code>show databases | dbs</code></pre></li><li><p>创建集合</p><pre><code>db.createCollection(collection_name)</code></pre></li><li><p>删除数据库<br>先进入要删除的数据库，然后执行命令</p><pre><code>db.dropDatabase()</code></pre></li><li><p>删除集合</p><pre><code>db.collection_name.drop()</code></pre></li><li><p>增</p><pre><code>db.collection_name.insert(document)</code></pre><p>  exp:</p><pre><code>db.students.insert({name:&apos;James&apos;,age: 32,gender:&apos;man&apos;,career:&apos;player&apos;})</code></pre></li><li><p>查</p><pre><code>db.collection.find(&lt;query&gt;,&lt;projection&gt;)- query: 查询条件- projection: 投影操作</code></pre><p>  exp:</p><pre><code>db.students.find()</code></pre></li><li><p>改</p><pre><code>db.collection.updateOne(&lt;query&gt;,&lt;update&gt;) // 更新第一个符合条件的集合db.collection.updateMany(&lt;query&gt;,&lt;update&gt;)  // 更新所有符合条件的集合</code></pre><ul><li>query: 查询条件</li><li><p>update： 更新的内容</p><p>exp: </p><p>  db.students.update({name:’James’},{$set:{gender:’woman’}})</p></li></ul></li><li><p>删</p><pre><code>db.collection_name.deleteOne(&lt;query&gt;) // 删除第一个符合条件的集合db.collection_name.deleteMany(&lt;query&gt;) // 删除所有符合条件的集合</code></pre><p>  exp:</p><pre><code>db.students.deleteOne({name:&apos;James&apos;})</code></pre></li></ul></li></ul><h2 id="数据操作（重点）"><a href="#数据操作（重点）" class="headerlink" title="数据操作（重点）"></a>数据操作（重点）</h2><p>数据库的核心——CRUD，增加和删除较为简单，查询和修改较复杂</p><h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><ul><li><p>$gt 大于</p></li><li><p>$lt 小于</p></li><li><p>$gte  大于等于</p></li><li><p>$lte  小于等于</p></li><li><p>$eq | (key: value)  等于</p></li><li><p>$ne 不等于</p></li></ul><p>先往数据库中添加一些数据</p><pre><code>db.students.insert({&apos;name&apos;:&apos;张三&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:19,&apos;score&apos;: 89,&apos;address&apos;: &apos;海淀区&apos;})db.students.insert({&apos;name&apos;:&apos;李四&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:20,&apos;score&apos;: 100,&apos;address&apos;: &apos;朝阳区&apos;})db.students.insert({&apos;name&apos;:&apos;王五&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:22,&apos;score&apos;: 50,&apos;address&apos;: &apos;西城区&apos;})db.students.insert({&apos;name&apos;:&apos;赵六&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:21,&apos;score&apos;: 60,&apos;address&apos;: &apos;东城区&apos;})db.students.insert({&apos;name&apos;:&apos;孙七&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:19,&apos;score&apos;: 70,&apos;address&apos;: &apos;海淀区&apos;})db.students.insert({&apos;name&apos;:&apos;王八&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:23,&apos;score&apos;: 90,&apos;address&apos;: &apos;海淀区&apos;})db.students.insert({&apos;name&apos;:&apos;刘九&apos;,&apos;sex&apos;:&apos;女&apos;,&apos;age&apos;:35,&apos;score&apos;: 56,&apos;address&apos;: &apos;朝阳区&apos;})db.students.insert({&apos;name&apos;:&apos;钱十&apos;,&apos;sex&apos;:&apos;男&apos;,&apos;age&apos;:27,&apos;score&apos;: 89,&apos;address&apos;: &apos;海淀区&apos;})</code></pre><p>exp:</p><ol><li><p>查询姓名是张三的学生信息</p><pre><code>db.students.find({name:’张三’}).pretty()</code></pre></li><li><p>查询性别是男的学生信息</p><pre><code>db.students.find({sex:’男’}).pretty()</code></pre></li><li><p>查询年龄大于19岁的学生</p><pre><code>db.students.find({age:{$gt:19}}).pretty()</code></pre></li><li><p>查询成绩大于等于60分的学生</p><pre><code>db.students.find({score:{$gte:60}}).pretty() </code></pre></li><li><p>查询姓名不是王五的信息</p><pre><code>db.students.find({name:{$ne:’王五’}}).pretty()</code></pre></li></ol><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><ul><li><p><code>$and</code>   与</p></li><li><p><code>$or</code>   或</p></li><li><p><code>$not | $nor</code>  非</p></li></ul><p>exp:</p><ol><li><p>查询年龄在19 ~ 22岁的学生信息</p><pre><code>db.students.find({age:{$gte:19,$lte:22}}).pretty()</code></pre></li></ol><p>逻辑运算中与连接是最容易的，只需要利用<code>,</code>分割多个条件即可</p><ol start="2"><li><p>查询年龄小于20岁，或者成绩大于90分的学生信息</p><pre><code>db.students.find({$or:    [     {age:{$lt:20}},    {score:{$gt:90}}    ]}).pretty()</code></pre></li><li><p>查询年龄大于等于20岁，且成绩小于等于90分的学生信息</p><pre><code>db.students.find({$and:    [     {age:{$gte:20}},    {score:{$lte:90}}    ]}).pretty()</code></pre></li><li><p>查询年龄小于20岁的学生信息</p><pre><code>db.students.find({age:{$lt:20}}).pretty()db.students.find({age:{$not:{$gte:20}}}).pretty()</code></pre></li></ol><h4 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h4><p><code>$mod:[除数，余数]</code></p><p>exp: 查询年龄除以20余1的学生信息</p><pre><code>db.students.find({age:{$mod:[20,1]}}).pretty()</code></pre><h4 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h4><p>$in: 在范围之中<br>$nin: 不在范围之中</p><p>exp:</p><ol><li><p>查询姓名是”张三“、”李四、”王五“的学生</p><pre><code>db.students.find({name: {$in:[&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]}}).pret ty()</code></pre></li><li><p>查询姓名不是”张三“、”李四、”王五“的学生</p><pre><code>db.students.find({name: {$nin:[&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;]}}).pretty()</code></pre></li></ol><h4 id="数组查询"><a href="#数组查询" class="headerlink" title="数组查询"></a>数组查询</h4><ul><li><p>$all </p></li><li><p>$size </p></li><li><p>$slice </p></li><li><p>$elemMatch</p></li></ul><p>首先在数据库中新增一些数据</p><pre><code>db.students.insert({name:&apos;a&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;]})db.students.insert({name:&apos;b&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;]})db.students.insert({name:&apos;c&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;]})db.students.insert({name:&apos;d&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;]})db.students.insert({name:&apos;e&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,course:[&apos;语文&apos;,&apos;政治&apos;]})</code></pre><p><code>$all</code>: 表示全都包括，用法：</p><pre><code>{$all:[内容1,内容2]}</code></pre><p>exp:</p><p>查询同时参加语文和数学的学生</p><pre><code>db.students.find({course:{$all:[&apos;语文&apos;,&apos;数学&apos;]}}).pretty()</code></pre><p>数组的操作，可以利用索引，使用<code>key.index</code>的方式来定义索引</p><p>查询数组中第二个内容是数学的学生(sh)</p><pre><code>db.students.find({&apos;course.1&apos;:&apos;数学&apos;}).pretty()</code></pre><p><code>$size</code>: 控制数组元素数量</p><p>exp:</p><p>查询只有两门课程的学生</p><pre><code>db.students.find({course:{$size: 2}}).pretty()</code></pre><p><code>$slice</code>: 控制查询结果的返回数量</p><p>exp:</p><p>查询年龄是19岁的学生，要求之显示两门参加的课程</p><pre><code>db.students.find({age:19},{course:{$slice:2}}).pretty()</code></pre><p>此时查询返回的是前两门课程，可以设置参数来取出想要的内容</p><pre><code>$slice:-2   //后两门$slice: [1,2]   // 第一个参数表示跳过的数据量，第二个参数表示返回的数据量</code></pre><h4 id="嵌套集合运算"><a href="#嵌套集合运算" class="headerlink" title="嵌套集合运算"></a>嵌套集合运算</h4><p>对象里面套对象</p><p>在数据库中新增数据</p><pre><code>db.students.insert({    name:&apos;A&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,    course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;,&apos;音乐&apos;,&apos;政治&apos;],    parents:[        {name:&apos;A(father)&apos;,age:50,job:&apos;工人&apos;},        {name:&apos;A(mother)&apos;,age:50,job:&apos;职员&apos;}    ]})db.students.insert({    name:&apos;B&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,    course:[&apos;语文&apos;,&apos;数学&apos;],    parents:[        {name:&apos;B(father)&apos;,age:50,job:&apos;处长&apos;},        {name:&apos;B(mother)&apos;,age:50,job:&apos;局长&apos;}    ]})db.students.insert({    name:&apos;C&apos;,sex:&apos;男&apos;,age:19,score:89,address:&apos;海淀区&apos;,    course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;],    parents:[        {name:&apos;C(father)&apos;,age:50,job:&apos;工人&apos;},        {name:&apos;C(mother)&apos;,age:50,job:&apos;局长&apos;}        ]})</code></pre><p>对于嵌套的集合中数据的判断只能通过<code>$elemMatch</code>完成</p><p>语法：<code>{ &lt;field&gt;: { $elemMatch: { &lt;query1&gt;, &lt;query2&gt;, ... } } }</code></p><p>exp:</p><p>查询父母中有人是局长的信息</p><pre><code>db.students.find({parents: {$elemMatch: {job: &apos;局长&apos;}}}).pretty()</code></pre><h4 id="判断某个字段是否存在"><a href="#判断某个字段是否存在" class="headerlink" title="判断某个字段是否存在"></a>判断某个字段是否存在</h4><p><code>{$exists:flag}</code>  flag为true表示存在，false表示不存在</p><p>exp:</p><ol><li><p>查询具有parents成员的学生</p><pre><code>db.students.find({parents:{$exists: true}}).pretty()</code></pre></li><li><p>查询不具有course成员的学生</p><pre><code>db.students.find({course: {$exists: false}}).pretty()</code></pre></li></ol><h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p><code>sort({ field: value })</code> value是1表示升序，-1表示降序</p><p>exp:</p><p>学生信息按照分数降序排列</p><pre><code>db.students.find().sort({score:-1}).pretty()</code></pre><h4 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h4><p><code>skip(n)</code>: 跳过n条数据</p><p><code>limit(n)</code>: 返回n条数据</p><p>exp:</p><ol><li><p>分页显示，第一页，每页显示5条数据</p><pre><code>db.students.find({}).skip(0).limit(5).pretty()</code></pre></li><li><p>分页显示，第二页，每页显示5条数据</p><pre><code>db.students.find({}).skip(5).limit(5).pretty()</code></pre></li></ol><h3 id="数据修改-更新"><a href="#数据修改-更新" class="headerlink" title="数据修改 | 更新"></a>数据修改 | 更新</h3><p><code>updateOne()</code>     修改匹配的第一条数据</p><p><code>updateMany()</code>    修改所有匹配的数据</p><p>格式：<code>updateOne(&lt;filter&gt;,&lt;update&gt;)</code></p><h4 id="修改器"><a href="#修改器" class="headerlink" title="修改器"></a>修改器</h4><p><code>$inc</code>: 操作数字字段的数据内容</p><p>语法: <code>{&quot;$inc&quot; : {成员 : 内容}}</code></p><p>exp: </p><p>将所有年龄为19岁的学生成绩一律减少30分，年龄增加1</p><pre><code>db.students.updateMany({age:19},{$inc:{score:-30,age:1}})</code></pre><p><code>$set</code>: 更新内容</p><p>语法：<code>{$set: :{属性: 新内容}}</code></p><p>exp: </p><p>将20岁学生的成绩修改为89</p><pre><code>db.students.updateMany({age: 20},{$set: {score: 89}})</code></pre><p><code>$unset</code>: 删除某个属性及其内容</p><p>语法：<code>{$unset: {属性: 1}}</code></p><p>exp:</p><p>删除张三的年龄和成绩信息</p><pre><code>db.students.updateOne({name:&apos;张三&apos;},{$unset: {age: 1,score: 1}})</code></pre><p><code>$push</code>: 向数组中添加数据</p><p>语法：<code>{$push: {属性: value}}</code></p><p>exp:</p><p>在李四的课程中添加语文</p><pre><code>db.students.updateOne({name: &apos;李四&apos;},{$push: {course: &apos;语文&apos;}})</code></pre><p>如果需要向数组中添加多个数据，则需要用到<code>$each</code></p><p>exp: </p><p>在李四的课程中添加数学、英语</p><pre><code>db.students.updateOne(    {name:&apos;李四&apos;},    {$push:        {            course:{$each: [&apos;数学&apos;,&apos;英语&apos;]}        }    })</code></pre><p><code>$addToSet</code>: 向数组里面添加一个新的数据</p><p>与<code>$push</code>的区别，<code>$push</code>添加的数据可能是重复的，<code>$addToSet</code>只有这个数据不存在时才会添加（去重）</p><p>语法：<code>{$addToSet: {属性：value}}</code></p><p>exp:</p><p>王五新增一门舞蹈课程</p><pre><code>db.students.updateOne(    {name:&apos;王五&apos;},    {$addToSet: {course:&apos;舞蹈&apos;}})</code></pre><p><code>$pop</code>: 删除数组内的数据</p><p>语法：<code>{$pop: {field: value}}</code>,value为-1表示删除第一个，value为1表示删除最后一个</p><p>exp:</p><p>删除王五的第一个课程</p><pre><code>db.students.updateOne({name:&apos;王五&apos;},{$pop:{course:-1}})</code></pre><p>只是删除属性的内容，属性还在</p><p><code>$pull</code>: 从数组中删除一个指定内容的数据</p><p>语法：<code>{$pull: {field：value}}</code> 进行数据比对，如果是该数据则删除</p><p>exp:</p><p>删除李四的语文课程</p><pre><code>db.students.updateOne({name: &apos;李四&apos;},{$pull:{course:&apos;语文&apos;}})</code></pre><p><code>$pullAll</code>: 一次删除多个数据</p><p>语法：<code>{$pullAll:{field:[value1,value2...]}}</code></p><p>exp:</p><p>删除a的语文数学英语课程</p><pre><code>db.students.updateOne({name:&apos;a&apos;},{$pullAll:{course:[&apos;语文&apos;,&apos;数学&apos;,&apos;英语&apos;]}})</code></pre><p><code>$rename</code>: 属性重命名</p><p>语法： <code>{$rename: {旧属性名：新属性名}}</code></p><p>exp:</p><p>把张三的name属性名改为姓名</p><pre><code>db.students.updateOne({name:&apos;张三&apos;},{$rename:{name:&apos;姓名&apos;}})</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;MongoDB&quot;&gt;&lt;a href=&quot;#MongoDB&quot; class=&quot;headerlink&quot; title=&quot;MongoDB&quot;&gt;&lt;/a&gt;MongoDB&lt;/h1&gt;&lt;p&gt;转载自&lt;a href=&quot;https://github.com/zxhyJack/MyBlog/blo
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="mongodb" scheme="http://yoursite.com/tags/mongodb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>facenet详解</title>
-    <link href="http://yoursite.com/2018/07/14/facenet%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://yoursite.com/2018/07/14/facenet详解/</id>
-    <published>2018-07-14T08:35:26.000Z</published>
-    <updated>2018-08-05T09:57:36.933Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="facenet算法初测"><a href="#facenet算法初测" class="headerlink" title="facenet算法初测"></a>facenet算法初测</h2><ul><li><p><a href="https://github.com/davidsandberg/facenet" target="_blank" rel="noopener">facenet代码地址</a></p></li><li><p><a href="https://www.cnblogs.com/bakari/archive/2012/08/27/2658956.html" target="_blank" rel="noopener">数据对齐详解</a></p></li><li><p><a href="https://drive.google.com/file/d/1R77HmFADxe87GmoLwzfgMu_HY0IhcyBz/view" target="_blank" rel="noopener">已训练模型下载(基于CASIA-WebFace)</a></p></li><li><p><a href="https://blog.csdn.net/u013044310/article/details/79556099" target="_blank" rel="noopener">主要参考博客</a></p></li></ul><hr><h3 id="算法代码结构"><a href="#算法代码结构" class="headerlink" title="算法代码结构"></a>算法代码结构</h3><p>结构如图：<br><img src="/2018/07/14/facenet详解/算法结构.png" alt="代码结构">  </p><ul><li><p>|—— contribute (包含对人脸进行处理的函数)  </p></li><li><p>|—— data (原算法进行训练或测试时使用的图片数据)  </p></li><li><p>|—— lfw (储存的lfw数据集)  </p></li><li><p>|—— lfw_mtcnnpy_160 (储存的经过对齐后的图片数据)  </p></li><li><p>|—— models (存储训练模型)  </p></li><li><p>|—— src (核心功能相关的代码)  </p></li><li><p>|—— test (算法、模型测试相关的代码)  </p></li><li><p>|—— tmp (暂不清楚)  </p></li><li><p>|—— 其他  </p></li></ul><hr><h3 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h3><ul><li><p>预训练模型测试：  </p><pre><code>python src/validate_on_lfw.py lfw_mtcnnpy_160 models\20180408-102900  </code></pre></li></ul><p><img src="/2018/07/14/facenet详解/算法测试.png" alt="算法测试">  </p><p>然而测试结果并不是特别好，可能是仅用CPU的缘故  </p><ul><li><p>相似人脸对比结果：  </p><pre><code>python src\compare.py models\20180408-102900 data\images\Anthony_Hopkins_0001.jpg data\images\Anthony_Hopkins_0002.jpg  </code></pre></li></ul><p><img src="/2018/07/14/facenet详解/相似人脸对比结果.png" alt="相似人脸对比结果">  </p><ul><li><p>不相似人脸对比结果：  </p><pre><code>python src\compare.py models\20180408-102900 data\images\Anthony_Hopkins_0001.jpg lfw_mtcnnpy_160\Aaron_Eckhart\Aaron_Eckhart_0001.png</code></pre></li></ul><p><img src="/2018/07/14/facenet详解/不相似人脸对比结果.png" alt="不相似人脸对比结果"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;facenet算法初测&quot;&gt;&lt;a href=&quot;#facenet算法初测&quot; class=&quot;headerlink&quot; title=&quot;facenet算法初测&quot;&gt;&lt;/a&gt;facenet算法初测&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.c
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="facenet" scheme="http://yoursite.com/tags/facenet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript使用记录</title>
-    <link href="http://yoursite.com/2018/07/12/JavaScript%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/2018/07/12/JavaScript使用记录/</id>
-    <published>2018-07-12T06:20:08.000Z</published>
-    <updated>2018-07-14T12:42:53.197Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>在JavaScript的世界中，所有代码都是单线程执行的。</p><p>由于这个“缺陷”，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现：  </p><pre><code>function callback() {    console.log(&apos;Done&apos;);}console.log(&apos;before setTimeout()&apos;);setTimeout(callback, 1000); // 1秒钟后调用callback函数console.log(&apos;after setTimeout()&apos;);</code></pre><p>观察上述代码执行，在Chrome的控制台输出可以看到：</p><pre><code>before setTimeout()after setTimeout()(等待1秒后)Done  </code></pre><p>可见，异步操作会在将来的某个时间点触发一个函数调用。</p><p>AJAX就是典型的异步操作。以之前的代码为例：</p><pre><code>request.onreadystatechange = function () {    if (request.readyState === 4) {        if (request.status === 200) {            return success(request.responseText);        } else {            return fail(request.status);        }    }}  </code></pre><p>把回调函数success(request.responseText)和fail(request.status)写到一个AJAX操作里很正常，但是不好看，而且不利于代码复用。</p><p>有没有更好的写法？比如写成这样：</p><pre><code>var ajax = ajaxGet(&apos;http://...&apos;);ajax.ifSuccess(success)    .ifFail(fail);</code></pre><p>这种链式写法的好处在于，先统一执行AJAX逻辑，不关心如何处理结果，然后，根据结果是成功还是失败，在将来的某个时候调用success函数或fail函数。</p><p>古人云：“君子一诺千金”，这种“承诺将来会执行”的对象在JavaScript中称为Promise对象。<br>Promise有各种开源实现，在ES6中被统一规范，由浏览器直接支持。  </p><p>我们先看一个最简单的Promise例子：生成一个0-2之间的随机数，如果小于1，则等待一段时间后返回成功，否则返回失败：</p><pre><code>function test(resolve, reject) {    var timeOut = Math.random() * 2;    log(&apos;set timeout to: &apos; + timeOut + &apos; seconds.&apos;);    setTimeout(function () {        if (timeOut &lt; 1) {            log(&apos;call resolve()...&apos;);            resolve(&apos;200 OK&apos;);        }        else {            log(&apos;call reject()...&apos;);            reject(&apos;timeout in &apos; + timeOut + &apos; seconds.&apos;);        }    }, timeOut * 1000);}</code></pre><p>这个test()函数有两个参数，这两个参数都是函数，如果执行成功，我们将调用resolve(‘200 OK’)，如果执行失败，我们将调用reject(‘timeout in ‘ + timeOut + ‘ seconds.’)。可以看出，test()函数只关心自身的逻辑，并不关心具体的resolve和reject将如何处理结果。</p><p>有了执行函数，我们就可以用一个Promise对象来执行它，并在将来某个时刻获得成功或失败的结果：</p><pre><code>var p1 = new Promise(test);var p2 = p1.then(function (result) {    console.log(&apos;成功：&apos; + result);});var p3 = p2.catch(function (reason) {    console.log(&apos;失败：&apos; + reason);});</code></pre><p>变量p1是一个Promise对象，它负责执行test函数。由于test函数在内部是异步执行的，当test函数执行成功时，我们告诉Promise对象：</p><p>// 如果成功，执行这个函数：  </p><pre><code>p1.then(function (result) {    console.log(&apos;成功：&apos; + result);});</code></pre><p>当test函数执行失败时，我们告诉Promise对象：</p><pre><code>p2.catch(function (reason) {    console.log(&apos;失败：&apos; + reason);});</code></pre><p>Promise对象可以串联起来，所以上述代码可以简化为：</p><pre><code>new Promise(test).then(function (result) {    console.log(&apos;成功：&apos; + result);}).catch(function (reason) {    console.log(&apos;失败：&apos; + reason);}); </code></pre><p>可见Promise最大的好处是在异步执行的流程中，把执行代码和处理结果的代码清晰地分离了：<br><img src="/2018/07/12/JavaScript使用记录/l.png" alt="图片">  </p><p>Promise还可以做更多的事情，比如，有若干个异步任务，需要先做任务1，如果成功后再做任务2，任何任务失败则不再继续并执行错误处理函数。</p><p>要串行执行这样的异步任务，不用Promise需要写一层一层的嵌套代码。有了Promise，我们只需要简单地写：</p><pre><code>job1.then(job2).then(job3).catch(handleError);  </code></pre><p>其中，job1、job2和job3都是Promise对象。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Promise&quot;&gt;&lt;a href=&quot;#Promise&quot; class=&quot;headerlink&quot; title=&quot;Promise&quot;&gt;&lt;/a&gt;Promise&lt;/h3&gt;&lt;p&gt;在JavaScript的世界中，所有代码都是单线程执行的。&lt;/p&gt;
-&lt;p&gt;由于这个“缺陷”，导致Ja
-      
-    
-    </summary>
-    
-      <category term="编程语言" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git使用</title>
-    <link href="http://yoursite.com/2018/07/12/Git%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/07/12/Git使用/</id>
-    <published>2018-07-12T03:27:13.000Z</published>
-    <updated>2018-07-12T03:32:08.825Z</updated>
-    
-    <content type="html"><![CDATA[<p>转载自<a href="https://blog.csdn.net/zwhfyy/article/details/8625228，如有侵权，请联系删除" target="_blank" rel="noopener">https://blog.csdn.net/zwhfyy/article/details/8625228，如有侵权，请联系删除</a></p><h1 id="出错信息"><a href="#出错信息" class="headerlink" title="出错信息"></a>出错信息</h1><p>Your local changes to the following files would be overwritten by merge<br>error: Your local changes to the following files would be overwritten by merge:<br>        123.txt<br>Please, commit your changes or stash them before you can merge.</p><p>如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:  </p><pre><code>git stashgit pullgit stash pop  </code></pre><p>然后可以使用git diff -w +文件名 来确认代码自动合并的情况.</p><p>反过来,如果希望用代码库中的文件完全覆盖本地工作版本. 方法如下:  </p><pre><code>git reset --hardgit pull其中git reset是针对版本,如果想针对文件回退本地修改,使用</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;转载自&lt;a href=&quot;https://blog.csdn.net/zwhfyy/article/details/8625228，如有侵权，请联系删除&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/zwhfyy/
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人脸识别算法发展情况</title>
-    <link href="http://yoursite.com/2018/07/10/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%AE%97%E6%B3%95%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5/"/>
-    <id>http://yoursite.com/2018/07/10/人脸识别算法发展情况/</id>
-    <published>2018-07-10T09:09:03.000Z</published>
-    <updated>2018-07-21T07:25:30.449Z</updated>
-    
-    <content type="html"><![CDATA[<p>转载自<a href="https://zhuanlan.zhihu.com/p/36416906，如有侵权，请联系删除。" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/36416906，如有侵权，请联系删除。</a></p><h1 id="人脸识别概述"><a href="#人脸识别概述" class="headerlink" title="人脸识别概述"></a>人脸识别概述</h1><p>人脸识别的目标是确定一张人脸图像的身份，即这个人是谁，这是机器学习和模式识别中的分类问题。它主要应用在身份识别和身份验证中。</p><h2 id="人脸识别系统的组成"><a href="#人脸识别系统的组成" class="headerlink" title="人脸识别系统的组成"></a>人脸识别系统的组成</h2><pre><code>人脸检测（Face Detection）人脸对齐（Face Alignment）人脸特征表征（Feature Representation）</code></pre><ul><li><p>人脸检测</p><p>  人脸检测用于确定人脸在图像中的大小和位置，即解决“人脸在哪里”的问题，把真正的人脸区域从图像中裁剪出来，便于后续的人脸特征分析和识别。  </p></li><li><p>人脸对齐</p><p>  同一个人在不同的图像序列中可能呈现出不同的姿态和表情，这种情况是不利于人脸识别的。所以有必要将人脸图像都变换到一个统一的角度和姿态，这就是人脸对齐。它的原理是找到人脸的若干个关键点（基准点，如眼角，鼻尖，嘴角等），然后利用这些对应的关键点通过相似变换（Similarity Transform，旋转、缩放和平移）将人脸尽可能变换到标准人脸。  </p></li><li><p>人脸特征表征</p><p>  第三个模块是本文重点要讲的人脸识别算法，它接受的输入是标准化的人脸图像，通过特征建模得到向量化的人脸特征，最后通过分类器判别得到识别的结果。这里的关键是怎样得到对不同人脸有区分度的特征，通常我们在识别一个人时会看它的眉形、脸轮廓、鼻子形状、眼睛的类型等，人脸识别算法引擎要通过练习（训练）得到类似这样的有区分度的特征。本系列文章主要围绕人脸识别中的人脸特征表征进行展开，人脸检测和人脸对齐方法会在其它专题系列文章中进行介绍。</p></li></ul><h2 id="人脸识别算法的三个阶段"><a href="#人脸识别算法的三个阶段" class="headerlink" title="人脸识别算法的三个阶段"></a>人脸识别算法的三个阶段</h2><p>人脸识别算法经历了早期算法，人工特征+分类器，深度学习3个阶段。目前深度学习算法是主流，极大的提高了人脸识别的精度。  </p><ul><li><p>早期算法  </p><p>  早期的算法有基于几何特征的算法，基于模板匹配的算法，子空间算法等多种类型。子空间算法将人脸图像当成一个高维的向量，将向量投影到低维空间中，投影之后得到的低维向量达到对不同的人具有良好的区分度。</p><p>  子空间算法的典型代表是PCA（主成分分析，也称为特征脸EigenFace）[1]和LDA（线性判别分析，FisherFace）[2]。PCA的核心思想是在进行投影之后尽量多的保留原始数据的主要信息，降低数据的冗余信息，以利于后续的识别。LDA的核心思想是最大化类间差异，最小化类内差异，即保证同一个人的不同人脸图像在投影之后聚集在一起，不同人的人脸图像在投影之后被用一个大的间距分开。PCA和LDA最后都归结于求解矩阵的特征值和特征向量，这有成熟的数值算法可以实现。</p><p>  PCA和LDA都是线性降维技术，但人脸在高维空间中的分布显然是非线性的，因此可以使用非线性降维算法，典型的代表是流形学习[3]和核（kernel）技术。流形学习假设向量点在高维空间中的分布具有某些几何形状，然后在保持这些几何形状约束的前提下将向量投影到低维空间中，这种投影是通过非线性变换完成的。  </p></li><li><p>人工特征 + 分类器  </p><p>  第二阶段的人脸识别算法普遍采用了人工特征 + 分类器的思路。分类器有成熟的方案，如神经网络，支持向量机[7]，贝叶斯[8]等。这里的关键是人工特征的设计，它要能有效的区分不同的人。</p><p>  描述图像的很多特征都先后被用于人脸识别问题，包括HOG、SIFT、Gabor、LBP等。它们中的典型代表是LBP（局部二值模式）特征[9]，这种特征简单却有效。LBP特征计算起来非常简单，部分解决了光照敏感问题，但还是存在姿态和表情的问题。</p><p>  联合贝叶斯是对贝叶斯人脸的改进方法[8]，选用LBP和LE作为基础特征，将人脸图像的差异表示为相同人因姿态、表情等导致的差异以及不同人间的差异两个因素，用潜在变量组成的协方差，建立两张人脸的关联。文章的创新点在于将两个人脸表示进行联合建模，在人脸联合建模的时候，又使用了人脸的先验知识，将两张人脸的建模问题变为单张人脸图片的统计计算，更好的验证人脸的相关性，该方法在LFW上取得了92.4%的准确率。</p><p>  人工特征的巅峰之作是出自CVPR 2013年MSRA的”Blessing of Dimisionality: High Dimensional Feature and Its Efficient Compression for Face Verification” [10]，一篇关于如何使用高维度特征在人脸验证中的文章，作者主要以LBP（Local Binary Pattern，局部二值特征）为例子，论述了高维特征和验证性能存在着正相关的关系，即人脸维度越高，验证的准确度就越高。</p></li><li><p>深度学习  </p><p>  第三个阶段是基于深度学习的方法，自2012年深度学习在ILSVRC-2012大放异彩后，很多研究者都在尝试将其应用在自己的方向，这极大的推动了深度学习的发展。卷积神经网络在图像分类中显示出了巨大的威力，通过学习得到的卷积核明显优于人工设计的特征+分类器的方案。在人脸识别的研究者利用卷积神经网络（CNN）对海量的人脸图片进行学习，然后对输入图像提取出对区分不同人的脸有用的特征向量，替代人工设计的特征。</p><p>  在前期，研究人员在网络结构、输入数据的设计等方面尝试了各种方案，然后送入卷积神经网络进行经典的目标分类模型训练；在后期，主要的改进集中在损失函数上，即迫使卷积网络学习得到对分辨不同的人更有效的特征，这时候人脸识别领域彻底被深度学习改造了！</p><p>  DeepFace[11]是CVPR2014上由Facebook提出的方法，是深度卷积神经网络在人脸识别领域的奠基之作，文中使用了3D模型来做人脸对齐任务，深度卷积神经网络针对对齐后的人脸Patch进行多类的分类学习，使用的是经典的交叉熵损失函数（Softmax）进行问题优化，最后通过特征嵌入（Feature Embedding）得到固定长度的人脸特征向量。Backbone网络使用了多层局部卷积结构（Local Convolution），原因是希望网络的不同卷积核能学习人脸不同区域的特征，但会导致参数量增大，要求数据量很大，回过头去看该策略并不是十分必要。<br>  DeepFace在LFW上取得了97.35%的准确率，已经接近了人类的水平。之后Google推出FaceNet（<a href="https://arxiv.org/abs/1503.03832" target="_blank" rel="noopener">Facenet论文地址</a>），使用三元组损失函数(Triplet Loss)代替常用的Softmax交叉熵损失函数，在一个超球空间上进行优化使类内距离更紧凑，类间距离更远，最后得到了一个紧凑的128维人脸特征，其网络使用GoogLeNet的Inception模型，模型参数量较小，精度更高，在LFW上取得了99.63%的准确率，这种损失函数的思想也可以追溯到早期的LDA算法。<br>  CVPR2014、CVPR2015香港中文大学汤晓鸥团队提出的DeepID系列是一组非常有代表性的工作，其中DeepID1[12]使用四层卷积，最后一层为Softmax，中间为Deep Hidden Identity Features，是学习到的人脸特征表示，并使用Multi-patch分别训练模型最后组合成高维特征，人脸验证阶段使用联合贝叶斯的方法；通过学习一个多类（10000类，每个类大约有20个实例）人脸识别任务来学习特征，文中指出，随着训练时要预测的人脸类越多，DeepID的泛化能力就越强。</p></li></ul><h1 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h1><h2 id="算法仓库"><a href="#算法仓库" class="headerlink" title="算法仓库"></a><strong>算法仓库</strong></h2><ul><li><p>ageitgey/face_recognition:  </p><p>  <a href="https://github.com/ageitgey/face_recognition" target="_blank" rel="noopener">https://github.com/ageitgey/face_recognition</a>  </p></li><li><p>davidsandberg/facenet:  </p><p>  <a href="https://github.com/davidsandberg/facenet" target="_blank" rel="noopener">https://github.com/davidsandberg/facenet</a>  </p></li><li><p>cmusatyalab/openface:  </p><p>  <a href="https://github.com/cmusatyalab/openface" target="_blank" rel="noopener">https://github.com/cmusatyalab/openface</a> </p></li><li><p>kpzhang93/MTCNN_face_detection_alignment(人脸检测):  </p><p>  <a href="https://github.com/kpzhang93/MTCNN_face_detection_alignment" target="_blank" rel="noopener">https://github.com/kpzhang93/MTCNN_face_detection_alignment</a>  </p></li><li><p>deepinsight/insightface:  </p><p>  <a href="https://github.com/deepinsight/insightface" target="_blank" rel="noopener">https://github.com/deepinsight/insightface</a>  </p></li><li><p>nyoki-mtl/keras-facenet:  </p><p>  <a href="https://github.com/nyoki-mtl/keras-facenet" target="_blank" rel="noopener">https://github.com/nyoki-mtl/keras-facenet</a>  </p></li><li><p>yuyang-huang/keras-inception-resnet-v2(网络结构):</p><p>  <a href="https://github.com/yuyang-huang/keras-inception-resnet-v2" target="_blank" rel="noopener">https://github.com/yuyang-huang/keras-inception-resnet-v2</a>  </p></li><li><p>yobibyte/yobiface:<br>  <a href="https://github.com/yobibyte/yobiface/tree/master/src" target="_blank" rel="noopener">https://github.com/yobibyte/yobiface/tree/master/src</a></p></li></ul><p><strong>相关博客</strong></p><ul><li><p>应用一个基于Python的开源人脸识别库，face_recognition:<br><a href="https://blog.csdn.net/hongbin_xu/article/details/76284134" target="_blank" rel="noopener">https://blog.csdn.net/hongbin_xu/article/details/76284134</a>  </p></li><li><p>TensorFlow–实现人脸识别实验精讲 （Face Recognition using Tensorflow）:<br><a href="https://blog.csdn.net/niutianzhuang/article/details/79191167" target="_blank" rel="noopener">https://blog.csdn.net/niutianzhuang/article/details/79191167</a>  </p></li><li><p>基于卷积神经网络和tensorflow实现的人脸识别:<br><a href="https://blog.csdn.net/hy13684802853/article/details/79780805" target="_blank" rel="noopener">https://blog.csdn.net/hy13684802853/article/details/79780805</a></p></li><li><p>keras/构建卷积神经网络人脸识别:</p><p>  <a href="https://blog.csdn.net/szj_huhu/article/details/75202254" target="_blank" rel="noopener">https://blog.csdn.net/szj_huhu/article/details/75202254</a></p></li><li><p>人脸识别–(opencv、dlib、keras-TensorFlow）:<br><a href="https://blog.csdn.net/u014258362/article/details/80688224" target="_blank" rel="noopener">https://blog.csdn.net/u014258362/article/details/80688224</a>  </p></li><li><p>TensorFlow实现人脸识别(5)——-利用训练好的模型实时进行人脸检测:<br><a href="https://blog.csdn.net/yunge812/article/details/79447584" target="_blank" rel="noopener">https://blog.csdn.net/yunge812/article/details/79447584</a>  </p></li><li><p>基于keras的人脸识别:<br><a href="https://blog.csdn.net/Julymycin/article/details/79182222" target="_blank" rel="noopener">https://blog.csdn.net/Julymycin/article/details/79182222</a>  </p></li><li><p>史上最全的FaceNet源码使用方法和讲解（一）（附预训练模型下载）:<br><a href="https://blog.csdn.net/u013044310/article/details/79556099" target="_blank" rel="noopener">https://blog.csdn.net/u013044310/article/details/79556099</a><br><a href="https://github.com/boyliwensheng/understand_facenet(作者整理代码)" target="_blank" rel="noopener">https://github.com/boyliwensheng/understand_facenet(作者整理代码)</a>  </p></li><li><p>基于 MTCNN/TensorFlow 实现人脸检测:<br><a href="https://blog.csdn.net/Mr_EvanChen/article/details/77650883" target="_blank" rel="noopener">https://blog.csdn.net/Mr_EvanChen/article/details/77650883</a></p></li><li><p>计算机视觉实时目标检测 TensorFlow Object Detection API<br><a href="https://blog.csdn.net/chenhaifeng2016/article/details/74205717" target="_blank" rel="noopener">https://blog.csdn.net/chenhaifeng2016/article/details/74205717</a></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;转载自&lt;a href=&quot;https://zhuanlan.zhihu.com/p/36416906，如有侵权，请联系删除。&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/36416906，如有侵权，
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="人脸识别" scheme="http://yoursite.com/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nodejs与Django的跨域问题</title>
-    <link href="http://yoursite.com/2018/07/08/Nodejs%E4%B8%8EDjango%E7%9A%84%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2018/07/08/Nodejs与Django的跨域问题/</id>
-    <published>2018-07-08T12:23:10.000Z</published>
-    <updated>2018-07-09T00:38:12.861Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Nodejs与Django的跨域问题"><a href="#Nodejs与Django的跨域问题" class="headerlink" title="Nodejs与Django的跨域问题"></a>Nodejs与Django的跨域问题</h2><p>由于采用前后端分离的编程方式，Django的csrf_token验证失效，出现跨域问题，在此记录一下解决方法。</p><ul><li><p>1 安装django-cors-headers  </p><p>  pip install django-cors-headers</p></li></ul><ul><li>2 配置settings.py文件<br><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题模块.png" alt="Nodejs与Django的跨域问题">  </li></ul><p><img src="/2018/07/08/Nodejs与Django的跨域问题/跨域问题设置.png" alt="Nodejs与Django的跨域问题">  </p><p>OK！问题解决！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;a href=&quot;#Nodejs与Django的跨域问题&quot; class=&quot;headerlink&quot; title=&quot;Nodejs与Django的跨域问题&quot;&gt;&lt;/a&gt;Nodejs与Django的跨域问题&lt;/h2&gt;&lt;p&gt;由于采用前后
-      
-    
-    </summary>
-    
-      <category term="Web开发" scheme="http://yoursite.com/categories/Web%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
-    
-      <category term="Nodejs" scheme="http://yoursite.com/tags/Nodejs/"/>
     
   </entry>
   
