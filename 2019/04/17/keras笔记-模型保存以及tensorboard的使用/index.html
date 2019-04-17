@@ -154,13 +154,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZOUZHEN_BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/NoteBook/index.html">
+  <meta name="description" content="对于一个epoch的模型保存以及tensorboard的使用都是可以使用keras中的回调函数 Callbacks。 首先还是看代码吧: from keras import backend as K from keras.models import Sequential from keras.layers.core import Activation, Dropout from keras.lay">
+<meta name="keywords" content="tensoflow,keras">
+<meta property="og:type" content="article">
+<meta property="og:title" content="keras笔记-模型保存以及tensorboard的使用">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/keras笔记-模型保存以及tensorboard的使用/index.html">
 <meta property="og:site_name" content="ZOUZHEN_BLOG">
+<meta property="og:description" content="对于一个epoch的模型保存以及tensorboard的使用都是可以使用keras中的回调函数 Callbacks。 首先还是看代码吧: from keras import backend as K from keras.models import Sequential from keras.layers.core import Activation, Dropout from keras.lay">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-17T09:30:13.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZOUZHEN_BLOG">
+<meta name="twitter:title" content="keras笔记-模型保存以及tensorboard的使用">
+<meta name="twitter:description" content="对于一个epoch的模型保存以及tensorboard的使用都是可以使用keras中的回调函数 Callbacks。 首先还是看代码吧: from keras import backend as K from keras.models import Sequential from keras.layers.core import Activation, Dropout from keras.lay">
 
 
 
@@ -169,7 +174,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/NoteBook/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/17/keras笔记-模型保存以及tensorboard的使用/"/>
 
 
 
@@ -179,7 +184,7 @@
   };
 </script>
 
-  <title>标签: NoteBook | ZOUZHEN_BLOG</title>
+  <title>keras笔记-模型保存以及tensorboard的使用 | ZOUZHEN_BLOG</title>
   
 
 
@@ -226,7 +231,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/zouzhen"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
@@ -280,7 +285,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
@@ -316,28 +321,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -386,58 +369,344 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NoteBook<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/keras笔记-模型保存以及tensorboard的使用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZOUZHEN">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZOUZHEN_BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/26/第一个博客！/" itemprop="url">
-              
-                <span itemprop="name">第一个博客！</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">keras笔记-模型保存以及tensorboard的使用
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T15:38:48+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-17 17:26:22 / 修改时间：17:30:13" itemprop="dateCreated datePublished" datetime="2019-04-17T17:26:22+08:00">2019-04-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/17/keras笔记-模型保存以及tensorboard的使用/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/keras笔记-模型保存以及tensorboard的使用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/17/keras笔记-模型保存以及tensorboard的使用/" class="leancloud_visitors" data-flag-title="keras笔记-模型保存以及tensorboard的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>对于一个epoch的模型保存以及tensorboard的使用都是可以使用keras中的回调函数 Callbacks。</p>
+<p>首先还是看代码吧:</p>
+<pre><code>from keras import backend as K
+from keras.models import Sequential
+from keras.layers.core import Activation, Dropout
+from keras.layers.core import Dense
+from keras.optimizers import SGD
+from keras.callbacks import ModelCheckpoint, TensorBoard
+
+from keras.datasets import mnist
+from keras.utils import np_utils
+
+
+import numpy as np
+import os
+
+
+np.random.seed(1671)
+
+
+#网络和训练
+NB_EPOCH = 20
+BATCH_SIZE = 128
+VERBOSE = 1
+NB_CLASSES = 10
+OPTIMIZER = SGD()
+N_HIDDEN = 128
+VALIDATION_SPLIT = 0.2
+DROPOUT = 0.3
+MODEL_path = &apos;./model/&apos;
+if not os.path.exists(MODEL_path):
+    os.mkdir(MODEL_path)
+
+
+
+#数据
+(X_train, Y_train), (X_test, Y_test) = mnist.load_data()
+
+RESHAPED = 784
+
+#
+X_train = X_train.reshape(60000, RESHAPED)
+X_test = X_test.reshape(10000, RESHAPED)
+X_train = X_train.astype(&apos;float32&apos;)
+X_test = X_test.astype(&apos;float32&apos;)
+
+
+#归一化
+X_train /= 255
+X_test /= 255
+
+print(X_train.shape[0], &apos;train samples&apos;)
+print(X_test.shape[0], &apos;test samples&apos;)
+
+Y_train = np_utils.to_categorical(Y_train, NB_CLASSES)
+Y_test = np_utils.to_categorical(Y_test, NB_CLASSES)
+
+
+model = Sequential()
+model.add(Dense(N_HIDDEN, input_shape=(RESHAPED,)))
+model.add(Activation(&apos;relu&apos;))
+model.add(Dropout(DROPOUT))
+model.add(Dense(N_HIDDEN))
+model.add(Activation(&apos;relu&apos;))
+model.add(Dense(NB_CLASSES))
+model.add(Activation(&apos;softmax&apos;))
+model.summary()
+
+
+model.compile(loss=&apos;categorical_crossentropy&apos;, optimizer=OPTIMIZER, metrics=[&apos;accuracy&apos;])
+
+checkpoit = ModelCheckpoint(filepath=os.path.join(MODEL_path, &apos;model-{epoch:02d}.h5&apos;))
+tensorboard = TensorBoard(log_dir=&apos;./logs&apos;, histogram_freq=0, write_graph=True, write_images=True)
+
+history = model.fit(X_train, Y_train,
+                    batch_size=BATCH_SIZE, epochs=NB_EPOCH,
+                    verbose=VERBOSE, validation_split=VALIDATION_SPLIT, callbacks=[checkpoit, tensorboard])
+
+#模型保存
+model.save(&apos;mnist.h5&apos;)
+
+score = model.evaluate(X_test, Y_test, verbose=VERBOSE)
+print(&apos;test score:&apos;, score[0])
+print(&apos;test accuracy:&apos;, score[1])
+</code></pre><h3 id="回调函数使用"><a href="#回调函数使用" class="headerlink" title="回调函数使用"></a>回调函数使用</h3><p>回调函数是一个函数的合集，会在训练的阶段中所使用。你可以使用回调函数来查看训练模型的内在状态和统计。你可以传递一个列表的回调函数（作为 callbacks 关键字参数）到 Sequential 或 Model 类型的 .fit() 方法。在训练时，相应的回调函数的方法就会被在各自的阶段被调用。</p>
+<h3 id="ModelCheckpoint"><a href="#ModelCheckpoint" class="headerlink" title="ModelCheckpoint"></a>ModelCheckpoint</h3><pre><code>keras.callbacks.ModelCheckpoint(filepath, monitor=&apos;val_loss&apos;, verbose=0, save_best_only=False, save_weights_only=False, mode=&apos;auto&apos;, period=1)
+</code></pre><p>在每个训练期之后保存模型。</p>
+<p>filepath 可以包括命名格式选项，可以由 epoch 的值和 logs 的键（由 on_epoch_end 参数传递）来填充。</p>
+<p>例如：如果 filepath 是 weights.{epoch:02d}-{val_loss:.2f}.hdf5， 那么模型被保存的的文件名就会有训练轮数和验证损失。</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><pre><code>filepath: 字符串，保存模型的路径。
+monitor: 被监测的数据。
+verbose: 详细信息模式，0 或者 1 。
+save_best_only: 如果 save_best_only=True， 被监测数据的最佳模型就不会被覆盖。
+mode: {auto, min, max} 的其中之一。 如果 save_best_only=True，那么是否覆盖保存文件的决定就取决于被监测数据的最大或者最小值。 对于 val_acc，模式就会是 max，而对于 val_loss，模式就需要是 min，等等。 在 auto 模式中，方向会自动从被监测的数据的名字中判断出来。
+save_weights_only: 如果 True，那么只有模型的权重会被保存 (model.save_weights(filepath))， 否则的话，整个模型会被保存 (model.save(filepath))。
+period: 每个检查点之间的间隔（训练轮数）。
+TensorBoard
+keras.callbacks.TensorBoard(log_dir=&apos;./logs&apos;, histogram_freq=0, batch_size=32, write_graph=True, write_grads=False, write_images=False, embeddings_freq=0, embeddings_layer_names=None, embeddings_metadata=None)
+Tensorboard 基本可视化。
+</code></pre><p>TensorBoard 是由 Tensorflow 提供的一个可视化工具。</p>
+<p>这个回调函数为 Tensorboard 编写一个日志， 这样你可以可视化测试和训练的标准评估的动态图像， 也可以可视化模型中不同层的激活值直方图。</p>
+<p>如果你已经使用 pip 安装了 Tensorflow，你应该可以从命令行启动 Tensorflow：</p>
+<pre><code>tensorboard --logdir=/full_path_to_your_logs
+</code></pre><h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><pre><code>log_dir: 用来保存被 TensorBoard 分析的日志文件的文件名。
+histogram_freq: 对于模型中各个层计算激活值和模型权重直方图的频率（训练轮数中）。 如果设置成 0 ，直方图不会被计算。对于直方图可视化的验证数据（或分离数据）一定要明确的指出。
+write_graph: 是否在 TensorBoard 中可视化图像。 如果 write_graph 被设置为 True，日志文件会变得非常大。
+write_grads: 是否在 TensorBoard 中可视化梯度值直方图。 histogram_freq 必须要大于 0 。
+batch_size: 用以直方图计算的传入神经元网络输入批的大小。
+write_images: 是否在 TensorBoard 中将模型权重以图片可视化。
+embeddings_freq: 被选中的嵌入层会被保存的频率（在训练轮中）。
+embeddings_layer_names: 一个列表，会被监测层的名字。 如果是 None 或空列表，那么所有的嵌入层都会被监测。
+embeddings_metadata: 一个字典，对应层的名字到保存有这个嵌入层元数据文件的名字。 查看 详情 关于元数据的数据格式。 以防同样的元数据被用于所用的嵌入层，字符串可以被传入。
+</code></pre><p>作者：pursuit_zhangyu<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/pursuit_zhangyu/article/details/85226481" target="_blank" rel="noopener">https://blog.csdn.net/pursuit_zhangyu/article/details/85226481</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
     </div>
 
+      
+  <div>
+
+    <div style="text-align:center;color: #000;font-size:14px;">>>>----------本文结束^_^感谢您的阅读----------<<<</div>
+
+</div>
+  
+  </div>
+
+    
+      <div>
+
+
+    
+    
+    
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tensoflow/" rel="tag"><i class="fa fa-tag"></i> tensoflow</a>
+          
+            <a href="/tags/keras/" rel="tag"><i class="fa fa-tag"></i> keras</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/17/常用神经网络分类/" rel="next" title="常用神经网络分类">
+                <i class="fa fa-chevron-left"></i> 常用神经网络分类
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -458,8 +727,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -684,6 +962,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#回调函数使用"><span class="nav-number">1.</span> <span class="nav-text">回调函数使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ModelCheckpoint"><span class="nav-number">2.</span> <span class="nav-text">ModelCheckpoint</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参数"><span class="nav-number">2.1.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数-1"><span class="nav-number">3.</span> <span class="nav-text">参数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -817,6 +1111,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
