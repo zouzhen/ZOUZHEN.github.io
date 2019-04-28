@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-17T09:30:13.189Z</updated>
+  <updated>2019-04-28T01:23:27.057Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>陈丫头</title>
+    <link href="http://yoursite.com/2019/04/28/%E9%99%88%E4%B8%AB%E5%A4%B4/"/>
+    <id>http://yoursite.com/2019/04/28/陈丫头/</id>
+    <published>2019-04-28T01:19:54.000Z</published>
+    <updated>2019-04-28T01:23:27.057Z</updated>
+    
+    <content type="html"><![CDATA[<script src=/js/crypto-js.js></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+30DETlUfLizh3T9T4MMjq1l/MLPDZewJJS+nJTmXCAPF4S5vD7/DP4EVBZiy69kARd2bgIe3YYip5WyYjMQg7bsxjw0hoNs+plLPBxzbGkrAvz1+UtbC7khrrKXfJ8JJQOcjwdE34DmzlDRVsBoezs5SjYiMXkhfIgalgTFz7516QecdawIqgI5+X9/IHR9LPjRe0koqO6z3lxRVvKJbPgZbd2WW9Yg6kipUx/uRA5ndYOnU8GMCJ8WVhjiU8jSDm0f24AMqsTWjswhC1ygucy06mYkds+gvT/2HhDrK8XI2wiI5D0xJ9So5AqdX1gnXbmmSEipiO5ubbmMX01XvnXfthag+rSkBJcWvCRP5vNfQE6DkYHBLJ2lgorlaaQqlMMnBv+c0K/c8wGQJ+gOqnHbbTFRRjszECe7u7iwkw3bofOm24AXnT1eUt+kq9v1Rb1iZ5zFoLZkPtzlBfXxJ29Rat4DGu+zrdnPRTJPOxR7WpWLmWfDaG2HqOUrcwbvvXbqqyFRAVTWWAB/VHsJgHbf3h25kmwjc=</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=/js/crypto-js.js&gt;&lt;/script&gt;
+&lt;script&gt;
+function doDecrypt (pwd, onError) {
+	console.log(&#39;in doDecrypt&#39;);
+	const txt = document.getE
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>keras笔记-模型保存以及tensorboard的使用</title>
@@ -246,9 +271,9 @@ from keras.mode
       <category term="框架实现" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6%E5%AE%9E%E7%8E%B0/"/>
     
     
-      <category term="RetinaNet" scheme="http://yoursite.com/tags/RetinaNet/"/>
-    
       <category term="keras" scheme="http://yoursite.com/tags/keras/"/>
+    
+      <category term="RetinaNet" scheme="http://yoursite.com/tags/RetinaNet/"/>
     
   </entry>
   
@@ -508,31 +533,6 @@ from keras.mode
     
     
       <category term="scikit-learn" scheme="http://yoursite.com/tags/scikit-learn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flask整理</title>
-    <link href="http://yoursite.com/2018/10/17/Flask%E6%95%B4%E7%90%86/"/>
-    <id>http://yoursite.com/2018/10/17/Flask整理/</id>
-    <published>2018-10-17T07:50:11.000Z</published>
-    <updated>2018-10-17T09:51:48.921Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a><strong>使用工具</strong></h2><h4 id="Flask后端-Postgresql数据库-JS前端（我未使用）"><a href="#Flask后端-Postgresql数据库-JS前端（我未使用）" class="headerlink" title="Flask后端 + Postgresql数据库 + JS前端（我未使用）"></a>Flask后端 + Postgresql数据库 + JS前端（我未使用）</h4><h2 id="Flask搭建"><a href="#Flask搭建" class="headerlink" title="Flask搭建"></a>Flask搭建</h2><ul><li><p><strong>确定确定目录结构</strong></p><ol><li>app/algorithms: 用来存放相关的算法文件</li><li>app/models: 用来存放数据库的操作</li><li>app/web: 用来存放路由和视图函数</li><li>manage: flask的启动文件</li></ol></li><li><p><strong>确定路由注册方式</strong></p><ol><li>使用蓝图形式来注册路由</li></ol></li><li><p><strong>确定数据库操作方式</strong></p><ol><li>使用sqlalchemy及psycopg2来控制Postgresql数据库</li><li>由于主要是用来进行数据读取的，所以采用非ORM方式构建的表结构，这种方式方便进行查询过滤操作</li></ol></li></ul><h2 id="基于sqlalchemy的Postgresql数据库访问操作"><a href="#基于sqlalchemy的Postgresql数据库访问操作" class="headerlink" title="基于sqlalchemy的Postgresql数据库访问操作"></a>基于sqlalchemy的Postgresql数据库访问操作</h2><ul><li><strong>创建表结构</strong></li></ul><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy.engine <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.schema <span class="keyword">import</span> MetaData, Table, Column, ForeignKey, Sequence</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.types <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.sql.expression <span class="keyword">import</span> select,and_</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">engine = create_engine(<span class="string">'postgres://user:password@hosts/builder'</span>, echo=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">metadata = MetaData()</span><br><span class="line">metadata.bind = engine</span><br><span class="line">    <span class="comment"># 创建桥梁索引表</span></span><br><span class="line">bridges_table = Table(<span class="string">'bridges'</span>, metadata,</span><br><span class="line">                      Column(<span class="string">'id'</span>, Integer, primary_key=<span class="keyword">True</span>),</span><br><span class="line">                      Column(<span class="string">'org_id'</span>, Integer, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'user_id'</span>, Integer, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'name'</span>, VARCHAR(length=<span class="number">255</span>), nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'created_date'</span>, TIMESTAMP, nullable=<span class="keyword">False</span>),</span><br><span class="line">                      Column(<span class="string">'finished_date'</span>, TIMESTAMP, nullable=<span class="keyword">True</span>),</span><br><span class="line">                    <span class="comment">#   autoload=True,</span></span><br><span class="line">                      )</span><br></pre></td></tr></table></figure><p>这种方式，有助于进行表查询，具体的相关API介绍及使用放那格式可<a href="https://docs.sqlalchemy.org/en/latest/genindex.html" target="_blank" rel="noopener">点此</a>查看。</p><ul><li><strong>相关操作</strong></li></ul><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">()</span>:</span></span><br><span class="line">    s = book_table.insert().values(title=<span class="string">'测试写入2'</span>,time=datetime.now())</span><br><span class="line">    c = engine.execute(s)</span><br><span class="line">    c.close()</span><br><span class="line">    <span class="keyword">return</span> c.inserted_primary_key</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">query_code</span><span class="params">(id)</span>:</span></span><br><span class="line">    info = &#123;<span class="string">'id'</span>: <span class="string">''</span>, <span class="string">'title'</span>: <span class="string">''</span>&#125;</span><br><span class="line">    s = select([bridge_jobs_table.c.id.label(<span class="string">'name'</span>)]).where(and_(bridge_jobs_table.c.kind==<span class="string">'桩基'</span>,bridge_jobs_table.c.name==<span class="string">'起钻'</span>))</span><br><span class="line">    codename_query = engine.execute(s)</span><br><span class="line">    print(codename_query.keys())</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> codename_query:</span><br><span class="line">        print(row[<span class="number">0</span>])</span><br><span class="line">    codename_query.close()</span><br><span class="line">    <span class="keyword">return</span> info</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新数据</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">updata</span><span class="params">(id, title)</span>:</span></span><br><span class="line">    s = book_table.update().where(book_table.c.id == id).values(title=title, id=id)</span><br><span class="line">    c = engine.execute(s)</span><br><span class="line">    c.close()</span><br></pre></td></tr></table></figure><h2 id="Flask相关知识"><a href="#Flask相关知识" class="headerlink" title="Flask相关知识"></a>Flask相关知识</h2><ul><li><p><strong>路由操作</strong></p><ol><li><p>静态路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello world!'</span></span><br></pre></td></tr></table></figure></li><li><p>参数路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello/&lt;string:name&gt;', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello %d '</span>% name</span><br></pre></td></tr></table></figure></li><li><p>JSON返回</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@web.route('/hello/&lt;string:name&gt;', methods=['POST', 'GET'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> jsonify(<span class="string">'hello %d '</span>% name)</span><br></pre></td></tr></table></figure></li><li><p>使用蓝图方式注册路由</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_app</span><span class="params">()</span>:</span></span><br><span class="line">    app = Flask(__name__)</span><br><span class="line">    app.config.from_object(<span class="string">'app.setting'</span>)</span><br><span class="line"></span><br><span class="line">    register_blueprint(app)</span><br><span class="line">    <span class="comment"># db.init_app(app)</span></span><br><span class="line">    <span class="comment"># db.create_app(app=app)</span></span><br><span class="line">    <span class="keyword">return</span> app</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">register_blueprint</span><span class="params">(app)</span>:</span></span><br><span class="line">    <span class="keyword">from</span> app.web.view <span class="keyword">import</span> web</span><br><span class="line">    app.register_blueprint(web)</span><br></pre></td></tr></table></figure></li></ol></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;使用工具&quot;&gt;&lt;a href=&quot;#使用工具&quot; class=&quot;headerlink&quot; title=&quot;使用工具&quot;&gt;&lt;/a&gt;&lt;strong&gt;使用工具&lt;/strong&gt;&lt;/h2&gt;&lt;h4 id=&quot;Flask后端-Postgresql数据库-JS前端（我未使用）&quot;&gt;&lt;a hre
-      
-    
-    </summary>
-    
-      <category term="Python后端" scheme="http://yoursite.com/categories/Python%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="flask框架" scheme="http://yoursite.com/tags/flask%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
